@@ -1,0 +1,71 @@
+// SASS: Colors
+$color-blue: #007EB1;
+$color-red: #FF5349;
+$color-gray1: #F6F9FC;
+$color-gray2: #78787B;
+
+
+// SASS: Responsive Media Queries
+@mixin desktop {
+	@media (min-width:1220px){
+		@content;
+	}
+} 
+@mixin tablet {
+	@media (min-width:768px) and (max-width:1219px){
+		@content;
+	}
+}
+@mixin tablet_up {
+	@media (min-width:768px){
+		@content;
+	}
+}
+@mixin mobile {
+	@media (max-width:767px){
+		@content;
+	}
+}
+@mixin mobile_480 {
+	@media (min-width:480px) and (max-width:767px){
+		@content;
+	}
+}
+@mixin mobile_320 {
+	@media (max-width:479px){
+		@content;
+	}
+}
+
+// SASS: Vertical Centering - Outer element REQUIRES a height, not just a min-height
+@mixin center-vertical() {
+	position:relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// SASS: Horizontal Centering
+@mixin center-horizontal() {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+// SASS: Placeholder Color
+@mixin placeholderColor($color) {
+	::-webkit-input-placeholder {color:$color;}
+	::-moz-placeholder {color:$color;}
+	:-ms-input-placeholder {color:$color;}
+	:-moz-placeholder {color:$color;}
+}
+
+// Container Widths
+@include desktop {
+	.container {width:1200px!important;}
+}
+@include tablet {
+	.container {width:750px!important;}
+}
+@include mobile {
+	.container {width:100%!important; min-width:320px; overflow-x:hidden; padding-left:15px; padding-right:15px;}
+}
