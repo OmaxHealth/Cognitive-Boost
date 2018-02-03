@@ -1,0 +1,53 @@
+/* Font Sizes
+H1 Sizes:
+Desktop: 36
+Tablet: 34
+Mobile480: 26/28
+Mobile320: 24/26
+
+H2 Sizes:
+Desktop:42/48
+Tablet: 32/36
+Mobile: 26/28
+
+P Sizes:
+Desktop: 20/32
+Tablet: 18/26
+Mobile: 16/22
+*/
+
+// SASS: Fonts
+@mixin font($font,$font_size:null,$line_height:null){
+	font-family:'Montserrat',Helvetica,Arial,sans-serif; font-style:normal;
+	// Assigns the Weight
+	@if $font == "MontserratLight" {
+		font-weight:300;
+ 	} @else if $font == "MontserratRegular" {
+		font-weight:400;
+	} @else if $font == "MontserratMedium" {
+		font-weight:500;
+	} @else if $font == "MontserratSemiBold" {
+		font-weight:600;
+	} @else if $font == "MontserratBold" {
+		font-weight:700;
+	} 
+		
+	// Assigns the Font Size and Line Height
+	@if ($font_size == null) {
+		// Insert nothing
+	} @else if ($line_height == null) {
+		@include font-size($font_size,$font_size);
+	} @else {
+		@include font-size($font_size,$line_height);	
+	}		
+}
+
+@mixin font-size($font_size:null,$line_height:null){ 
+	@if ($line_height == null) {
+		font-size:$font_size;
+		line-height:$font_size;
+	} @else {
+		font-size:$font_size;
+		line-height:$line_height;		
+	}		
+}
