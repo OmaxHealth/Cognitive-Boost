@@ -64,7 +64,6 @@ html, body { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); -webkit-tap-hi
 @media (min-width: 1220px) { .container { width: 1200px !important; } }
 @media (min-width: 768px) and (max-width: 1219px) { .container { width: 750px !important; } }
 @media (max-width: 767px) { .container { width: 100% !important; min-width: 320px; overflow-x: hidden; padding-left: 15px; padding-right: 15px; } }
-/*.container {border-left:1px solid #afafaf; border-right:1px solid #afafaf;}*/
 /* Font Sizes
 H1 Sizes:
 Desktop: 36
@@ -82,51 +81,6 @@ Desktop: 20/32
 Tablet: 18/26
 Mobile: 16/22
 */
-.flexbox, .flexbox > .row { position: relative; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; justify-content: space-evenly; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
-.flexbox .box, .flexbox > .row .box { position: relative; display: block; }
-.flexbox { -ms-flex-wrap: wrap; flex-wrap: wrap; }
-.flexbox > .row { -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
-.flexbox > .row:last-of-type { margin-bottom: 0px !important; }
-@media (max-width: 767px) { .flexbox, .flexbox > .row { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
-  .flexbox .box, .flexbox > .row .box { width: 100%; -ms-flex-item-align: start; align-self: flex-start; }
-  .flexbox > .row:last-of-type > .box:last-of-type, .flexbox > .box:last-of-type { margin-bottom: 0px !important; } }
-
-.flexcolumn, .flexcolumn > .container { position: relative; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: nowrap; flex-wrap: nowrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
-.flexcolumn .column { position: relative; display: block; }
-@media (max-width: 767px) { .flexcolumn, .flexcolumn > .container { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
-  .flexcolumn .column, .flexcolumn > .container .column { width: 100%; } }
-
-.splitBG { position: relative; }
-@media (min-width: 768px) { .splitBG:before { content: ""; width: 50%; position: absolute; top: 0px; bottom: 0px; left: 0px; z-index: -1; }
-  .splitBG:after { content: ""; width: 50%; position: absolute; top: 0px; bottom: 0px; right: 0px; z-index: -1; } }
-@media (max-width: 767px) { .splitBG:before, .splitBG:after { display: none; } }
-
-.button { display: block; text-align: center; -webkit-transition: background .15s; transition: background .15s; cursor: pointer; }
-.button span { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; position: relative; }
-.button.red { background-color: #FF5349; }
-.button.red span { color: #fff; }
-.button.red:hover { background-color: #db190e; }
-.button.white { background-color: #fff; border: 2px solid #000; }
-.button.white span { color: #000; }
-.button.white:hover { background-color: #f4f4f4; }
-@media (min-width: 1220px) { .button { height: 60px; }
-  .button span { font-size: 22px; line-height: 22px; top: calc((100% - 22px)/2); } }
-@media (min-width: 768px) and (max-width: 1219px) { .button { height: 42px; width: 160px; }
-  .button span { font-size: 14px; line-height: 14px; top: calc((100% - 14px)/2); } }
-@media (max-width: 767px) { .button { height: 50px; width: 190px; display: block; margin-left: auto; margin-right: auto; }
-  .button span { font-size: 16px; line-height: 16px; top: calc((100% - 16px)/2); } }
-
-a.boldLink { position: relative; font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 600; color: #000; text-transform: uppercase; -webkit-transition: color .25s; transition: color .25s; margin-bottom: 6px; }
-a.boldLink:after { content: ""; position: absolute; bottom: -4px; left: 0px; right: 0px; display: block; height: 2px; background-color: #007EB1; }
-a.boldLink:hover { color: #007EB1; }
-
-.video { position: relative; }
-.video img.overlay { position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; opacity: 1; z-index: 10; -webkit-transition: opacity 2.5s ease; transition: opacity 2.5s ease; cursor: pointer; }
-.video .player { position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; opacity: 0; z-index: 1; -webkit-transition: opacity 2.5s ease; transition: opacity 2.5s ease; }
-.video .player iframe { position: absolute; top: 0px; bottom: 0px; width: 100%; height: 100%; }
-.video.playVideo img.overlay { opacity: 0; z-index: 1; }
-.video.playVideo .player { opacity: 1; z-index: 10; }
-
 header { background-color: #fff; position: fixed; top: 0px; left: 0px; right: 0px; z-index: 100; }
 header:before { content: ""; position: absolute; left: 0px; right: 0px; height: 35px; background-color: #007EB1; }
 header .container { overflow: visible; }
@@ -138,8 +92,8 @@ header nav.menu .pages a:hover { color: #007EB1; }
 header nav.global { position: absolute; right: 0px; }
 header nav.global > * { position: absolute; top: 0px; display: block; }
 header nav.global a:nth-of-type(1) { background: url("images/icon-phone.svg"); background-repeat: no-repeat; background-size: 100% 100%; text-indent: -1000px; cursor: pointer; }
-header nav.global a:nth-of-type(2) { background-color: #ff5349; -webkit-transition: background .15s; transition: background .15s; right: 0px; }
-header nav.global a:nth-of-type(2):hover { background-color: #db190e; }
+header nav.global a:nth-of-type(2) { background-color: #ff5349; right: 0px; }
+header nav.global a:nth-of-type(2):hover { background-color: #09C9C0; }
 header nav.global a:nth-of-type(2) span { width: 80px; line-height: 20px; font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; font-size: 18px; line-height: 20px; color: #fff; text-transform: uppercase; text-align: center; display: block; margin-left: auto; margin-right: auto; position: relative; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 header .offer { position: absolute; left: 0px; right: 0px; }
 header .offer p { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; color: #fff; }
@@ -176,8 +130,9 @@ header .offer p { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-sty
   header nav.menu svg.button { position: absolute; top: -38px; left: 10px; display: block; width: 30px; height: 30px; -webkit-transition: all .25s; transition: all .25s; cursor: pointer; }
   header nav.menu svg.button path { fill: #afafaf; }
   header nav.menu div.pages { width: 100%; height: 0px; overflow: hidden; -webkit-transition: all .25s; transition: all .25s; -webkit-box-shadow: 0px 10px 8px -8px #afafaf; box-shadow: 0px 10px 8px -8px #afafaf; }
-  header nav.menu div.pages a { display: block; background-color: #F6F9FC; border-bottom: 1px solid #c9c9c9; font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; font-size: 16px; line-height: 40px; color: #007EB1; padding: 0px 20px; }
+  header nav.menu div.pages a { display: block; background-color: #007EB1; border-bottom: 1px solid #fff; font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; font-size: 16px; line-height: 40px; color: #fff; padding: 0px 20px; }
   header nav.menu div.pages a:last-of-type { border-bottom: 0px; }
+  header nav.menu div.pages a:hover { color: #fff; }
   header nav.menu.open svg.button { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
   header nav.menu.open div.pages { height: calc((2 * 40px) + 1px); border-bottom: 1px solid #c9c9c9; }
   header .offer { top: 45px; height: 25px; }
@@ -185,16 +140,58 @@ header .offer p { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-sty
 
 @media (min-width: 768px) { main { margin-top: 110px; } }
 @media (max-width: 767px) { main { margin-top: 70px; } }
-main section .headline { background-color: #007EB1; }
-main section .headline h1 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; color: #fff; text-transform: uppercase; text-align: center; display: block; margin-left: auto; margin-right: auto; position: relative; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
-@media (min-width: 1220px) { main section .headline .container { height: 150px; }
-  main section .headline h1 { font-size: 36px; line-height: 36px; } }
-@media (min-width: 768px) and (max-width: 1219px) { main section .headline .container { height: 100px; }
-  main section .headline h1 { font-size: 34px; line-height: 34px; } }
-@media (max-width: 767px) { main section .headline .container { padding: 20px 15px !important; }
-  main section .headline h1 { top: auto; -webkit-transform: none; transform: none; } }
-@media (min-width: 480px) and (max-width: 767px) { main section .headline h1 { font-size: 26px; line-height: 32px; } }
-@media (max-width: 479px) { main section .headline h1 { font-size: 24px; line-height: 30px; } }
+main .flexbox, main .flexbox > .row { position: relative; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; justify-content: space-evenly; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
+main .flexbox .box, main .flexbox > .row .box { position: relative; display: block; }
+main .flexbox { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+main .flexbox > .row { -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
+main .flexbox > .row:last-of-type { margin-bottom: 0px !important; }
+@media (max-width: 767px) { main .flexbox, main .flexbox > .row { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
+  main .flexbox .box, main .flexbox > .row .box { width: 100%; -ms-flex-item-align: start; align-self: flex-start; }
+  main .flexbox > .row:last-of-type > .box:last-of-type, main .flexbox > .box:last-of-type { margin-bottom: 0px !important; } }
+main .flexcolumn, main .flexcolumn > .container { position: relative; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: nowrap; flex-wrap: nowrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
+main .flexcolumn .column { position: relative; display: block; }
+@media (max-width: 767px) { main .flexcolumn, main .flexcolumn > .container { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
+  main .flexcolumn .column, main .flexcolumn > .container .column { width: 100%; } }
+main .splitBG { position: relative; }
+@media (min-width: 768px) { main .splitBG:before { content: ""; width: 50%; position: absolute; top: 0px; bottom: 0px; left: 0px; z-index: -1; }
+  main .splitBG:after { content: ""; width: 50%; position: absolute; top: 0px; bottom: 0px; right: 0px; z-index: -1; } }
+@media (max-width: 767px) { main .splitBG:before, main .splitBG:after { display: none; } }
+main .button { display: block; text-align: center; cursor: pointer; }
+main .button span { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; position: relative; }
+main .button.red { background-color: #FF5349; }
+main .button.red span { color: #fff; }
+main .button.red:hover { background-color: #09C9C0; }
+main .button.white { background-color: #fff; border: 2px solid #000; }
+main .button.white span { color: #000; }
+main .button.white:hover { background-color: #09C9C0; }
+main .button.white:hover span { color: #fff; }
+@media (min-width: 1220px) { main .button { height: 60px; }
+  main .button span { font-size: 22px; line-height: 22px; top: calc((100% - 22px)/2); } }
+@media (min-width: 768px) and (max-width: 1219px) { main .button { height: 40px; width: 150px; }
+  main .button span { font-size: 14px; line-height: 14px; top: calc((100% - 14px)/2); } }
+@media (min-width: 510px) and (max-width: 767px) { main .button { height: 80px; width: 300px; display: block; margin-left: auto; margin-right: auto; }
+  main .button span { font-size: 26px; line-height: 26px; top: calc((100% - 26px)/2); } }
+@media (max-width: 509px) { main .button { height: 50px; width: 212px; display: block; margin-left: auto; margin-right: auto; }
+  main .button span { font-size: 16px; line-height: 16px; top: calc((100% - 16px)/2); } }
+main a.boldLink { position: relative; font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 600; color: #000; text-transform: uppercase; -webkit-transition: color .25s; transition: color .25s; margin-bottom: 6px; }
+main a.boldLink:after { content: ""; position: absolute; bottom: -4px; left: 0px; right: 0px; display: block; height: 2px; background-color: #007EB1; }
+main a.boldLink:hover { color: #007EB1; }
+main .headline { background-color: #007EB1; }
+main .headline h1 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; color: #fff; text-transform: uppercase; text-align: center; display: block; margin-left: auto; margin-right: auto; position: relative; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+@media (min-width: 1220px) { main .headline .container { height: 150px; }
+  main .headline h1 { font-size: 33px; line-height: 33px; } }
+@media (min-width: 768px) and (max-width: 1219px) { main .headline .container { height: 100px; }
+  main .headline h1 { font-size: 30px; line-height: 30px; } }
+@media (max-width: 767px) { main .headline .container { padding: 20px 15px !important; }
+  main .headline h1 { top: auto; -webkit-transform: none; transform: none; } }
+@media (min-width: 510px) and (max-width: 767px) { main .headline h1 { font-size: 26px; line-height: 32px; } }
+@media (max-width: 509px) { main .headline h1 { font-size: 24px; line-height: 30px; } }
+main .video { position: relative; }
+main .video img.overlay { position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; opacity: 1; z-index: 10; -webkit-transition: opacity 2.5s ease; transition: opacity 2.5s ease; cursor: pointer; }
+main .video .player { position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; opacity: 0; z-index: 1; -webkit-transition: opacity 2.5s ease; transition: opacity 2.5s ease; }
+main .video .player iframe { position: absolute; top: 0px; bottom: 0px; width: 100%; height: 100%; }
+main .video.playVideo img.overlay { opacity: 0; z-index: 1; }
+main .video.playVideo .player { opacity: 1; z-index: 10; }
 main #stories .flexcolumn.videoLeft .column.video { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 main #stories .flexcolumn.videoLeft .column.text { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
 main #stories .flexcolumn.videoRight .column.video { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
@@ -210,7 +207,7 @@ main #stories .flexcolumn .text p.quote:after { content: "\201D"; }
   main #stories .flexcolumn .video, main #stories .flexcolumn .video > img.overlay, main #stories .flexcolumn .video > iframe { width: 765px; height: 430px; }
   main #stories .flexcolumn .text { width: 435px; }
   main #stories .flexcolumn .text h3 { font-size: 30px; line-height: 30px; margin-bottom: 20px; }
-  main #stories .flexcolumn .text p.person { font-size: 24px; line-height: 24px; margin-bottom: 60px; }
+  main #stories .flexcolumn .text p.person { font-size: 22px; line-height: 22px; margin-bottom: 60px; }
   main #stories .flexcolumn .text p.quote { font-size: 20px; line-height: 32px; }
   main #stories .flexcolumn.videoLeft .column.text { padding-left: 100px; }
   main #stories .flexcolumn.videoRight .column.text { padding-right: 100px; } }
@@ -286,114 +283,131 @@ main #lowerCTA .purchase a.button { position: absolute; }
   main #lowerCTA .text .purchase .discount .ln1 { font-size: 20px; line-height: 20px; top: 10px; }
   main #lowerCTA .text .purchase .discount .ln2 { font-size: 18px; line-height: 18px; bottom: 10px; }
   main #lowerCTA .text .purchase a.button { left: 110px; top: 5px; width: 200px; } }
-@media (max-width: 767px) { main #lowerCTA .container { background-size: 100% auto; }
+@media (max-width: 767px) { main #lowerCTA .container { padding-left: 0px; padding-right: 0px; }
   main #lowerCTA .text { width: 100%; padding-bottom: 20px; }
   main #lowerCTA .text > * { display: block; margin-left: auto; margin-right: auto; }
-  main #lowerCTA .text .price { position: absolute; left: 0px; right: 0px; }
-  main #lowerCTA .text .book h3 { font-size: 20px; line-height: 20px; margin-bottom: 5px; }
-  main #lowerCTA .text .book li { font-size: 16px; line-height: 22px; margin-bottom: 5px; }
-  main #lowerCTA .text .purchase { height: 50px; }
-  main #lowerCTA .text .purchase .discount { top: 0px; width: 50px; height: 50px; border-radius: 50px; border-width: 1px; }
-  main #lowerCTA .text .purchase .discount .ln1 { font-size: 18px; line-height: 18px; top: 10px; }
-  main #lowerCTA .text .purchase .discount .ln2 { font-size: 16px; line-height: 16px; bottom: 6px; }
-  main #lowerCTA .text .purchase a.button { bottom: 0px; width: 200px; } }
-@media (min-width: 480px) and (max-width: 767px) { main #lowerCTA:before { height: 160px; }
-  main #lowerCTA .container { max-width: 450px; background-size: 380px 292px; background-position: center top 90px; }
-  main #lowerCTA .text { padding-top: 380px; }
-  main #lowerCTA .text .price { top: 30px; }
-  main #lowerCTA .text .price h2 { font-size: 32px; line-height: 32px; margin-bottom: 10px; }
-  main #lowerCTA .text .price .value { font-size: 20px; line-height: 20px; width: 250px; }
-  main #lowerCTA .text .price .value:before, main #lowerCTA .text .price .value:after { width: 30px; }
-  main #lowerCTA .text .book { min-height: 135px; padding-top: 20px; padding-left: 150px; background-size: 100px 134px; background-position: left 40px top; }
-  main #lowerCTA .text .purchase .discount { left: 90px; }
-  main #lowerCTA .text .purchase a.button { left: 150px; } }
-@media (max-width: 479px) { main #lowerCTA:before { height: 120px; }
-  main #lowerCTA .container { max-width: 290px; background-size: 260px 200px; background-position: center top 80px; }
-  main #lowerCTA .text { padding-top: 300px; }
+  main #lowerCTA .text .price { position: absolute; left: 0px; right: 0px; } }
+@media (min-width: 510px) and (max-width: 767px) { main #lowerCTA:before { height: 160px; }
+  main #lowerCTA .container { max-width: 480px; background-size: 330px auto; background-position: center top 105px; }
+  main #lowerCTA .text { padding-top: 350px; }
+  main #lowerCTA .text .price { top: 25px; }
+  main #lowerCTA .text .price h2 { font-size: 40px; line-height: 40px; margin-bottom: 10px; }
+  main #lowerCTA .text .price .value { font-size: 20px; line-height: 20px; width: 280px; }
+  main #lowerCTA .text .price .value:before, main #lowerCTA .text .price .value:after { width: 45px; }
+  main #lowerCTA .text .book { min-height: 201px; padding-top: 30px; padding-left: 170px; background-size: 150px 201px; background-position: left 10px top; }
+  main #lowerCTA .text .book h3 { font-size: 24px; line-height: 24px; margin-bottom: 15px; }
+  main #lowerCTA .text .book li { font-size: 16px; line-height: 22px; margin-bottom: 10px; }
+  main #lowerCTA .text .purchase { width: 440px; height: 100px; margin-top: -15px; }
+  main #lowerCTA .text .purchase .discount { top: 0px; left: 60px; width: 100px; height: 100px; border-radius: 100px; border-width: 1px; }
+  main #lowerCTA .text .purchase .discount .ln1 { font-size: 28px; line-height: 28px; top: 22px; }
+  main #lowerCTA .text .purchase .discount .ln2 { font-size: 28px; line-height: 28px; bottom: 22px; }
+  main #lowerCTA .text .purchase a.button { top: 15px; right: 15px; width: 250px; } }
+@media (max-width: 509px) { main #lowerCTA:before { height: 120px; }
+  main #lowerCTA .container { width: 330px; background-size: 260px auto; background-position: center top 70px; }
+  main #lowerCTA .text { padding-top: 270px; }
   main #lowerCTA .text .price { top: 20px; }
-  main #lowerCTA .text .price h2 { font-size: 28px; line-height: 28px; margin-bottom: 10px; }
-  main #lowerCTA .text .price .value { font-size: 18px; line-height: 18px; width: 250px; }
-  main #lowerCTA .text .price .value:before, main #lowerCTA .text .price .value:after { width: 30px; }
-  main #lowerCTA .text .book { min-height: 135px; padding-top: 0px; padding-left: 70px; background-size: 60px 80px; background-position: left 0px top; }
-  main #lowerCTA .text .purchase { margin-top: 10px; }
-  main #lowerCTA .text .purchase .discount { left: 5px; }
-  main #lowerCTA .text .purchase a.button { left: 70px; } }
+  main #lowerCTA .text .price h2 { font-size: 28px; line-height: 28px; margin-bottom: 5px; }
+  main #lowerCTA .text .price .value { font-size: 14px; line-height: 14px; width: 200px; }
+  main #lowerCTA .text .price .value:before, main #lowerCTA .text .price .value:after { width: 38px; }
+  main #lowerCTA .text .book { min-height: 135px; padding-top: 15px; padding-left: 105px; padding-right: 10px; background-size: 90px 120px; background-position: left 10px top; }
+  main #lowerCTA .text .book h3 { font-size: 22px; line-height: 22px; margin-bottom: 8px; letter-spacing: -0.08em; }
+  main #lowerCTA .text .book li { font-size: 14px; line-height: 16px; margin-bottom: 8px; letter-spacing: -0.04em; }
+  main #lowerCTA .text .purchase { width: 290px; height: 70px; margin-top: -15px; }
+  main #lowerCTA .text .purchase .discount { top: 0px; left: 0px; width: 70px; height: 70px; border-radius: 70px; border-width: 1px; }
+  main #lowerCTA .text .purchase .discount .ln1 { font-size: 20px; line-height: 20px; top: 15px; }
+  main #lowerCTA .text .purchase .discount .ln2 { font-size: 20px; line-height: 20px; bottom: 15px; }
+  main #lowerCTA .text .purchase a.button { top: 10px; right: 0px; } }
 
 footer { background-color: #F6F9FC; }
-footer .container { min-height: 200px; text-align: center; padding-top: 20px; }
-footer p, footer a { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; color: #78787B; }
+footer .container { text-align: center; }
+footer p { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; font-size: 12px; line-height: 16px; color: #454545; margin-bottom: 10px; }
+footer p.disclaimer { border: 1px solid #454545; padding: 10px; display: block; margin-left: auto; margin-right: auto; display: inline-block; }
+footer p.copyright { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; }
+footer p:last-of-type { margin-bottom: 0px; }
+footer nav a { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 600; font-size: 14px; line-height: 14px; color: #454545; }
+footer nav a:hover { color: #007EB1; }
+footer nav a:nth-of-type(1):after, footer nav a:nth-of-type(2):after { content: "|"; padding: 0 5px 0 10px; opacity: 0.5; }
+footer nav a:hover:after { color: #454545; }
+@media (min-width: 1220px) { footer .container { padding: 40px 0; }
+  footer nav { margin-top: 20px; } }
+@media (min-width: 768px) and (max-width: 1219px) { footer .container { padding: 20px 0; }
+  footer p.disclaimer { max-width: 600px; }
+  footer nav { margin-top: 20px; } }
+@media (max-width: 767px) { footer .container { padding: 20px 15px; }
+  footer nav { margin-top: 20px; } }
+@media (min-width: 510px) and (max-width: 767px) { footer p.disclaimer { max-width: 500px; } }
+@media (max-width: 509px) { footer nav { max-width: 290px; display: block; margin-left: auto; margin-right: auto; }
+  footer nav a:nth-of-type(2):after { display: none; }
+  footer nav a:nth-of-type(3) { display: block; margin-top: 5px; } }
 
+body.page-home main #hero .text { text-align: center; }
 body.page-home main #hero .text > * { text-align: center; }
-body.page-home main #hero .text h1 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; color: #007EB1; text-transform: uppercase; }
+body.page-home main #hero .text h1 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 300; color: #007EB1; text-transform: uppercase; }
 body.page-home main #hero .text h1 strong { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 600; }
 body.page-home main #hero .text h2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; color: #000; }
 body.page-home main #hero .text h2 sup { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 300; font-size: 50%; }
-body.page-home main #hero .text h3 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; color: #000; text-transform: uppercase; position: relative; display: block; margin-left: auto; margin-right: auto; }
+body.page-home main #hero .text h3 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; color: #000; text-transform: uppercase; display: inline-block; position: relative; }
 body.page-home main #hero .text h3:after { content: ""; position: absolute; bottom: 0px; left: 0px; right: 0px; display: block; height: 2px; background-color: #007EB1; }
-body.page-home main #hero .text p { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 300; color: #000; display: block; margin-left: auto; margin-right: auto; }
-body.page-home main #hero .text p strong { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; }
+body.page-home main #hero .text p { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; color: #000; display: block; margin-left: auto; margin-right: auto; }
 body.page-home main #hero .order { position: relative; display: block; }
 body.page-home main #hero .order .price { text-align: center; }
 body.page-home main #hero .order .price .ln1 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 600; color: #007EB1; }
-body.page-home main #hero .order .price .ln2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; color: #282528; text-transform: uppercase; }
+body.page-home main #hero .order .price .ln2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; color: #282528; text-transform: uppercase; }
 @media (min-width: 768px) { body.page-home main #hero { background: #8496a4 url("images/hero-home-desktop-bg.jpg") top center no-repeat; background-size: auto 100%; }
   body.page-home main #hero .text, body.page-home main #hero .order { position: absolute; }
   body.page-home main #hero .text .price, body.page-home main #hero .order .price { position: absolute; left: 0px; }
-  body.page-home main #hero .text a.button, body.page-home main #hero .order a.button { position: absolute; top: 0px; }
+  body.page-home main #hero .text a.button, body.page-home main #hero .order a.button { position: absolute; top: 0px; right: 0px; }
   body.page-home main #hero .product { display: none; } }
 @media (min-width: 1220px) { body.page-home main #hero .container { height: 700px; }
-  body.page-home main #hero .text { left: 660px; top: 170px; width: 520px; }
-  body.page-home main #hero .text h3 { font-size: 24px; line-height: 24px; width: 360px; margin-bottom: 30px; }
+  body.page-home main #hero .text { left: 685px; top: 150px; width: 480px; }
+  body.page-home main #hero .text h3 { font-size: 24px; line-height: 24px; width: 350px; margin-bottom: 20px; }
   body.page-home main #hero .text h3:after { bottom: -10px; }
-  body.page-home main #hero .text h1 { font-size: 54px; line-height: 54px; letter-spacing: -0.04em; margin-bottom: 20px; }
+  body.page-home main #hero .text h1 { font-size: 54px; line-height: 54px; letter-spacing: -0.06em; margin-bottom: 20px; }
   body.page-home main #hero .text h2 { font-size: 42px; line-height: 42px; margin-bottom: 30px; }
   body.page-home main #hero .text h2 sup { position: relative; font-size: 50%; line-height: 30px; top: 10px; }
-  body.page-home main #hero .text p { font-size: 22px; line-height: 32px; width: 400px; }
-  body.page-home main #hero .order { left: 680px; top: 520px; width: 520px; height: 60px; }
+  body.page-home main #hero .text p { font-size: 22px; line-height: 32px; width: 400px; letter-spacing: -0.02em; }
+  body.page-home main #hero .order { left: 710px; top: 500px; width: 430px; height: 60px; }
   body.page-home main #hero .order .price { top: 6px; }
   body.page-home main #hero .order .price .ln1 { font-size: 30px; line-height: 30px; }
   body.page-home main #hero .order .price .ln2 { font-size: 20px; line-height: 20px; }
-  body.page-home main #hero .order a.button { left: 200px; width: 240px; } }
+  body.page-home main #hero .order a.button { width: 240px; } }
 @media (min-width: 768px) and (max-width: 1219px) { body.page-home main #hero .container { height: 430px; }
   body.page-home main #hero .text { left: 380px; top: 100px; width: 370px; }
-  body.page-home main #hero .text h3 { font-size: 20px; line-height: 20px; width: 300px; margin-bottom: 20px; }
+  body.page-home main #hero .text h3 { font-size: 16px; line-height: 16px; width: 240px; margin-bottom: 20px; }
   body.page-home main #hero .text h3:after { bottom: -10px; }
   body.page-home main #hero .text h1 { font-size: 34px; line-height: 34px; margin-bottom: 5px; }
   body.page-home main #hero .text h2 { font-size: 26px; line-height: 26px; margin-bottom: 10px; }
   body.page-home main #hero .text h2 sup { position: relative; top: 6px; }
   body.page-home main #hero .text p { font-size: 16px; line-height: 22px; width: 300px; }
-  body.page-home main #hero .order { left: 430px; top: 305px; width: 310px; height: 50px; }
+  body.page-home main #hero .order { left: 440px; top: 305px; width: 300px; height: 50px; }
   body.page-home main #hero .order .price { top: 4px; }
   body.page-home main #hero .order .price .ln1 { font-size: 24px; line-height: 24px; }
   body.page-home main #hero .order .price .ln2 { font-size: 16px; line-height: 16px; }
-  body.page-home main #hero .order a.button { top: 4px; right: 0px; } }
-@media (max-width: 767px) { body.page-home main #hero .container { padding-top: 20px; padding-bottom: 20px; }
-  body.page-home main #hero .product { display: block; margin-left: auto; margin-right: auto; }
-  body.page-home main #hero .text, body.page-home main #hero .order { position: relative; width: 100%; } }
-@media (min-width: 480px) and (max-width: 767px) { body.page-home main #hero .product { max-width: 450px; }
-  body.page-home main #hero .text { margin-bottom: 10px; }
-  body.page-home main #hero .text h3 { font-size: 16px; line-height: 16px; max-width: 290px; margin-bottom: 20px; }
-  body.page-home main #hero .text h3:after { bottom: -10px; }
-  body.page-home main #hero .text h1 { font-size: 32px; line-height: 32px; margin-bottom: 5px; }
-  body.page-home main #hero .text h2 { font-size: 24px; line-height: 24px; margin-bottom: 10px; }
-  body.page-home main #hero .text h2 sup { position: relative; top: 8px; }
-  body.page-home main #hero .text p { font-size: 16px; line-height: 22px; max-width: 400px; }
-  body.page-home main #hero .order { margin-top: -30px; }
+  body.page-home main #hero .order a.button { top: 4px; } }
+@media (max-width: 767px) { body.page-home main #hero { background-color: #f1f3f4; }
+  body.page-home main #hero .container { width: 100vw; padding: 20px 0 30px; }
+  body.page-home main #hero .text, body.page-home main #hero .order { position: relative; width: 100%; display: block; margin-left: auto; margin-right: auto; }
+  body.page-home main #hero .text h2 { display: none; } }
+@media (min-width: 510px) and (max-width: 767px) { body.page-home main #hero .text { max-width: 450px; margin-bottom: 10px; }
+  body.page-home main #hero .text h3 { font-size: 27px; line-height: 27px; margin-bottom: 20px; }
+  body.page-home main #hero .text h3:after { height: 2px; bottom: -10px; }
+  body.page-home main #hero .text h1 { font-size: 46px; line-height: 46px; letter-spacing: -0.01em; margin-bottom: 5px; }
+  body.page-home main #hero .text p { font-size: 18px; line-height: 28px; max-width: 340px; }
+  body.page-home main #hero .product { width: 100%; }
+  body.page-home main #hero .order { margin-top: -50px; }
   body.page-home main #hero .order .price { margin-bottom: 20px; }
-  body.page-home main #hero .order .price .ln1 { font-size: 28px; line-height: 28px; }
-  body.page-home main #hero .order .price .ln2 { font-size: 18px; line-height: 18px; } }
-@media (max-width: 479px) { body.page-home main #hero .product { width: 100vw; margin-left: -15px; margin-right: 15px; }
-  body.page-home main #hero .text { margin-bottom: 10px; }
-  body.page-home main #hero .text h3 { font-size: 14px; line-height: 14px; max-width: 220px; margin-bottom: 15px; }
-  body.page-home main #hero .text h3:after { bottom: -6px; }
-  body.page-home main #hero .text h1 { font-size: 30px; line-height: 30px; letter-spacing: -0.01em; margin-bottom: 8px; }
-  body.page-home main #hero .text h2 { font-size: 20px; line-height: 20px; margin-bottom: 5px; }
-  body.page-home main #hero .text h2 sup { position: relative; top: 8px; }
+  body.page-home main #hero .order .price .ln1 { font-size: 32px; line-height: 32px; }
+  body.page-home main #hero .order .price .ln2 { font-size: 21px; line-height: 21px; } }
+@media (max-width: 509px) { body.page-home main #hero .text { margin-bottom: 10px; }
+  body.page-home main #hero .text h3 { font-size: 16px; line-height: 16px; display: inline-block; margin-bottom: 15px; }
+  body.page-home main #hero .text h3:after { height: 1px; bottom: -6px; }
+  body.page-home main #hero .text h1 { font-size: 33px; line-height: 33px; margin-bottom: 8px; }
   body.page-home main #hero .text p { font-size: 14px; line-height: 20px; max-width: 260px; }
-  body.page-home main #hero .order { margin-top: -20px; }
+  body.page-home main #hero .product { width: 100vw; }
+  body.page-home main #hero .order { margin-top: -30px; }
   body.page-home main #hero .order .price { margin-bottom: 10px; }
-  body.page-home main #hero .order .price .ln1 { font-size: 22px; line-height: 22px; }
-  body.page-home main #hero .order .price .ln2 { font-size: 14px; line-height: 14px; } }
+  body.page-home main #hero .order .price .ln1 { font-size: 23px; line-height: 23px; }
+  body.page-home main #hero .order .price .ln2 { font-size: 15px; line-height: 15px; } }
 body.page-home main #icons { background-color: #F6F9FC; }
 body.page-home main #icons .container { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 body.page-home main #icons .block { position: relative; max-height: 72px; background-position: top left; background-repeat: no-repeat; background-size: auto 100%; }
@@ -418,9 +432,9 @@ body.page-home main #icons .block span { font-family: 'Montserrat',Helvetica,Ari
 @media (max-width: 767px) { body.page-home main #icons .container { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding-top: 20px; padding-bottom: 20px; }
   body.page-home main #icons .block { width: 100%; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto; }
   body.page-home main #icons .block:last-of-type { margin-bottom: 0px; } }
-@media (min-width: 480px) and (max-width: 767px) { body.page-home main #icons .block { height: 50px; padding-left: 40px; max-width: 340px; }
+@media (min-width: 510px) and (max-width: 767px) { body.page-home main #icons .block { height: 50px; padding-left: 40px; max-width: 340px; }
   body.page-home main #icons .block span { font-size: 20px; line-height: 20px; top: 14px; padding-left: 10px; } }
-@media (max-width: 479px) { body.page-home main #icons .block { height: 40px; padding-left: 34px; max-width: 290px; }
+@media (max-width: 509px) { body.page-home main #icons .block { height: 40px; padding-left: 34px; max-width: 290px; }
   body.page-home main #icons .block span { font-size: 16px; line-height: 16px; top: 14px; padding-left: 10px; } }
 body.page-home main #intro .text { display: block; position: relative; }
 body.page-home main #intro .text h2 span { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; }
@@ -440,7 +454,7 @@ body.page-home main #intro .text ul li:last-of-type { margin-bottom: 0px; }
   body.page-home main #intro .text p:nth-of-type(2) { margin-bottom: 10px; }
   body.page-home main #intro .text li { font-size: 20px; line-height: 20px; margin-bottom: 15px; } }
 @media (min-width: 768px) and (max-width: 1219px) { body.page-home main #intro .container { min-height: 560px; }
-  body.page-home main #intro .text { width: 500px; margin-top: 20px; margin-bottom: 20px; }
+  body.page-home main #intro .text { width: 420px; margin-top: 20px; margin-bottom: 20px; }
   body.page-home main #intro .text h2 { margin-bottom: 15px; }
   body.page-home main #intro .text h2 span { font-size: 32px; line-height: 36px; }
   body.page-home main #intro .text p { font-size: 18px; line-height: 26px; max-width: 500px; }
@@ -457,9 +471,9 @@ body.page-home main #intro .text ul li:last-of-type { margin-bottom: 0px; }
   body.page-home main #intro .text p:nth-of-type(2) { margin-bottom: 10px; }
   body.page-home main #intro .text ul { max-width: 290px; display: block; margin-left: auto; margin-right: auto; }
   body.page-home main #intro .text ul li { font-size: 16px; line-height: 16px; letter-spacing: -0.04em; margin-bottom: 6px; } }
-@media (min-width: 480px) and (max-width: 767px) { body.page-home main #intro h2 { margin-bottom: 40px; }
+@media (min-width: 510px) and (max-width: 767px) { body.page-home main #intro h2 { margin-bottom: 40px; }
   body.page-home main #intro h2 span { font-size: 38px; line-height: 46px; letter-spacing: -0.05em; max-width: 450px; } }
-@media (max-width: 479px) { body.page-home main #intro h2 { margin-bottom: 20px; }
+@media (max-width: 509px) { body.page-home main #intro h2 { margin-bottom: 20px; }
   body.page-home main #intro h2 span { font-size: 22px; line-height: 32px; letter-spacing: -0.02em; max-width: 290px; } }
 body.page-home main #howitworks { background-color: #F6F9FC; }
 body.page-home main #howitworks h2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; color: #000; text-align: center; display: block; margin-left: auto; margin-right: auto; }
@@ -496,11 +510,11 @@ body.page-home main #howitworks .flexcolumn .column:nth-of-type(3) h3 { backgrou
   body.page-home main #howitworks .flexcolumn .column h3 { font-size: 26px; line-height: 26px; padding-top: 65px; margin-bottom: 15px; background-size: auto 60px; }
   body.page-home main #howitworks .flexcolumn .column p { margin-bottom: 0px; }
   body.page-home main #howitworks .flexcolumn .column img.icon { width: 100%; max-width: 260px; }
-  body.page-home main #howitworks a.button { width: 200px; margin-bottom: 20px; } }
+  body.page-home main #howitworks a.button { margin-bottom: 20px; } }
 body.page-home main #better h2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; color: #000; text-align: center; display: block; margin-left: auto; margin-right: auto; }
 body.page-home main #better p { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; color: #000; text-align: center; display: block; margin-left: auto; margin-right: auto; }
 body.page-home main #better h3 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; color: #fff; text-align: center; display: block; margin-left: auto; margin-right: auto; }
-body.page-home main #better a.button { display: block; margin-left: auto; margin-right: auto; }
+body.page-home main #better .button_wrapper { position: relative; display: block; display: block; margin-left: auto; margin-right: auto; }
 body.page-home main #better .flexcolumn .column { position: relative; background-position: center top; background-repeat: no-repeat; background-size: auto 100%; }
 body.page-home main #better .flexcolumn .column:nth-of-type(1) { background-image: url("images/better-box1-bg.jpg"); }
 body.page-home main #better .flexcolumn .column:nth-of-type(1) .icon { background-color: #007EB1; background-image: url("images/icon-head.svg"); }
@@ -511,6 +525,8 @@ body.page-home main #better .flexcolumn .column:nth-of-type(3) .icon { backgroun
 body.page-home main #better .flexcolumn .column:nth-of-type(4) { background-image: url("images/better-box4-bg.jpg"); }
 body.page-home main #better .flexcolumn .column:nth-of-type(4) .icon { background-color: #78787B; background-image: url("images/icon-brain.svg"); }
 body.page-home main #better .flexcolumn .column .icon { position: absolute; background-position: center top; background-repeat: no-repeat; }
+@media (min-width: 768px) { body.page-home main #better a.button { display: block; margin-left: auto; margin-right: auto; }
+  body.page-home main #better img.badge { display: none; } }
 @media (min-width: 1220px) { body.page-home main #better > .container { padding-top: 100px; padding-bottom: 80px; }
   body.page-home main #better h2 { font-size: 42px; line-height: 42px; margin-bottom: 40px; }
   body.page-home main #better p { font-size: 20px; line-height: 32px; max-width: 850px; }
@@ -535,18 +551,25 @@ body.page-home main #better .flexcolumn .column .icon { position: absolute; back
 @media (max-width: 767px) { body.page-home main #better > .container { padding-top: 30px; padding-bottom: 20px; }
   body.page-home main #better h2 { font-size: 26px; line-height: 28px; margin-bottom: 20px; }
   body.page-home main #better p { font-size: 16px; line-height: 22px; max-width: 650px; }
-  body.page-home main #better a { width: 180px; }
   body.page-home main #better .flexcolumn { width: 100vw; margin-left: -15px; margin-right: -15px; margin-top: 30px; margin-bottom: 40px; }
   body.page-home main #better .flexcolumn .column { width: 100%; height: calc(100vw * 0.55); background-size: cover; }
-  body.page-home main #better .flexcolumn .column .icon { left: 0px; right: 0px; } }
-@media (min-width: 480px) and (max-width: 767px) { body.page-home main #better h1 { max-width: 550px; }
+  body.page-home main #better .flexcolumn .column .icon { left: 0px; right: 0px; }
+  body.page-home main #better .button_wrapper img.badge { position: absolute; top: 0px; left: 0px; }
+  body.page-home main #better .button_wrapper a.button { position: absolute; top: 0px; right: 0px; } }
+@media (min-width: 510px) and (max-width: 767px) { body.page-home main #better h1 { max-width: 550px; }
   body.page-home main #better .flexcolumn .column { margin-bottom: 120px; }
   body.page-home main #better .flexcolumn .column .icon { bottom: -120px; height: 120px; background-size: 50px; background-position: center top 10px !important; }
-  body.page-home main #better .flexcolumn .column .icon h3 { font-size: 20px; line-height: 24px; margin-top: 65px; max-width: 200px; } }
-@media (max-width: 479px) { body.page-home main #better h1 { font-size: 23px; line-height: 26px; }
+  body.page-home main #better .flexcolumn .column .icon h3 { font-size: 20px; line-height: 24px; margin-top: 65px; max-width: 200px; }
+  body.page-home main #better .button_wrapper { width: 420px; height: 110px; }
+  body.page-home main #better .button_wrapper img.badge { width: 110px; height: 110px; }
+  body.page-home main #better .button_wrapper a.button { top: 15px; } }
+@media (max-width: 509px) { body.page-home main #better h1 { font-size: 23px; line-height: 26px; }
   body.page-home main #better .flexcolumn .column { margin-bottom: 100px; }
   body.page-home main #better .flexcolumn .column .icon { bottom: -100px; height: 100px; background-size: 40px; background-position: center top 10px !important; }
-  body.page-home main #better .flexcolumn .column .icon h3 { font-size: 16px; line-height: 20px; margin-top: 50px; max-width: 140px; } }
+  body.page-home main #better .flexcolumn .column .icon h3 { font-size: 16px; line-height: 20px; margin-top: 50px; max-width: 140px; }
+  body.page-home main #better .button_wrapper { width: 300px; height: 75px; }
+  body.page-home main #better .button_wrapper img.badge { width: 75px; height: 75px; }
+  body.page-home main #better .button_wrapper a.button { top: 12px; } }
 body.page-home main #stories .flexcolumn.r2:before { content: ""; position: absolute; background: url("images/home-stories-greg-badge.png") center center no-repeat; background-size: 100% 100%; }
 body.page-home main #stories .flexcolumn.r2:after { content: ""; position: absolute; width: 50%; top: 0px; bottom: 0px; right: 0px; background: url("images/home-stories-greg-bg.jpg") no-repeat; z-index: -1; }
 body.page-home main #stories .flexcolumn.r2 p.quote:before { content: ""; position: absolute; height: 30px; width: 36px; background: url("images/home-stories-large-quotes.png") center center no-repeat; }
@@ -578,17 +601,17 @@ body.page-home main #stories .flexcolumn.r2 p.quote:before { content: ""; positi
   body.page-home main #stories .flexcolumn.r2 .text p.quote:before { top: -60px; left: 150px; }
   body.page-home main #stories .flexcolumn.r2 .text p.person { margin-bottom: 40px; } }
 @media (max-width: 767px) { body.page-home main #stories a.boldLink { font-size: 13px; line-height: 13px; letter-spacing: -0.04em; }
-  body.page-home main #stories .flexcolumn.r1 .text p.quote { margin-top: 20px; margin-bottom: 20px; max-width: 480px; }
-  body.page-home main #stories .flexcolumn.r1 .text p.person { margin-bottom: 40px; }
+  body.page-home main #stories .flexcolumn.r1 .text h3, body.page-home main #stories .flexcolumn.r1 .text p.person { display: none; }
+  body.page-home main #stories .flexcolumn.r1 .text p.quote { margin-top: 20px; margin-bottom: 30px; max-width: 480px; }
   body.page-home main #stories .flexcolumn.r1 .text a { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; max-width: 290px; }
   body.page-home main #stories .flexcolumn.r2 { margin-top: 10px; }
   body.page-home main #stories .flexcolumn.r2:before { top: 290px; left: calc((100vw / 2) - 160px); width: 173px; height: 40px; }
   body.page-home main #stories .flexcolumn.r2:after { content: ""; position: absolute; top: 0px; display: block; width: 100%; height: 330px; background-position: center top; background-size: 415px auto; z-index: -1; }
   body.page-home main #stories .flexcolumn.r2 .container { padding-top: 330px; }
   body.page-home main #stories .flexcolumn.r2 .text { margin-top: 20px; }
+  body.page-home main #stories .flexcolumn.r2 .text h3, body.page-home main #stories .flexcolumn.r2 .text p.person, body.page-home main #stories .flexcolumn.r2 .text a { display: none; }
   body.page-home main #stories .flexcolumn.r2 .text p.quote { max-width: 480px; margin-top: 40px; }
-  body.page-home main #stories .flexcolumn.r2 .text p.quote:before { top: -40px; left: 44%; }
-  body.page-home main #stories .flexcolumn.r2 .text h3, body.page-home main #stories .flexcolumn.r2 .text p.person, body.page-home main #stories .flexcolumn.r2 .text a { display: none; } }
+  body.page-home main #stories .flexcolumn.r2 .text p.quote:before { top: -40px; left: 44%; } }
 body.page-home main #purity { background: url("images/home-purity-bg.jpg") center center no-repeat; background-size: auto 100%; }
 body.page-home main #purity .container > * { color: #fff; text-align: center; display: block; margin-left: auto; margin-right: auto; }
 body.page-home main #purity .container:after { content: ""; position: absolute; bottom: 0px; display: block; background: url("images/home-purity-badge.png") center center no-repeat; background-size: 100% 100%; }
@@ -636,10 +659,10 @@ body.page-home main #science p.ln1 { font-family: 'Montserrat',Helvetica,Arial,s
   body.page-home main #science .column.text > * { text-align: center; }
   body.page-home main #science .column.text h2 { font-size: 26px; line-height: 28px; margin-bottom: 20px; }
   body.page-home main #science .column.text p { font-size: 16px; line-height: 22px; } }
-@media (min-width: 480px) and (max-width: 767px) { body.page-home main #science .column.image { position: relative; max-width: 450px; height: 240px; margin-top: 20px; display: block; margin-left: auto; margin-right: auto; }
+@media (min-width: 510px) and (max-width: 767px) { body.page-home main #science .column.image { position: relative; max-width: 450px; height: 240px; margin-top: 20px; display: block; margin-left: auto; margin-right: auto; }
   body.page-home main #science .column.image img { position: absolute; right: 0px; bottom: 0px; width: 240px; }
   body.page-home main #science .column.image .title { position: absolute; left: 60px; top: 40px; width: 200px; } }
-@media (max-width: 479px) { body.page-home main #science .column.image { margin-top: 20px; }
+@media (max-width: 509px) { body.page-home main #science .column.image { margin-top: 20px; }
   body.page-home main #science .column.image img { width: 100%; max-width: 400px; display: block; margin-left: auto; margin-right: auto; }
   body.page-home main #science .column.image .title { padding-top: 15px; padding-bottom: 15px; text-align: center; } }
 
@@ -650,7 +673,7 @@ body.page-how-it-works main #hero { background-color: #000; }
 body.page-how-it-works main #why:after { content: ""; position: absolute; bottom: 0px; left: 0px; right: 0px; background-color: #F6F9FC; height: 100px; z-index: -1; }
 body.page-how-it-works main #why h2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; }
 body.page-how-it-works main #why p { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; }
-body.page-how-it-works main #why a.boldLink { color: #007EB1; text-transform: uppercase; }
+body.page-how-it-works main #why a.boldLink { display: none !important; color: #007EB1; text-transform: uppercase; }
 @media (min-width: 768px) { body.page-how-it-works main #why .flexcolumn .column { width: 50%; }
   body.page-how-it-works main #why .flexcolumn.r1 img { position: relative; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
   body.page-how-it-works main #why .flexcolumn.r2 img { position: absolute; right: 20px; }
@@ -672,18 +695,18 @@ body.page-how-it-works main #why a.boldLink { color: #007EB1; text-transform: up
   body.page-how-it-works main #why .flexcolumn.r2 { height: 150px; }
   body.page-how-it-works main #why .flexcolumn.r2 img { width: 110px; top: 20px; }
   body.page-how-it-works main #why .flexcolumn.r2 a.button { width: 200px; top: 50px; } }
-@media (max-width: 767px) { body.page-how-it-works main #why:after { height: 120px; }
+@media (max-width: 767px) { body.page-how-it-works main #why:after { display: none; }
   body.page-how-it-works main #why h2 { font-size: 26px; line-height: 28px; margin-bottom: 30px; }
   body.page-how-it-works main #why p, body.page-how-it-works main #why a.boldLink { font-size: 16px; line-height: 22px; margin-bottom: 40px; }
   body.page-how-it-works main #why .flexcolumn .column > * { display: block; margin-left: auto; margin-right: auto; }
   body.page-how-it-works main #why .flexcolumn.r1 .left { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
   body.page-how-it-works main #why .flexcolumn.r1 .left img { width: 100%; max-width: 260px; }
   body.page-how-it-works main #why .flexcolumn.r1 .right { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; padding: 20px 0 0; text-align: center; }
+  body.page-how-it-works main #why .flexcolumn.r1 .right p { margin-bottom: 0px; }
   body.page-how-it-works main #why .flexcolumn.r1 .right a.boldLink { display: inline-block; margin-bottom: 0px; }
-  body.page-how-it-works main #why .flexcolumn.r2 .left { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; height: 120px; }
-  body.page-how-it-works main #why .flexcolumn.r2 .left img { width: 100px; position: relative; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
-  body.page-how-it-works main #why .flexcolumn.r2 .right { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; padding-bottom: 40px; }
-  body.page-how-it-works main #why .flexcolumn.r2 .right a.button { width: 200px; } }
+  body.page-how-it-works main #why .flexcolumn.r2 .left { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; height: 150px; background-color: #F6F9FC; }
+  body.page-how-it-works main #why .flexcolumn.r2 .left img { width: 120px; position: relative; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+  body.page-how-it-works main #why .flexcolumn.r2 .right { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; padding-bottom: 40px; } }
 body.page-how-it-works main #brain h2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; text-align: center; display: block; margin-left: auto; margin-right: auto; }
 body.page-how-it-works main #brain h2 span.light { display: block; font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 300; color: #007EB1; }
 body.page-how-it-works main #brain h2 span.light strong { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 700; }
@@ -750,12 +773,12 @@ body.page-how-it-works main #brain .flexcolumn img { display: block; margin-left
   body.page-how-it-works main #brain .flexcolumn p:last-of-type { margin-bottom: 0px; }
   body.page-how-it-works main #brain .flexcolumn .column:nth-of-type(1) .title { width: 160px; }
   body.page-how-it-works main #brain .flexcolumn .column:nth-of-type(3) .title { width: 170px; } }
-@media (min-width: 480px) and (max-width: 767px) { body.page-how-it-works main #brain h2 { font-size: 26px; line-height: 28px; margin-top: 20px; margin-bottom: 20px; }
+@media (min-width: 510px) and (max-width: 767px) { body.page-how-it-works main #brain h2 { font-size: 26px; line-height: 28px; margin-top: 20px; margin-bottom: 20px; }
   body.page-how-it-works main #brain h2 span { margin-bottom: 15px; }
   body.page-how-it-works main #brain h2 span strong { font-size: 40px; line-height: 28px; }
   body.page-how-it-works main #brain .flexcolumn .column:nth-of-type(1) { margin-bottom: 20px; }
   body.page-how-it-works main #brain .flexcolumn .column:nth-of-type(2) img { width: 300px; } }
-@media (max-width: 479px) { body.page-how-it-works main #brain h2 { font-size: 20px; line-height: 24px; margin-top: 20px; margin-bottom: 20px; }
+@media (max-width: 509px) { body.page-how-it-works main #brain h2 { font-size: 20px; line-height: 24px; margin-top: 20px; margin-bottom: 20px; }
   body.page-how-it-works main #brain h2 span { margin-bottom: 10px; }
   body.page-how-it-works main #brain h2 span strong { font-size: 30px; line-height: 26px; }
   body.page-how-it-works main #brain .flexcolumn .column:nth-of-type(1) { margin-bottom: 20px; }
@@ -791,9 +814,9 @@ body.page-how-it-works main #fuel .flexcolumn .column:nth-of-type(2) p { font-fa
   body.page-how-it-works main #fuel .flexcolumn .column:nth-of-type(1) p { font-size: 14px; line-height: 20px; margin-bottom: 30px; }
   body.page-how-it-works main #fuel .flexcolumn .column:nth-of-type(2) img { margin-bottom: 30px; }
   body.page-how-it-works main #fuel .flexcolumn .column:nth-of-type(2) p { font-size: 16px; line-height: 22px; margin-bottom: 20px; } }
-@media (min-width: 480px) and (max-width: 767px) { body.page-how-it-works main #fuel h1 { max-width: 400px; }
+@media (min-width: 510px) and (max-width: 767px) { body.page-how-it-works main #fuel h1 { max-width: 400px; }
   body.page-how-it-works main #fuel h3 { font-size: 26px; line-height: 32px; margin-top: 10px; margin-bottom: 40px; } }
-@media (max-width: 479px) { body.page-how-it-works main #fuel h1 { max-width: 290px; font-size: 20px; line-height: 26px; }
+@media (max-width: 509px) { body.page-how-it-works main #fuel h1 { max-width: 290px; font-size: 20px; line-height: 26px; }
   body.page-how-it-works main #fuel h3 { font-size: 20px; line-height: 22px; margin-top: 5px; margin-bottom: 30px; } }
 body.page-how-it-works main #facts { background-color: #F6F9FC; }
 body.page-how-it-works main #facts h2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 600; color: #007EB1; text-transform: uppercase; text-align: center; }
@@ -833,7 +856,7 @@ body.page-how-it-works main #facts .table .row:last-of-type { border-bottom: non
 @media (max-width: 767px) { body.page-how-it-works main #facts .container { padding-top: 40px; padding-bottom: 20px; }
   body.page-how-it-works main #facts h2 { font-size: 26px; line-height: 26px; margin-bottom: 40px; }
   body.page-how-it-works main #facts .table .title { border-width: 4px; } }
-@media (min-width: 480px) and (max-width: 767px) { body.page-how-it-works main #facts .table { width: 420px; margin-bottom: 30px; }
+@media (min-width: 510px) and (max-width: 767px) { body.page-how-it-works main #facts .table { width: 420px; margin-bottom: 30px; }
   body.page-how-it-works main #facts .table .left { width: 340px; }
   body.page-how-it-works main #facts .table .right { width: 80px; }
   body.page-how-it-works main #facts .table .title { padding-bottom: 20px; margin-bottom: 15px; }
@@ -843,7 +866,7 @@ body.page-how-it-works main #facts .table .row:last-of-type { border-bottom: non
   body.page-how-it-works main #facts .table .row * { font-size: 16px; line-height: 22px; }
   body.page-how-it-works main #facts .table .row .right { top: 10px; }
   body.page-how-it-works main #facts img { max-width: 380px; margin-bottom: 40px; } }
-@media (max-width: 479px) { body.page-how-it-works main #facts .table { width: 290px; margin-bottom: 30px; }
+@media (max-width: 509px) { body.page-how-it-works main #facts .table { width: 290px; margin-bottom: 30px; }
   body.page-how-it-works main #facts .table .left { width: 210px; }
   body.page-how-it-works main #facts .table .right { width: 80px; }
   body.page-how-it-works main #facts .table .title { padding-bottom: 20px; margin-bottom: 15px; }
@@ -859,7 +882,6 @@ body.page-how-it-works main #team .flexcolumn .column .box { display: block; bac
 body.page-how-it-works main #team .flexcolumn .column .box h3 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; color: #000; }
 body.page-how-it-works main #team .flexcolumn .column .box p.title { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 700; color: #9fa3a7; text-transform: uppercase; }
 body.page-how-it-works main #team .flexcolumn .column .box p.bio { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; color: #000; }
-body.page-how-it-works main #team .video { display: none; }
 body.page-how-it-works main #team .lower h2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; color: #007EB1; text-align: center; display: block; margin-left: auto; margin-right: auto; }
 @media (min-width: 768px) { body.page-how-it-works main #team .column { background-color: #f5f5f5; }
   body.page-how-it-works main #team .column img { width: 100%; height: auto; } }
@@ -896,11 +918,11 @@ body.page-how-it-works main #team .lower h2 { font-family: 'Montserrat',Helvetic
   body.page-how-it-works main #team .video { width: 100vw !important; margin-left: -15px; margin-right: -15px; margin-top: 20px; }
   body.page-how-it-works main #team .video, body.page-how-it-works main #team .video > img, body.page-how-it-works main #team .video iframe { left: 0px; right: 0px; top: 0px; width: 100%; height: calc(100vw * 0.5625); }
   body.page-how-it-works main #team .lower { margin: 30px 0; } }
-@media (min-width: 480px) and (max-width: 767px) { body.page-how-it-works main #team .headline { margin-bottom: 30px; }
+@media (min-width: 510px) and (max-width: 767px) { body.page-how-it-works main #team .headline { margin-bottom: 30px; }
   body.page-how-it-works main #team .headline h1 { max-width: 400px; }
   body.page-how-it-works main #team .flexcolumn img { max-width: 280px; }
   body.page-how-it-works main #team .lower h2 { font-size: 24px; line-height: 26px; max-width: 360px; } }
-@media (max-width: 479px) { body.page-how-it-works main #team .headline { margin-bottom: 20px; }
+@media (max-width: 509px) { body.page-how-it-works main #team .headline { margin-bottom: 20px; }
   body.page-how-it-works main #team .headline h1 { max-width: 380px; }
   body.page-how-it-works main #team .flexcolumn img { max-width: 200px; }
   body.page-how-it-works main #team .lower h2 { font-size: 20px; line-height: 24px; max-width: 290px; } }
@@ -921,8 +943,8 @@ body.page-real-user-stories main #hero img { display: block; margin-left: auto; 
   body.page-real-user-stories main #hero .container .text img { width: 80px; height: 80px; } }
 @media (max-width: 767px) { body.page-real-user-stories main #hero h1 { margin-top: 20px; margin-bottom: 20px; }
   body.page-real-user-stories main #hero img { width: 80px; height: 80px; margin-bottom: 20px; } }
-@media (min-width: 480px) and (max-width: 767px) { body.page-real-user-stories main #hero h1 { font-size: 28px; line-height: 32px; max-width: 380px; } }
-@media (max-width: 479px) { body.page-real-user-stories main #hero h1 { font-size: 22px; line-height: 26px; max-width: 290px; } }
+@media (min-width: 510px) and (max-width: 767px) { body.page-real-user-stories main #hero h1 { font-size: 28px; line-height: 32px; max-width: 380px; } }
+@media (max-width: 509px) { body.page-real-user-stories main #hero h1 { font-size: 22px; line-height: 26px; max-width: 290px; } }
 body.page-real-user-stories main #stories .flexcolumn .video:after { content: ""; position: absolute; bottom: 0px; left: 0px; right: 0px; display: block; height: 5px; background-color: #007EB1; }
 body.page-real-user-stories main #stories .flexcolumn:last-of-type { padding-bottom: 0px; }
 body.page-real-user-stories main #stories .flexcolumn:last-of-type .video:after { display: none; }
@@ -944,6 +966,32 @@ body.page-real-user-stories main #stories .flexcolumn:last-of-type .video:after 
   body.page-real-user-stories main #stories .flexcolumn .column.video, body.page-real-user-stories main #stories .flexcolumn .column.video > img, body.page-real-user-stories main #stories .flexcolumn .column.video iframe { left: 0px; right: 0px; top: 0px; width: 100%; height: calc((100vw * 0.5625) - 7px); }
   body.page-real-user-stories main #stories .flexcolumn .column.video:after { display: none; }
   body.page-real-user-stories main #stories .flexcolumn:last-of-type .column { border-bottom: none; } }
-@media (min-width: 480px) and (max-width: 767px) { body.page-real-user-stories main #stories h1 { max-width: 480px; } }
+@media (min-width: 510px) and (max-width: 767px) { body.page-real-user-stories main #stories h1 { max-width: 480px; } }
+
+body.page-terms-and-conditions main h1, body.page-privacy-policy main h1 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; color: #000; text-align: center; display: block; margin-left: auto; margin-right: auto; }
+body.page-terms-and-conditions main h2, body.page-privacy-policy main h2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 600; text-transform: uppercase; }
+body.page-terms-and-conditions main h3, body.page-privacy-policy main h3 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; }
+body.page-terms-and-conditions main p, body.page-terms-and-conditions main li, body.page-privacy-policy main p, body.page-privacy-policy main li { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; }
+body.page-terms-and-conditions main p strong, body.page-terms-and-conditions main li strong, body.page-privacy-policy main p strong, body.page-privacy-policy main li strong { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; }
+body.page-terms-and-conditions main ul, body.page-privacy-policy main ul { margin-left: 20px; }
+body.page-terms-and-conditions main ul li, body.page-privacy-policy main ul li { list-style-type: disc; }
+body.page-terms-and-conditions main ol, body.page-privacy-policy main ol { margin-left: 20px; }
+body.page-terms-and-conditions main ol li, body.page-privacy-policy main ol li { list-style-type: decimal; }
+body.page-terms-and-conditions main a, body.page-privacy-policy main a { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; color: #007EB1; text-decoration: underline; }
+@media (min-width: 768px) { body.page-terms-and-conditions main h1, body.page-privacy-policy main h1 { margin-top: 40px; margin-bottom: 20px; }
+  body.page-terms-and-conditions main h2, body.page-privacy-policy main h2 { margin: 20px 0; }
+  body.page-terms-and-conditions main h3, body.page-privacy-policy main h3 { font-size: 16px; line-height: 16px; }
+  body.page-terms-and-conditions main p, body.page-privacy-policy main p { font-size: 16px; line-height: 22px; margin-bottom: 15px; }
+  body.page-terms-and-conditions main ul, body.page-terms-and-conditions main ol, body.page-privacy-policy main ul, body.page-privacy-policy main ol { margin-bottom: 15px; }
+  body.page-terms-and-conditions main ul li, body.page-terms-and-conditions main ol li, body.page-privacy-policy main ul li, body.page-privacy-policy main ol li { font-size: 16px; line-height: 22px; margin-bottom: 5px; } }
+@media (min-width: 1220px) { body.page-terms-and-conditions main h1, body.page-privacy-policy main h1 { font-size: 42px; line-height: 42px; }
+  body.page-terms-and-conditions main h2, body.page-privacy-policy main h2 { font-size: 20px; line-height: 20px; } }
+@media (min-width: 768px) and (max-width: 1219px) { body.page-terms-and-conditions main h1, body.page-privacy-policy main h1 { font-size: 32px; line-height: 32px; }
+  body.page-terms-and-conditions main h2, body.page-privacy-policy main h2 { font-size: 18px; line-height: 18px; } }
+@media (max-width: 767px) { body.page-terms-and-conditions main h1, body.page-privacy-policy main h1 { font-size: 26px; line-height: 26px; margin-top: 20px; margin-bottom: 20px; }
+  body.page-terms-and-conditions main h2, body.page-privacy-policy main h2 { font-size: 16px; line-height: 16px; margin-bottom: 10px; }
+  body.page-terms-and-conditions main p, body.page-privacy-policy main p { font-size: 14px; line-height: 20px; margin-bottom: 10px; }
+  body.page-terms-and-conditions main ul, body.page-terms-and-conditions main ol, body.page-privacy-policy main ul, body.page-privacy-policy main ol { margin-bottom: 10px; }
+  body.page-terms-and-conditions main ul li, body.page-terms-and-conditions main ol li, body.page-privacy-policy main ul li, body.page-privacy-policy main ol li { font-size: 14px; line-height: 20px; margin-bottom: 5px; } }
 
 /*# sourceMappingURL=style.css.map */

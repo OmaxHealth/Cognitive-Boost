@@ -3,25 +3,23 @@ body.page-home {
 		
 		// Section: Main Hero
 		#hero {
-			.text {
+			.text {text-align:center;
 				& > * {text-align:center;}
-				h1 {@include font('MontserratRegular'); color:$color-blue; text-transform:uppercase;
+				h1 {@include font('MontserratLight'); color:$color-blue; text-transform:uppercase;
 					strong {@include font('MontserratSemiBold');}
 				}
 				h2 {@include font('MontserratMedium'); color:#000;
 					sup {@include font('MontserratLight'); font-size:50%;}
 				}
-				h3 {@include font('MontserratMedium'); color:#000; text-transform:uppercase; position:relative; @include center-horizontal();
+				h3 {@include font('MontserratRegular'); color:#000; text-transform:uppercase; display:inline-block; position:relative;
 					&:after {content:""; position:absolute; bottom:0px; left:0px; right:0px; display:block; height:2px; background-color:$color-blue;}
 				}
-				p {@include font('MontserratLight'); color:#000; @include center-horizontal();
-					strong {@include font('MontserratMedium');}
-				}
+				p {@include font('MontserratMedium'); color:#000; @include center-horizontal();}
 			}
 			.order {position:relative; display:block;
 				.price {text-align:center;
 					.ln1 {@include font('MontserratSemiBold'); color:$color-blue;}
-					.ln2 {@include font('MontserratRegular'); color:#282528; text-transform:uppercase;}
+					.ln2 {@include font('MontserratMedium'); color:#282528; text-transform:uppercase;}
 				}
 			}
 
@@ -30,34 +28,34 @@ body.page-home {
 				.text,
 				.order {position:absolute;
 					.price {position:absolute; left:0px;}
-					a.button {position:absolute; top:0px;}
+					a.button {position:absolute; top:0px; right:0px;}
 				}
 				.product {display:none;}
 			}
 			@include desktop {
 				.container {height:700px;}
-				.text {left:660px; top:170px; width:520px;
-					h3 {@include font-size(24px); width:360px; margin-bottom:30px;
+				.text {left:685px; top:150px; width:480px;
+					h3 {@include font-size(24px); width:350px; margin-bottom:20px;
 						&:after {bottom:-10px;}
 					}
-					h1 {@include font-size(54px); letter-spacing:-0.04em; margin-bottom:20px;}
+					h1 {@include font-size(54px); letter-spacing:-0.06em; margin-bottom:20px;}
 					h2 {@include font-size(42px); margin-bottom:30px;
 						sup {position:relative; font-size:50%; line-height:30px; top:10px;}
 					}
-					p {@include font-size(22px,32px); width:400px;}
+					p {@include font-size(22px,32px); width:400px; letter-spacing:-0.02em;}
 				}
-				.order {left:680px; top:520px; width:520px; height:60px;
+				.order {left:710px; top:500px; width:430px; height:60px;
 					.price {top:6px;
 						.ln1 {@include font-size(30px);}
 						.ln2 {@include font-size(20px);}
 					}
-					a.button {left:200px; width:240px;}
+					a.button {width:240px;}
 				}
 			}
 			@include tablet {
 				.container {height:430px;}
 				.text {left:380px; top:100px; width:370px;
-					h3 {@include font-size(20px); width:300px; margin-bottom:20px;
+					h3 {@include font-size(16px); width:240px; margin-bottom:20px;
 						&:after {bottom:-10px;}
 					}
 					h1 {@include font-size(34px); margin-bottom:5px;}
@@ -66,55 +64,51 @@ body.page-home {
 					}
 					p {@include font-size(16px,22px); width:300px;}
 				}
-				.order {left:430px; top:305px; width:310px; height:50px;
+				.order {left:440px; top:305px; width:300px; height:50px;
 					.price {top:4px;
 						.ln1 {@include font-size(24px);}
 						.ln2 {@include font-size(16px);}
 					}
-					a.button {top:4px; right:0px;}
+					a.button {top:4px;}
 				}
 			}
 			@include mobile {
-				.container {padding-top:20px; padding-bottom:20px;}
-				.product {@include center-horizontal();}
+				& {background-color:#f1f3f4;}
+				.container {width:100vw; padding:20px 0 30px;}
 				.text,
-				.order {position:relative; width:100%;}
+				.order {position:relative; width:100%; @include center-horizontal();}
+				.text h2 {display:none;}
+				
 			}
-			@include mobile_480 {
-				.product {max-width:450px;}
-				.text {margin-bottom:10px;
-					h3 {@include font-size(16px); max-width:290px; margin-bottom:20px;
-						&:after {bottom:-10px;}
+			@include mobile_510 {
+				.text {max-width:450px; margin-bottom:10px;
+					h3 {@include font-size(27px); margin-bottom:20px;
+						&:after {height:2px; bottom:-10px;}
 					}
-					h1 {@include font-size(32px); margin-bottom:5px;}
-					h2 {@include font-size(24px); margin-bottom:10px;
-						sup {position:relative; top:8px;}
-					}
-					p {@include font-size(16px,22px); max-width:400px;}
+					h1 {@include font-size(46px); letter-spacing:-0.01em; margin-bottom:5px;}
+					p {@include font-size(18px,28px); max-width:340px;}
 				}
-				.order {margin-top:-30px;
+				.product {width:100%;}
+				.order {margin-top:-50px;
 					.price {margin-bottom:20px;
-						.ln1 {@include font-size(28px);}
-						.ln2 {@include font-size(18px);}
+						.ln1 {@include font-size(32px);}
+						.ln2 {@include font-size(21px);}
 					}
 				}
 			}
-			@include mobile_320 {
-				.product {width:100vw; margin-left:-15px; margin-right:15px;}
+			@include mobile_360 {
 				.text {margin-bottom:10px;
-					h3 {@include font-size(14px); max-width:220px; margin-bottom:15px;
-						&:after {bottom:-6px;}
+					h3 {@include font-size(16px); display:inline-block; margin-bottom:15px;
+						&:after {height:1px; bottom:-6px;}
 					}
-					h1 {@include font-size(30px); letter-spacing:-0.01em; margin-bottom:8px;}
-					h2 {@include font-size(20px); margin-bottom:5px;
-						sup {position:relative; top:8px;}
-					}
+					h1 {@include font-size(33px); margin-bottom:8px;}
 					p {@include font-size(14px,20px); max-width:260px;}
 				}
-				.order {margin-top:-20px;
+				.product {width:100vw;}
+				.order {margin-top:-30px;
 					.price {margin-bottom:10px;
-						.ln1 {@include font-size(22px);}
-						.ln2 {@include font-size(14px);}
+						.ln1 {@include font-size(23px);}
+						.ln2 {@include font-size(15px);}
 					}
 				}
 			}
@@ -159,12 +153,12 @@ body.page-home {
 					&:last-of-type {margin-bottom:0px;}
 				}
 			}
-			@include mobile_480 {
+			@include mobile_510 {
 				.block {height:50px; padding-left:40px; max-width:340px;
 					span {@include font-size(20px); top:14px; padding-left:10px;}
 				}				
 			}			
-			@include mobile_320 {
+			@include mobile_360 {
 				.block {height:40px; padding-left:34px; max-width:290px;
 					span {@include font-size(16px); top:14px; padding-left:10px;}
 				}				
@@ -202,7 +196,7 @@ body.page-home {
 			}
 			@include tablet {
 				.container {min-height:560px;}
-				.text {width:500px; margin-top:20px; margin-bottom:20px;
+				.text {width:420px; margin-top:20px; margin-bottom:20px;
 					h2 {margin-bottom:15px;
 						span {@include font-size(32px,36px);}
 					}
@@ -229,12 +223,12 @@ body.page-home {
 					}
 				}				
 			}
-			@include mobile_480 {
+			@include mobile_510 {
 				h2 {margin-bottom:40px;
 					span {@include font-size(38px,46px); letter-spacing:-0.05em; max-width:450px;}
 				}
 			}
-			@include mobile_320 {
+			@include mobile_360 {
 				h2 {margin-bottom:20px;
 					span {@include font-size(22px,32px); letter-spacing:-0.02em; max-width:290px;}
 				}
@@ -303,7 +297,7 @@ body.page-home {
 						img.icon {width:100%; max-width:260px;}
 					}
 				}
-				a.button {width:200px; margin-bottom:20px;}
+				a.button {margin-bottom:20px;}
 			}			
 		}
 
@@ -312,7 +306,7 @@ body.page-home {
 			h2 {@include font('MontserratRegular'); color:#000; text-align:center; @include center-horizontal();}
 			p {@include font('MontserratRegular'); color:#000; text-align:center; @include center-horizontal();}
 			h3 {@include font('MontserratRegular'); color:#fff; text-align:center; @include center-horizontal();}
-			a.button {@include center-horizontal();}
+			.button_wrapper {position:relative; display:block; @include center-horizontal();}
 			
 			.flexcolumn {
 				.column {position:relative; background-position:center top; background-repeat:no-repeat; background-size:auto 100%;
@@ -331,7 +325,11 @@ body.page-home {
 					.icon {position:absolute; background-position:center top; background-repeat:no-repeat;}
 				}
 			}
-
+			
+			@include tablet_up {
+				a.button {@include center-horizontal();}
+				img.badge {display:none;}
+			}
 			@include desktop {
 				& > .container {padding-top:100px; padding-bottom:80px;}
 				h2 {@include font-size(42px); margin-bottom:40px;}
@@ -367,27 +365,38 @@ body.page-home {
 				& > .container {padding-top:30px; padding-bottom:20px;}
 				h2 {@include font-size(26px,28px); margin-bottom:20px;}
 				p {@include font-size(16px,22px); max-width:650px;}
-				a {width:180px;}
 				.flexcolumn {width:100vw; margin-left:-15px; margin-right:-15px; margin-top:30px; margin-bottom:40px;
 					.column {width:100%; height:calc(100vw * 0.55); background-size:cover;
 						.icon {left:0px; right:0px;}
 					}
 				}
+				.button_wrapper {
+					img.badge {position:absolute; top:0px; left:0px;}
+					a.button {position:absolute; top:0px; right:0px;}
+				}
 			}
-			@include mobile_480 {
+			@include mobile_510 {
 				h1 {max-width:550px;}
 				.flexcolumn .column {margin-bottom:120px;
 					.icon {bottom:-120px; height:120px; background-size:50px; background-position:center top 10px!important;
 						h3 {@include font-size(20px,24px); margin-top:65px; max-width:200px;}
 					}
+				}
+				.button_wrapper {width:420px; height:110px;
+					img.badge {width:110px; height:110px;}
+					a.button {top:15px;}
 				}	
 			}			
-			@include mobile_320 {
+			@include mobile_360 {
 				h1 {@include font-size(23px,26px);}
 				.flexcolumn .column {margin-bottom:100px;
 					.icon {bottom:-100px; height:100px; background-size:40px; background-position:center top 10px!important;
 						h3 {@include font-size(16px,20px); margin-top:50px; max-width:140px;}
 					}
+				}
+				.button_wrapper {width:300px; height:75px;
+					img.badge {width:75px; height:75px;}
+					a.button {top:12px;}
 				}				
 			}			
 		}
@@ -454,8 +463,8 @@ body.page-home {
 				a.boldLink {@include font-size(13px); letter-spacing:-0.04em;}
 				.flexcolumn.r1 {
 					.text {
-						p.quote {margin-top:20px; margin-bottom:20px; max-width:480px;}
-						p.person {margin-bottom:40px;}
+						h3, p.person {display:none;}
+						p.quote {margin-top:20px; margin-bottom:30px; max-width:480px;}
 						a {order:4; max-width:290px;}
 					}	
 				}
@@ -464,10 +473,10 @@ body.page-home {
 					&:after {content:""; position:absolute; top:0px; display:block; width:100%; height:330px; background-position:center top; background-size:415px auto; z-index:-1;}
 					.container {padding-top:330px;}
 					.text {margin-top:20px;
+						h3, p.person, a {display:none;}
 						p.quote {max-width:480px; margin-top:40px;
 							&:before {top:-40px; left:44%;}
 						}
-						h3, p.person, a {display:none;}	
 					}
 				}				
 			}
@@ -567,13 +576,13 @@ body.page-home {
 					}
 				}
 			}
-			@include mobile_480 {
+			@include mobile_510 {
 				.column.image {position:relative; max-width:450px; height:240px; margin-top:20px; @include center-horizontal();
 					img {position:absolute; right:0px; bottom:0px; width:240px;}
 					.title {position:absolute; left:60px; top:40px; width:200px;}
 				}			
 			}
-			@include mobile_320 {
+			@include mobile_360 {
 				.column.image {margin-top:20px;
 					img {width:100%; max-width:400px; @include center-horizontal();}
 					.title {padding-top:15px; padding-bottom:15px; text-align:center;}

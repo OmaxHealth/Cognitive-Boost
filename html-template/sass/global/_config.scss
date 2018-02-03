@@ -3,6 +3,7 @@ $color-blue: #007EB1;
 $color-red: #FF5349;
 $color-gray1: #F6F9FC;
 $color-gray2: #78787B;
+$color-teal: #09C9C0;
 
 
 // SASS: Responsive Media Queries
@@ -26,13 +27,13 @@ $color-gray2: #78787B;
 		@content;
 	}
 }
-@mixin mobile_480 {
-	@media (min-width:480px) and (max-width:767px){
+@mixin mobile_510 {
+	@media (min-width:510px) and (max-width:767px){
 		@content;
 	}
 }
-@mixin mobile_320 {
-	@media (max-width:479px){
+@mixin mobile_360 {
+	@media (max-width:509px){
 		@content;
 	}
 }
