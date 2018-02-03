@@ -8,9 +8,6 @@ jQuery(document).ready(function($){
 	initMobileNav();
 	initVideo();
 	
-	if (isPage('home') || isPage('real-user-stories')){
-		
-	}
 });
 
 // ===================================================================
