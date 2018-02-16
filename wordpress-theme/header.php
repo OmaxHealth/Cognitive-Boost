@@ -34,7 +34,7 @@
 		</nav>
 		<nav class="global">
 			<a href="tel:1-800-881-6084">Click to Call</a>
-			<a href="#"><span>Order Now</span></a>
+			<a href="https://mind.omaxhealth.com/cart/buybutton.php?id=Zc4EJX_Iy0SAAg4PPoyAYw"><span>Order Now</span></a>
 		</nav>
 		<div class="offer">
 			<p>First Box $19.95 + FREE SHIPPING</p>

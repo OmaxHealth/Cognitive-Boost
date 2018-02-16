@@ -110,6 +110,10 @@ function force_page_template($template){
 		$new_template = locate_template(array('page-template-privacy-policy.php'));
 		if ('' != $new_template) {return $new_template;}
 	}
+	if (is_page('refund-policy')){
+		$new_template = locate_template(array('page-template-refund-policy.php'));
+		if ('' != $new_template) {return $new_template;}
+	}
 	return $template;
 }
 ?>

@@ -29,7 +29,7 @@
 				<img class="badge" src="<?php bloginfo('template_directory'); ?>/images/icon-60day-badge.png" alt ="60 Day Money-Back Guarentee" />
 			</div>
 			<div class="column right">
-				<a class="button red" href="#"><span>Order Now</span></a>
+				<a class="button red" href="https://mind.omaxhealth.com/cart/buybutton.php?id=Zc4EJX_Iy0SAAg4PPoyAYw"><span>Order Now</span></a>
 			</div>		
 		</div>		
 	</section>
@@ -213,7 +213,7 @@
 						<div class="ln1">70%</div>
 						<div class="ln2">Off</div>
 					</div>
-					<a class="button red" href="#"><span>Order Now</span></a>
+					<a class="button red" href="https://mind.omaxhealth.com/cart/buybutton.php?id=Zc4EJX_Iy0SAAg4PPoyAYw"><span>Order Now</span></a>
 				</div>				
 			</div>
 		</div>
