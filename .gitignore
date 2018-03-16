@@ -1,5 +1,5 @@
 *~
 .DS_Store
-grunt/.sass-cache
-grunt/node_modules
-grunt/package-lock.json
++grunt/.sass-cache
++grunt/node_modules
++grunt/package-lock.json
