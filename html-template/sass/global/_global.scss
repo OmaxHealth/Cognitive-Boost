@@ -1,5 +1,3 @@
-
-
 // Global: Top Navigation
 header {
 	& {background-color:#fff; position:fixed; top:0px; left:0px; right:0px; z-index:100;
@@ -446,8 +444,8 @@ main {
 		}		
 	}
 	
-	// Global Section: Legal Copy (Terms & Conditions / Privacy Policy)
-	#legal {
+	// Global Page: Legal Copy (Terms & Conditions / Privacy Policy)
+	&#legal {
 		h1 {@include font('MontserratRegular'); color:#000; text-align:center; @include center-horizontal();}
 		h2 {@include font('MontserratSemiBold'); text-transform:uppercase;}
 		h3 {@include font('MontserratMedium');}
@@ -489,8 +487,8 @@ main {
 		}				
 	}
 
-	// Global Section: WordPress Blank Page
-	#wp-content {
+	// Global Page: WordPress Blank Page
+	&#wp-content {
 		h1 {@include font('MontserratRegular'); color:#000; text-align:center; @include center-horizontal();}
 		h2 {@include font('MontserratSemiBold'); text-transform:uppercase;}
 		h3 {@include font('MontserratMedium');}

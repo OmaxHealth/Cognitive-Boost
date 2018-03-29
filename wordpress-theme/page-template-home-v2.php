@@ -1,51 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Cognitive Boost - Omax Health</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" />
-	<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
-	
-	<!-- Google Tag Manager -->
-</head>
-<body class="page-home">
-
-<header>
-	<div class="container">
-		<a class="logo" href="./index.html">Omax Cognitive Boost</a>
-		<nav class="menu">
-			<svg class="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-				<path d="M2.5 9.25h27c1.242 0 2.25-1.008 2.25-2.25s-1.008-2.25-2.25-2.25h-27C1.258 4.75.25 5.758.25 7S1.258 9.25 2.5 9.25zm27 4.5h-27C1.258 13.75.25 14.758.25 16s1.008 2.25 2.25 2.25h27c1.242 0 2.25-1.008 2.25-2.25s-1.008-2.25-2.25-2.25zm0 9h-27C1.258 22.75.25 23.758.25 25s1.008 2.25 2.25 2.25h27c1.242 0 2.25-1.008 2.25-2.25s-1.008-2.25-2.25-2.25z"/>
-			</svg>
-			<div class="pages">
-				<a href="./how-it-works.html">How it Works</a>
-				<a href="./real-user-stories.html">Real User Stories</a>
-			</div>
-		</nav>
-		<nav class="global">
-			<a href="tel:1-800-881-6084">Click to Call</a>
-			<a href="https://mind.omaxhealth.com/cart/buybutton.php?id=Zc4EJX_Iy0SAAg4PPoyAYw"><span>Order Now</span></a>
-		</nav>
-		<div class="offer">
-			<p>First Box $19.95 + FREE SHIPPING</p>
-		</div>
-	</div>
-</header>
+<?php get_header(); ?>
+<?php the_post(); ?>
 
 <main id="home">
+	
 	<section id="hero">
 		<div class="container">
 			<div class="text">
 				<h3>Scientifically Advanced</h3>
 				<h1><strong>Cognitive</strong> Boost</h1>
-				<h2>Better Brain For Life<sup>&trade;</sup></h2>
-				<p>Instantly boost memory, focus & natural energy levels while supporting lifelong cognitive health.</p>
+				<h2>First Box $19.95</h2>
 			</div>
-			<div class="product"><img src="./images/hero-home-mobile-bg.jpg"/></div>
+			<div class="book">
+				<h3><strong>Plus</strong>, Free EBook</h3>
+				<ul>
+					<li>Get sharper and more focused</li>
+					<li>Naturally boost your memory</li>
+					<li>Learn tips for lifelong brain health</li>
+				</ul>
+			</div>
+			<div class="product"><img src="<?php bloginfo('template_directory'); ?>/images/hero-home-v2-mobile-bg.jpg"/></div>
 			<div class="order">
 				<div class="price">
 					<div class="ln1">Save 70%</div>
@@ -90,14 +63,14 @@
 					<p>Alpha-GPC, is a natural form of Choline found in your brain and in mother's milk, that is critical for brain development and producing neurotransmitters. Over 23 studies have shown Alpha-GPC to support enhanced cognitive function including improved concentration, focus, memory and recall.</p>
 				</div>
 				<div class="column">
-					<img class="icon brain" src="./images/howitworks-brain.gif" alt="brain animation"/>
+					<img class="icon brain" src="<?php bloginfo('template_directory'); ?>/images/howitworks-brain.gif" alt="brain animation"/>
 				</div>
 				<div class="column">
 					<h3>Omega-3 DHA</h3>
 					<p>Omega-3 fatty acids are essential to brain health, as DHA significantly impacts the brain's structure and signaling systems. High-concentration DHA helps promote optimal memory function and mood, while supporting lifelong brain health.</p>
 				</div>
 			</div>
-			<a class="button white" href="./how-it-works.html"><span>How it Works</span></a>
+			<a class="button white" href="<?php bloginfo('url'); ?>/how-it-works/"><span>How it Works</span></a>
 			</div>
 		</div>
 	</section>
@@ -135,7 +108,7 @@
 				</div>
 			</div>
 			<div class="button_wrapper">
-				<img class="badge" src="./images/icon-60day-badge.png" alt ="60 Day Money-Back Guarentee" />
+				<img class="badge" src="<?php bloginfo('template_directory'); ?>/images/icon-60day-badge.png" alt ="60 Day Money-Back Guarentee" />
 				<a class="button red" href="https://mind.omaxhealth.com/cart/buybutton.php?id=Zc4EJX_Iy0SAAg4PPoyAYw"><span>Order Now</span></a>
 			</div>
 		</div>
@@ -149,14 +122,14 @@
 		</div>
 		<div class="flexcolumn r1 container videoLeft">
 			<div class="column video" data-id="6sWvXOTki3o">
-				<img class="overlay" src="./images/video-thumb-tiffany.jpg" alt="tiffany"/>
+				<img class="overlay" src="<?php bloginfo('template_directory'); ?>/images/video-thumb-tiffany.jpg" alt="tiffany"/>
 				<div class="player"></div>
 			</div>
 			<div class="column text">
 				<h3>Tiffany P.</h3>
 				<p class="person">Mom</p>
 				<p class="quote">Within the first day, I had this amazing response. I felt a surge of energy. It was amazing, and I felt like I could take on the world.</p>
-				<a class="boldLink" href="./real-user-stories.html">See all real user stories and videos</a>
+				<a class="boldLink" href="<?php bloginfo('url'); ?>/real-user-stories/">See all real user stories and videos</a>
 			</div>					
 		</div>	
 		<div class="flexcolumn r2">
@@ -165,7 +138,7 @@
 					<p class="quote">It's easy to take and the benefits have have been amazing for me! I feel 20 years younger!</p>
 					<h3>Greg H.</h3>
 					<p class="person">Visuals</p>
-					<a class="boldLink" href="./real-user-stories.html">See all real user stories and videos</a>
+					<a class="boldLink" href="<?php bloginfo('url'); ?>/real-user-stories/">See all real user stories and videos</a>
 				</div>					
 			</div>
 		</div>
@@ -183,7 +156,7 @@
 		<div class="container">
 			<div class="flexcolumn">
 				<div class="column image">
-					<img src="./images/home-dr-maroon.jpg" alt="Dr. Joseph Maroon"/>
+					<img src="<?php bloginfo('template_directory'); ?>/images/home-dr-maroon.jpg" alt="Dr. Joseph Maroon"/>
 					<div class="title">
 						<p class="ln1">Dr. Joseph Maroon,</p>
 						<p class="ln2">Neurosurgeon, Sports Medicine Expert, Athlete</p>
@@ -225,27 +198,4 @@
 	
 </main>
 
-<footer>
-	<div class="container">
-		<p class="disclaimer">These statements have not been evaluated by the Food & Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.</p>
-		<p>*with enrollment into VIP auto-shipment program. 60-day money-back guarantee on first box only.</p>
-		<p>Customer is responsible for obtaining a return authorization and paying return shipping costs.</p>
-		<p>Dr. Maroon is a paid endorser of Cognitive Boost. Results will vary. Real user testimonials have been reimbursed for associated costs of filming.</p>
-		<p>There is an additional cost of $9.95 to ship to Canada, Hawaii, Alaska and Puerto Rico.</p>
-		<p class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Omax Health, Inc.</p>
-		<nav class="links">
-			<a href="./terms-and-conditions.html">Terms & Conditions</a>
-			<a href="./privacy-policy.html">Privacy Policy</a>
-			<a href="./faq.html">FAQ</a>
-			<a href="mailto:contact@omaxhealth.com?subject=Cognitive%20Boost%20Question">Contact Us</a>
-		</nav>
-	</div>
-</footer>
-
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js?ver=1.12.4"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js?ver=1.4.1"></script>
-<script src="./js/plugins.min.js"></script>
-<script src="./js/main.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>

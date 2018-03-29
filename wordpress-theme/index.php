@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
 
-<main>
-	<section id="wp-content">
+<main id="wp-content">
+	<section>
 		<div class="container">
 			<?php the_content(); ?>
 		</div>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
 
-<main>
+<main id="home">
 	
 	<section id="hero">
 		<div class="container">

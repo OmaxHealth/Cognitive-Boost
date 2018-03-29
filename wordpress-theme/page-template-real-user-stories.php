@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
 
-<main>
+<main id="real-user-stories">
 	
 	<section id="hero">
 		<div class="container">
