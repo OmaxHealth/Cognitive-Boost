@@ -11,7 +11,7 @@
 				<h2>First Box $19.95</h2>
 			</div>
 			<div class="book">
-				<h3><strong>Plus</strong>, Free EBook</h3>
+				<h3><strong>Plus</strong>, Free EBook <small>($19.99 value)</small></h3>
 				<ul>
 					<li>Get sharper and more focused</li>
 					<li>Naturally boost your memory</li>
@@ -175,10 +175,9 @@
 			<div class="text">
 				<div class="price">
 					<h2>First Box $19.95</h2>
-					<div class="value">A $49.95 VALUE</div>
 				</div>
 				<div class="book">
-					<h3><strong>Plus</strong>, Free EBook</h3>
+					<h3><strong>Plus</strong>, Free EBook <small>($19.99 value)</small></h3>
 					<ul>
 						<li>Get sharper and more focused</li>
 						<li>Naturally boost your memory</li>
