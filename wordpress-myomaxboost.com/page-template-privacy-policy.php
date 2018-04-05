@@ -1,9 +1,9 @@
-<?php get_header(); ?>
+<?php get_template_part('content','header'); ?>
 <?php the_post(); ?>
 
-<main>
+<main id="legal">
 	
-	<section id="legal">
+	<section>
 		<div class="container">
 			<h1>Privacy Policy</h1>
 			<p>This privacy policy addresses how this website and all pages within this website located at <a target="_blank" href="http://www.omaxhealth.com">www.omaxhealth.com</a> (this "Site") and its owner, Omax Health, Inc. f/k/a Prevention Pharmaceuticals, Inc. ("Company") collect and use information you provide. By visiting this Site, and providing your information to us, you agree to accept the practices described in this privacy policy.<br> <br> <strong>What Information We Collect About You</strong><br> We group the collection of user information into two categories: personal, which is information identifiable to a specific member, and aggregate, which is general demographic information that does not identify any individual member. Personal information may include your name, email address, mailing address, credit card information and phone number. We may also collect certain demographic information such as your site preferences, age, gender, geographical location, language, time zone, income and education (some of the information we ask for may be optional). Company may use or disclose aggregate information for any purpose.<br> <br> <strong>How Your Information May be Used <br> </strong>We collect personal information to make our services related to this Site ("Services") more rewarding for you to use, including billing, shipping and tracking your orders. If we have any questions or concerns regarding your order, we may use this information to contact you. We also use this information for internal purposes, such as studying our customers' preferences and improving the customers' experiences. We may also use your information to contact you for promotional purposes. We also may use this information to provide customer service to you. If you enter into a sweepstakes, contest, or similar promotion, we may use the information you provide to administer those activities. We may combine information about you with information from other sources in order to improve the quality of our services.<br> <br> We also receive and store certain personally non-identifiable information, which is collected passively using various technologies, and cannot presently be used to specifically identify you. This Site may use such information and pool it with other information to track, for example, the total number of visitors to our Site, the number of visitors to each page of our Site, the domain names of our visitors' Internet service providers, and how our users use and interact with the Services. Also, in an ongoing effort to better understand and serve you, we often conduct research on customer demographics, interests and behavior based on the personal information and other information provided to us. This research may be compiled and analyzed on an aggregate basis. We may share this non-identifiable and aggregate data with affiliates, agents and business partners, but this type of non-identifiable and aggregate information does not identify you personally. We may also disclose aggregated user statistics in order to describe our Services to current and prospective business partners, and to other third parties for other lawful purposes.</p>
@@ -73,4 +73,4 @@
 	
 </main>
 
-<?php get_footer(); ?>
+<?php get_template_part('content','footer'); ?>

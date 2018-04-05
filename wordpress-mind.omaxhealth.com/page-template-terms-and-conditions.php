@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_template_part('content','header'); ?>
 <?php the_post(); ?>
 
 <main id="legal">
@@ -151,4 +151,4 @@
 	
 </main>
 
-<?php get_footer(); ?>
+<?php get_template_part('content','footer'); ?>

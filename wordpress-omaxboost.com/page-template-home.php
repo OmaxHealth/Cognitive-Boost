@@ -1,9 +1,9 @@
-<?php get_header(); ?>
+<?php get_template_part('content','header'); ?>
 <?php the_post(); ?>
 
-<main>
+<main id="home">
 	
-	<section id="hero">
+	<section id="hero" class="version1">
 		<div class="container">
 			<div class="text">
 				<h3>Scientifically Advanced</h3>
@@ -163,32 +163,8 @@
 		</div>		
 	</section>
 
-	<section id="lowerCTA">
-		<div class="container">
-			<div class="text">
-				<div class="price">
-					<h2>$49.95</h2>
-					<div class="value">FREE SHIPPING</div>
-				</div>
-				<div class="book">
-					<h3><strong>Plus</strong>, Free EBook</h3>
-					<ul>
-						<li>Get sharper and more focused</li>
-						<li>Naturally boost your memory</li>
-						<li>Learn tips for lifelong brain health</li>
-					</ul>
-				</div>
-				<div class="purchase">
-					<div class="discount">
-						<div class="ln1">&nbsp;</div>
-						<div class="ln2">&nbsp;</div>
-					</div>
-					<a class="button red" href="https://omaxhealth.com/products/omax-cognitive-boost"><span>Order Now</span></a>
-				</div>				
-			</div>
-		</div>
-	</section>
+<?php get_template_part('content','lowerCTA'); ?>
 	
 </main>
 
-<?php get_footer(); ?>
+<?php get_template_part('content','footer'); ?>

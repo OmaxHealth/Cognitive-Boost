@@ -4,17 +4,13 @@ main#home {
 	// Section: Main Hero
 	#hero {
 		.text {text-align:center;
-			& > * {text-align:center;}
+			& > * {@include center-horizontal(); text-align:center;}
 			h1 {@include font('MontserratLight'); color:$color-blue; text-transform:uppercase;
 				strong {@include font('MontserratSemiBold');}
-			}
-			h2 {@include font('MontserratMedium'); color:#000;
-				sup {@include font('MontserratLight'); font-size:50%;}
 			}
 			h3 {@include font('MontserratRegular'); color:#000; text-transform:uppercase; display:inline-block; position:relative;
 				&:after {content:""; position:absolute; bottom:0px; left:0px; right:0px; display:block; height:2px; background-color:$color-blue;}
 			}
-			p {@include font('MontserratMedium'); color:#000; @include center-horizontal();}
 		}
 		.order {position:relative; display:block;
 			.price {text-align:center;
@@ -22,9 +18,39 @@ main#home {
 				.ln2 {@include font('MontserratMedium'); color:#282528; text-transform:uppercase;}
 			}
 		}
+		
+		// Version 1
+		&.version1 {
+			.text {
+				h2 {@include font('MontserratMedium'); color:#000;
+					sup {@include font('MontserratLight'); font-size:50%;}
+				}
+				p {@include font('MontserratMedium'); color:#000;}
+			}	
+		}
+		
+		// Version 2
+		&.version2 {
+			.text {
+				h2 {@include font('MontserratLight'); color:#fff; background-color:$color-blue; text-align:center;}
+			}
+			.book {position:absolute; background-image:url('images/lower-book.png'); background-repeat:no-repeat;
+				h3 {@include font('MontserratRegular'); color:$color-blue; text-transform:uppercase; letter-spacing:-0.06em;
+					strong {@include font('MontserratSemiBold');}
+					small {@include font('MontserratRegular'); text-transform:none;}
+				}
+				ul {@include font('MontserratRegular'); color:#000; padding-left:12px;
+					li {position:relative; padding-left:5px;
+						&:before {content:">"; position:absolute; left:-10px; top:1px; color:$color-blue;}
+						&:last-of-type{margin-bottom:0px;}
+					}
+				}
+			}
+		}
 
 		@include tablet_up {
-			& {background:#8496a4 url('images/hero-home-desktop-bg.jpg') top center no-repeat; background-size:auto 100%;}
+			&.version1 {background:#8496a4 url('images/hero-home-desktop-bg.jpg') top center no-repeat; background-size:auto 100%;}
+			&.version2 {background:#ffffff url('images/hero-home-v2-desktop-bg.jpg') top center no-repeat; background-size:auto 100%;}
 			.text,
 			.order {position:absolute;
 				.price {position:absolute; left:0px;}
@@ -34,82 +60,189 @@ main#home {
 		}
 		@include desktop {
 			.container {height:700px;}
-			.text {left:685px; top:150px; width:480px;
+			.text {
 				h3 {@include font-size(24px); width:350px; margin-bottom:20px;
 					&:after {bottom:-10px;}
 				}
-				h1 {@include font-size(54px); letter-spacing:-0.06em; margin-bottom:20px;}
-				h2 {@include font-size(42px); margin-bottom:30px;
-					sup {position:relative; font-size:50%; line-height:30px; top:10px;}
-				}
-				p {@include font-size(22px,32px); width:400px; letter-spacing:-0.02em;}
+				h1 {@include font-size(54px); letter-spacing:-0.06em;}				
 			}
-			.order {left:710px; top:500px; width:430px; height:60px;
+			.order {width:430px; height:60px;
 				.price {top:6px;
 					.ln1 {@include font-size(30px);}
 					.ln2 {@include font-size(20px);}
 				}
 				a.button {width:240px;}
 			}
+			
+			// Version 1
+			&.version1 {
+				.text {width:480px; top:150px; right:50px;
+					h1 {margin-bottom:20px;}
+					h2 {@include font-size(42px); margin-bottom:30px;
+						sup {position:relative; font-size:50%; line-height:30px; top:10px;}
+					}
+					p {@include font-size(22px,32px); width:400px; letter-spacing:-0.02em;}
+				}
+				.order {top:500px; right:60px;}				
+			}
+			
+			// Version 2
+			&.version2 {
+				.text {width:530px; top:100px; right:0px;
+					h1 {margin-bottom:25px;}
+					h2 {@include font-size(60px); letter-spacing:-0.04em; padding:30px 0;}
+				}
+				.book {top:330px; right:5px;  padding-top:35px; padding-left:160px; min-height:200px; background-size:auto 200px;
+					h3 {@include font-size(28px); margin-bottom:15px;
+						small {@include font-size(22px);}
+					}
+					li {@include font-size(20px); letter-spacing:-0.01em; margin-bottom:15px;}	
+				}
+				.order {top:540px; right:50px;}	
+			}
 		}
 		@include tablet {
 			.container {height:430px;}
-			.text {left:380px; top:100px; width:370px;
+			.text {
 				h3 {@include font-size(16px); width:240px; margin-bottom:20px;
 					&:after {bottom:-10px;}
 				}
-				h1 {@include font-size(34px); margin-bottom:5px;}
-				h2 {@include font-size(26px); margin-bottom:10px;
-					sup {position:relative; top:6px;}
-				}
-				p {@include font-size(16px,22px); width:300px;}
+				h1 {@include font-size(34px);}
 			}
-			.order {left:440px; top:305px; width:300px; height:50px;
+			.order {width:300px; height:50px;
 				.price {top:4px;
 					.ln1 {@include font-size(24px);}
 					.ln2 {@include font-size(16px);}
 				}
 				a.button {top:4px;}
 			}
+			
+			// Version 1
+			&.version1 {
+				.text {width:370px; top:100px; right:0px;
+					h3 {@include font-size(16px); width:240px; margin-bottom:20px;
+						&:after {bottom:-10px;}
+					}
+					h1 {margin-bottom:5px;}
+					h2 {@include font-size(26px); margin-bottom:10px;
+						sup {position:relative; top:6px;}
+					}
+					p {@include font-size(16px,22px); width:300px;}
+				}
+				.order {top:305px; right:20px;}				
+			}
+			
+			// Version 2
+			&.version2 {
+				.text {width:370px; top:50px; right:0px;
+					h1 {margin-bottom:16px;}
+					h2 {@include font-size(36px); letter-spacing:-0.04em; padding:16px 0; max-width:340px;}
+				}
+				.book {top:195px; right:5px; width:360px; padding-top:20px; padding-left:85px; min-height:110px; background-size:auto 110px;
+					h3 {@include font-size(18px); margin-bottom:10px;
+						small {@include font-size(14px);}
+					}
+					li {@include font-size(14px,18px); letter-spacing:-0.03em; margin-bottom:6px;}
+				}
+				.order {top:330px; right:30px;}				
+			}
 		}
 		@include mobile {
-			& {background-color:#f1f3f4;}
 			.container {width:100vw; padding:20px 0 30px;}
 			.text,
-			.order {position:relative; width:100%; @include center-horizontal();}
-			.text h2 {display:none;}
+			.order,
+			.book,
+			.product {position:relative!important; width:100%; @include center-horizontal();}
 			
+			
+			// Version 1
+			&.version1 {background-color:#f1f3f4;
+				.text h2 {display:none;}
+			}
+			
+			// Version 2
+			&.version2 {background-color:#ffffff;
+				.product {
+					img {@include center-horizontal(); width:96%;}
+				}				
+			}
 		}
 		@include mobile_510 {
-			.text {max-width:450px; margin-bottom:10px;
+			.text {
 				h3 {@include font-size(27px); margin-bottom:20px;
 					&:after {height:2px; bottom:-10px;}
 				}
-				h1 {@include font-size(46px); letter-spacing:-0.01em; margin-bottom:5px;}
-				p {@include font-size(18px,28px); max-width:340px;}
+				h1 {@include font-size(46px); letter-spacing:-0.01em;}
 			}
 			.product {width:100%;}
-			.order {margin-top:-50px;
-				.price {margin-bottom:20px;
-					.ln1 {@include font-size(32px);}
-					.ln2 {@include font-size(21px);}
+			.order .price {margin-bottom:20px;
+				.ln1 {@include font-size(32px);}
+				.ln2 {@include font-size(21px);}
+			}
+			
+			// Version 1
+			&.version1 {
+				.text {max-width:450px; margin-bottom:10px;
+					h1 {margin-bottom:5px;}
+					p {@include font-size(18px,28px); max-width:340px;}
 				}
+				.order {margin-top:-50px;}				
+			}
+			
+			// Version 2
+			&.version2 {
+				.text {
+					h1 {margin-bottom:10px;}
+					h2 {@include font-size(36px); padding:16px 0; max-width:450px;}
+				}
+				.book {width:470px; margin-top:-20px; margin-bottom:10px; padding-top:30px; padding-left:108px; min-height:140px; background-size:auto 140px;
+					h3 {@include font-size(26px); margin-bottom:10px;
+						small {@include font-size(18px);}
+					}
+					li {@include font-size(18px,22px); letter-spacing:-0.03em; margin-bottom:6px;}
+				}
+				.product {
+					img {max-width:400px;}
+				}
+				.order {margin-top:-30px;}				
 			}
 		}
 		@include mobile_360 {
-			.text {margin-bottom:10px;
-				h3 {@include font-size(16px); display:inline-block; margin-bottom:15px;
-					&:after {height:1px; bottom:-6px;}
-				}
-				h1 {@include font-size(33px); margin-bottom:8px;}
-				p {@include font-size(14px,20px); max-width:260px;}
-			}
 			.product {width:100vw;}
-			.order {margin-top:-30px;
-				.price {margin-bottom:10px;
-					.ln1 {@include font-size(23px);}
-					.ln2 {@include font-size(15px);}
+			.order .price {margin-bottom:10px;
+				.ln1 {@include font-size(23px);}
+				.ln2 {@include font-size(15px);}
+			}
+			
+			// Version 1
+			&.version1 {
+				.text {margin-bottom:10px;
+					h3 {@include font-size(16px); display:inline-block; margin-bottom:15px;
+						&:after {height:1px; bottom:-6px;}
+					}
+					h1 {@include font-size(33px); margin-bottom:8px;}
+					p {@include font-size(14px,20px); max-width:260px;}
 				}
+				.order {margin-top:-30px;}				
+			}
+			
+			// Version 2
+			&.version2 {
+				.text {
+					h3 {display:none;}
+					h1 {@include font-size(33px); margin-bottom:6px;}
+					h2 {@include font-size(26px); letter-spacing:-0.04em; padding:10px 0; max-width:320px;}
+				}
+				.book {width:340px; margin-top:-10px;  margin-bottom:10px; padding-top:20px; padding-left:80px; min-height:100px; background-size:auto 100px;
+					h3 {@include font-size(18px); margin-bottom:5px;
+						small {@include font-size(14px);}
+					}
+					li {@include font-size(14px,18px); letter-spacing:-0.03em; margin-bottom:2px;}
+				}
+				.product {
+					img {max-width:220px;}
+				}
+				.order {margin-top:-10px;}				
 			}
 		}
 	}

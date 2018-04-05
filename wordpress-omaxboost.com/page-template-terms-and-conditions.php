@@ -1,13 +1,12 @@
-<?php get_header(); ?>
+<?php get_template_part('content','header'); ?>
 <?php the_post(); ?>
 
-<main>
-	
-	<section id="legal">
+<main id="legal">
+	<section>
 		<div class="container">
 			<h1>Terms &amp; Conditions</h1>
 
-<p><strong>By placing your order, you agree to the following Terms and Conditions:</strong></p> 	
+			<p><strong>By placing your order, you agree to the following Terms and Conditions:</strong></p> 	
 
 			<h2>Omax Cognitive Boost $19.95 First Box Offer</h2>
 			<p>Pay only $19.95 today for a 30-day Starter Kit of Omax Cognitive Boost (A $49.95 retail value) and you'll receive free shipping and our 60-day money back guarantee.*  As a VIP member, in 30 days and every 60 days thereafter, you will receive a fresh 60-day supply of Omax Cognitive Boost (2, 60-count boxes) billed to your credit card at the discounted price of $79.99 ($99.90 retail value). You can call customer service at any time to cancel, skip or change your auto-shipments. *60-day money back guarantee applies to your first order of Omax Cognitive Boost, less return shipping & handling fees. To request a refund, please follow our <a href="#returns">returns & exchange policy</a>. If you have any questions, please contact Omax Health Customer Care at <a href="tel:1-800-765-6691">1-800-765-6691</a> or <a href="mailto:care@omaxhealth.com">care@omaxhealth.com</a> (Monday - Friday between 8am and 7pm EST.)</p>
@@ -151,4 +150,4 @@
 	
 </main>
 
-<?php get_footer(); ?>
+<?php get_template_part('content','footer'); ?>
