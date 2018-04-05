@@ -317,7 +317,14 @@ main {
 				&:last-of-type{margin-bottom:0px;}
 			}
 		}
-		.price {display:block; text-align:center;}
+		.price {display:block; text-align:center;
+			.value {display:inline-block; position:relative; @include font('MontserratLight'); color:#fff;
+				&:before,
+				&:after {content:""; position:absolute; top:50%; height:1px; background-color:#fff;}
+				&:before {left:0px; width:20px;}
+				&:after {right:0px; width:20px;}
+			}
+		}
 		.book {background-image:url('images/lower-book.png'); background-repeat:no-repeat;}
 		.purchase {position:relative;
 			.discount {position:absolute; border:2px solid #000; background-color:#fff;
@@ -332,48 +339,108 @@ main {
 			.text {display:block; position:absolute; top:0px; right:0px;}
 		}
 		@include desktop {
-			&:before {height:180px;}
-			.container {min-height:600px; background-size:650px 500px; background-position:top 40px left 0px;}
-			.text {width:550px;
-				.price {margin-top:60px; margin-bottom:90px;
-					h2 {@include font-size(58px);}
-				}
-				.book {padding-top:30px; padding-left:150px; margin-bottom:20px; min-height:190px; background-size:auto 190px;
-					h3 {@include font-size(28px); margin-bottom:20px;
-						small {@include font-size(22px);}
+			// Version 1
+			&.version1 {
+				&:before {height:220px;}
+				.container {min-height:600px; background-size:650px 500px; background-position:top 40px left 0px;}
+				.text {width:550px;
+					.price {margin-top:60px; margin-bottom:15px;
+						h2 {@include font-size(60px); margin-bottom:20px;}
+						.value {@include font-size(30px); width:430px;
+							&:before,
+							&:after {width:80px;}		
+						}
 					}
-					li {@include font-size(20px); letter-spacing:-0.01em; margin-bottom:15px;}
-					
-				}
-				.purchase {height:100px;
-					.discount {top:0px; left:70px; width:100px; height:100px; border-radius:50px;
-						.ln1 {@include font-size(28px); top:22px;}
-						.ln2 {@include font-size(28px); bottom:22px;}
+					.book {min-height:235px; padding-top:70px; padding-left:190px; background-size:175px 235px;
+						h3 {@include font-size(28px); margin-bottom:10px;}
+						li {@include font-size(20px); letter-spacing:-0.01em; margin-bottom:15px;}
+						
 					}
-					a.button {left:190px; top:20px; width:240px;}
-				}
+					.purchase {height:100px;
+						.discount {top:0px; left:70px; width:100px; height:100px; border-radius:50px;
+							.ln1 {@include font-size(28px); top:22px;}
+							.ln2 {@include font-size(28px); bottom:22px;}
+						}
+						a.button {left:190px; top:20px; width:240px;}
+					}
+				}				
+			}
+			
+			// Version 2
+			&.version2 {
+				&:before {height:180px;}
+				.container {min-height:600px; background-size:650px 500px; background-position:top 40px left 0px;}
+				.text {width:550px;
+					.price {margin-top:60px; margin-bottom:90px;
+						h2 {@include font-size(58px);}
+					}
+					.book {padding-top:30px; padding-left:150px; margin-bottom:20px; min-height:190px; background-size:auto 190px;
+						h3 {@include font-size(28px); margin-bottom:20px;
+							small {@include font-size(22px);}
+						}
+						li {@include font-size(20px); letter-spacing:-0.01em; margin-bottom:15px;}
+						
+					}
+					.purchase {height:100px;
+						.discount {top:0px; left:70px; width:100px; height:100px; border-radius:50px;
+							.ln1 {@include font-size(28px); top:22px;}
+							.ln2 {@include font-size(28px); bottom:22px;}
+						}
+						a.button {left:190px; top:20px; width:240px;}
+					}
+				}				
 			}
 		}
 		@include tablet {
-			&:before {height:120px;}
-			.container {min-height:380px; background-size:380px 292px; background-position:top 40px left 0px;}
-			.text {width:370px;
-				.price {margin-top:40px; margin-bottom:60px;
-					h2 {@include font-size(40px); margin-bottom:10px;}
-				}
-				.book {padding-top:10px; padding-left:100px; margin-bottom:20px; min-height:120px; background-size:auto 120px;
-					h3 {@include font-size(20px); margin-bottom:10px;
-						small {@include font-size(14px);}
+			// Version 1 
+			&.version1 {
+				&:before {height:160px;}
+				.container {min-height:440px; background-size:380px 292px; background-position:top 40px left 0px;}
+				.text {width:370px;
+					.price {margin-top:40px; margin-bottom:15px;
+						h2 {@include font-size(40px); margin-bottom:10px;}
+						.value {@include font-size(24px); width:300px;
+							&:before,
+							&:after {width:45px;}		
+						}
 					}
-					li {@include font-size(14px,20px); letter-spacing:-0.01em; margin-bottom:6px;}
-				}
-				.purchase {height:60px;
-					.discount {top:0px; left:30px; width:60px; height:60px; border-radius:30px; border-width:1px;
-						.ln1 {@include font-size(18px); top:12px;}
-						.ln2 {@include font-size(16px); bottom:12px;}
+					.book {min-height:135px; padding-top:40px; padding-left:110px; background-size:100px 134px;
+						h3 {@include font-size(20px); margin-bottom:10px;}
+						li {@include font-size(16px,20px); letter-spacing:-0.01em; margin-bottom:6px;}
+						
 					}
-					a.button {left:110px; top:5px; width:200px;}
-				}
+					.purchase {height:60px;
+						.discount {top:0px; left:30px; width:60px; height:60px; border-radius:30px; border-width:1px;
+							.ln1 {@include font-size(20px); top:10px;}
+							.ln2 {@include font-size(18px); bottom:10px;}
+						}
+						a.button {left:110px; top:5px; width:200px;}
+					}
+				}				
+			}
+			
+			// Version 2
+			&.version2 {
+				&:before {height:120px;}
+				.container {min-height:380px; background-size:380px 292px; background-position:top 40px left 0px;}
+				.text {width:370px;
+					.price {margin-top:40px; margin-bottom:60px;
+						h2 {@include font-size(40px); margin-bottom:10px;}
+					}
+					.book {padding-top:10px; padding-left:100px; margin-bottom:20px; min-height:120px; background-size:auto 120px;
+						h3 {@include font-size(20px); margin-bottom:10px;
+							small {@include font-size(14px);}
+						}
+						li {@include font-size(14px,20px); letter-spacing:-0.01em; margin-bottom:6px;}
+					}
+					.purchase {height:60px;
+						.discount {top:0px; left:30px; width:60px; height:60px; border-radius:30px; border-width:1px;
+							.ln1 {@include font-size(18px); top:12px;}
+							.ln2 {@include font-size(16px); bottom:12px;}
+						}
+						a.button {left:110px; top:5px; width:200px;}
+					}
+				}				
 			}
 		}		
 		@include mobile {
@@ -384,51 +451,109 @@ main {
 			}
 		}		
 		@include mobile_510 {
-			&:before {height:120px;}
-			.container {max-width:480px; background-size:330px auto; background-position:center top 70px;}
-			.text {padding-top:320px;
-				.price {top:25px;
-					h2 {@include font-size(40px); margin-bottom:10px;}
-				}
-				.book {padding-top:30px; padding-left:148px; margin-bottom:20px; min-height:200px; background-size:auto 200px;
-					h3 {@include font-size(24px); margin-bottom:15px;
-						small {@include font-size(18px);}
+			// Version 1
+			&.version1 {
+				&:before {height:160px;}
+				.container {max-width:480px; background-size:330px auto; background-position:center top 105px;}
+				.text {padding-top:350px;
+					.price {top:25px;
+						h2 {@include font-size(40px); margin-bottom:10px;}
+						.value {@include font-size(20px); width:280px;
+							&:before,
+							&:after {width:45px;}		
+						}
 					}
-					li {@include font-size(16px,22px); margin-bottom:10px;}
-				}
-				.purchase {width:440px; height:100px; margin-top:-15px;
-					.discount {top:0px; left:60px; width:100px; height:100px; border-radius:100px; border-width:1px;
-						.ln1 {@include font-size(28px); top:22px;}
-						.ln2 {@include font-size(28px); bottom:22px;}
+					.book {min-height:201px; padding-top:30px; padding-left:170px; background-size:150px 201px; background-position:left 10px top;
+						h3 {@include font-size(24px); margin-bottom:15px;}
+						li {@include font-size(16px,22px); margin-bottom:10px;}
 					}
-					a.button {top:15px; right:15px; width:250px;}	
-				}
+					.purchase {width:440px; height:100px; margin-top:-15px;
+						.discount {top:0px; left:60px; width:100px; height:100px; border-radius:100px; border-width:1px;
+							.ln1 {@include font-size(28px); top:22px;}
+							.ln2 {@include font-size(28px); bottom:22px;}
+						}
+						a.button {top:15px; right:15px; width:250px;}	
+					}
+				}				
+			}
+			
+			// Version 2
+			&.version2 {
+				&:before {height:120px;}
+				.container {max-width:480px; background-size:330px auto; background-position:center top 70px;}
+				.text {padding-top:320px;
+					.price {top:25px;
+						h2 {@include font-size(40px); margin-bottom:10px;}
+					}
+					.book {padding-top:30px; padding-left:148px; margin-bottom:20px; min-height:200px; background-size:auto 200px;
+						h3 {@include font-size(24px); margin-bottom:15px;
+							small {@include font-size(18px);}
+						}
+						li {@include font-size(16px,22px); margin-bottom:10px;}
+					}
+					.purchase {width:440px; height:100px; margin-top:-15px;
+						.discount {top:0px; left:60px; width:100px; height:100px; border-radius:100px; border-width:1px;
+							.ln1 {@include font-size(28px); top:22px;}
+							.ln2 {@include font-size(28px); bottom:22px;}
+						}
+						a.button {top:15px; right:15px; width:250px;}	
+					}
+				}				
 			}
 		}
 		@include mobile_360 {
-			&:before {height:80px;}
-			.container {width:330px; background-size:260px auto; background-position:center top 50px;}
-			.text {padding-top:260px;
-				.price {top:20px;
-					h2 {@include font-size(28px); margin-bottom:5px;}
-					.value {@include font-size(14px); width:200px;
-						&:before,
-						&:after {width:45px;}		
+			// Version 1
+			&.version1 {
+				&:before {height:120px;}
+				.container {width:330px; background-size:260px auto; background-position:center top 70px;}
+				.text {padding-top:270px;
+					.price {top:20px;
+						h2 {@include font-size(28px); margin-bottom:5px;}
+						.value {@include font-size(14px); width:200px;
+							&:before,
+							&:after {width:38px;}		
+						}
 					}
-				}
-				.book {padding-top:10px; padding-left:86px; margin-bottom:30px; min-height:110px; background-size:auto 110px;
-					h3 {@include font-size(18px); margin-bottom:8px;
-						small {@include font-size(14px);}
+					.book {min-height:135px; padding-top:15px; padding-left:105px; padding-right:10px; background-size:90px 120px; background-position:left 10px top;
+						h3 {@include font-size(22px); margin-bottom:8px; letter-spacing:-0.08em;}
+						li {@include font-size(14px,16px); margin-bottom:8px; letter-spacing:-0.04em;}					
 					}
-					li {@include font-size(14px,16px); margin-bottom:8px; letter-spacing:-0.04em;}					
-				}
-				.purchase {width:290px; height:70px; margin-top:-15px;
-					.discount {top:0px; left:0px; width:70px; height:70px; border-radius:70px; border-width:1px;
-						.ln1 {@include font-size(20px); top:15px;}
-						.ln2 {@include font-size(20px); bottom:15px;}
+					.purchase {width:290px; height:70px; margin-top:-15px;
+						.discount {top:0px; left:0px; width:70px; height:70px; border-radius:70px; border-width:1px;
+							.ln1 {@include font-size(20px); top:15px;}
+							.ln2 {@include font-size(20px); bottom:15px;}
+						}
+						a.button {top:10px; right:0px;}						
 					}
-					a.button {top:10px; right:0px;}						
-				}
+				}				
+			}
+			
+			// Version 2
+			&.version2 {
+				&:before {height:80px;}
+				.container {width:330px; background-size:260px auto; background-position:center top 50px;}
+				.text {padding-top:260px;
+					.price {top:20px;
+						h2 {@include font-size(28px); margin-bottom:5px;}
+						.value {@include font-size(14px); width:200px;
+							&:before,
+							&:after {width:45px;}		
+						}
+					}
+					.book {padding-top:10px; padding-left:86px; margin-bottom:30px; min-height:110px; background-size:auto 110px;
+						h3 {@include font-size(18px); margin-bottom:8px;
+							small {@include font-size(14px);}
+						}
+						li {@include font-size(14px,16px); margin-bottom:8px; letter-spacing:-0.04em;}					
+					}
+					.purchase {width:290px; height:70px; margin-top:-15px;
+						.discount {top:0px; left:0px; width:70px; height:70px; border-radius:70px; border-width:1px;
+							.ln1 {@include font-size(20px); top:15px;}
+							.ln2 {@include font-size(20px); bottom:15px;}
+						}
+						a.button {top:10px; right:0px;}						
+					}
+				}				
 			}
 		}		
 	}
