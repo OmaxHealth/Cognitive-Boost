@@ -6,33 +6,6 @@ remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'start_post_rel_link', 10, 0 );
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 
-// WordPress: Disable WordPress Admin Bar for all users
-show_admin_bar(false);
-
-// WordPress: Disable WP Emojicons
-add_action('init','disable_wp_emojicons');
-function disable_wp_emojicons(){
-  // all actions related to emojis
-  remove_action( 'admin_print_styles', 'print_emoji_styles' );
-  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-  remove_action( 'wp_print_styles', 'print_emoji_styles' );
-  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-
-  // filter to remove TinyMCE emojis
-  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
-  
-	function disable_emojicons_tinymce($plugins){
-		if (is_array($plugins)) {
-			return array_diff($plugins, array('wpemoji'));
-		} else {
-			return array();
-		}
-	}
-}
-
 // WordPress: Removes the default Post types from the admin section
 add_action( 'admin_menu', 'remove_menus' );
 function remove_menus(){
@@ -44,6 +17,61 @@ function remove_menus(){
 	if(!current_user_can('update_core')) {
 		remove_menu_page('tools.php');					//Tools
 	}
+}
+
+// WordPress: Disable WordPress Admin Bar for all users
+show_admin_bar(false);
+
+// WordPress: Forces page templates to load without needing to set template type
+add_filter('template_include', 'force_page_template', 99);
+function force_page_template($template){
+	global $post;
+
+	if (is_front_page() || is_page('home')){//Front Page must be assigned in Setting > Reading
+		$new_template = locate_template(array('page-template-home.php'));
+		if ('' != $new_template) {return $new_template;}
+	}
+	if (is_page('home-v2')){
+		$new_template = locate_template(array('page-template-home-v2.php'));
+		if ('' != $new_template) {return $new_template;}
+	}
+	if (is_page('how-it-works')){
+		$new_template = locate_template(array('page-template-how-it-works.php'));
+		if ('' != $new_template) {return $new_template;}
+	}
+	if (is_page('real-user-stories')){
+		$new_template = locate_template(array('page-template-real-user-stories.php'));
+		if ('' != $new_template) {return $new_template;}
+	}
+	if (is_page('terms-and-conditions')){
+		$new_template = locate_template(array('page-template-terms-and-conditions.php'));
+		if ('' != $new_template) {return $new_template;}
+	}
+	if (is_page('privacy-policy')){
+		$new_template = locate_template(array('page-template-privacy-policy.php'));
+		if ('' != $new_template) {return $new_template;}
+	}
+	if (is_page('contact-us')){
+		$new_template = locate_template(array('page-template-contact-us.php'));
+		if ('' != $new_template) {return $new_template;}
+	}
+	if (is_page('faq')){
+		$new_template = locate_template(array('page-template-faq.php'));
+		if ('' != $new_template) {return $new_template;}
+	}
+	return $template;
+}
+
+// WordPress: Changes the outgoing Email Name
+add_filter('wp_mail_from_name','wpb_sender_name');
+function wpb_sender_name($original_email_from){
+    return 'Omax Health';
+}
+
+// WordPress: Changes the outgoing Email Address
+add_filter('wp_mail_from','wpb_sender_email');
+function wpb_sender_email($original_email_address){
+    return 'noreply@omaxhealth.com';
 }
 
 // WordPress: Add slug name to body class
@@ -85,35 +113,78 @@ function media_library_filename_lowercase($filename){
 	return strtolower($name) . $ext;
 }
 
-// WordPress: Forces page templates to load without needing to set template type
-add_filter('template_include', 'force_page_template', 99);
-function force_page_template($template){
-	global $post;
+// WordPress: Disable WP Emojicons
+add_action('init','disable_wp_emojicons');
+function disable_wp_emojicons(){
+  // all actions related to emojis
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
-	if (is_front_page() || is_page('home')){//Front Page must be assigned in Setting > Reading
-		$new_template = locate_template(array('page-template-home.php'));
-		if ('' != $new_template) {return $new_template;}
+  // filter to remove TinyMCE emojis
+  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+  
+	function disable_emojicons_tinymce($plugins){
+		if (is_array($plugins)) {
+			return array_diff($plugins, array('wpemoji'));
+		} else {
+			return array();
+		}
 	}
-	if (is_page('how-it-works')){
-		$new_template = locate_template(array('page-template-how-it-works.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
-	if (is_page('real-user-stories')){
-		$new_template = locate_template(array('page-template-real-user-stories.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
-	if (is_page('terms-and-conditions')){
-		$new_template = locate_template(array('page-template-terms-and-conditions.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
-	if (is_page('privacy-policy')){
-		$new_template = locate_template(array('page-template-privacy-policy.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
-	if (is_page('refund-policy')){
-		$new_template = locate_template(array('page-template-refund-policy.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
-	return $template;
 }
+
+
+
+
+
+// WordPress: Adds Custom Post Type for FAQ
+add_action('init','create_faq_cpt',0);
+function create_faq_cpt() {
+	$labels = array(
+		'name' => 'FAQs',
+		'singular_name' => 'FAQ',
+		'menu_name' => 'FAQs',
+		'name_admin_bar' => 'FAQ',
+		'attributes' => 'FAQ Attributes',
+		'parent_item_colon' => 'Parent FAQ:',
+		'all_items' => 'All FAQs',
+		'add_new_item' => 'Add New FAQ',
+		'add_new' => 'Add New',
+		'new_item' => 'New FAQ',
+		'edit_item' => 'Edit FAQ',
+		'update_item' => 'Update FAQ',
+		'view_item' => 'View FAQ',
+		'view_items' => 'View FAQs',
+		'search_items' => 'Search FAQ',
+		'not_found' => 'FAQ Not found',
+		'not_found_in_trash' => 'FAQ Not found in Trash'
+	);
+	$args = array(
+		'label' => 'FAQ',
+		'description' => 'FAQ Question and Answer Block',
+		'labels' => $labels,
+		'menu_icon' => 'dashicons-book-alt',
+		'supports' => array('title','editor'),
+		'taxonomies' => array(),
+		'public' => false,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'menu_position' => 5,
+		'show_in_admin_bar' => false,
+		'show_in_nav_menus' => false,
+		'can_export' => true,
+		'has_archive' => false,
+		'hierarchical' => false,
+		'exclude_from_search' => true,
+		'show_in_rest' => true,
+		'publicly_queryable' => true,
+		'capability_type' => 'post',
+	);
+	register_post_type('faq',$args);
+}
+
 ?>

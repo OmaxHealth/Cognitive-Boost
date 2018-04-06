@@ -8,7 +8,34 @@ jQuery(document).ready(function($){
 	initMobileNav();
 	initVideo();
 	
+	if (isPage('faq')){
+		initFAQ();
+	}
+	
 });
+
+// ===================================================================
+// FAQ Expand Box
+// ===================================================================
+function initFAQ(){
+	
+	$('#faq article .question').click(function(){
+		var group = $(this).closest('article');
+		var answer = group.find('.answer');
+		
+		if (group.hasClass('open')){
+			answer.slideUp(400, function(){
+				group.removeClass('open');
+			});
+		} else {
+			answer.slideDown(400, function(){
+				group.addClass('open');
+			});
+		}
+	});
+
+}
+
 
 // ===================================================================
 // Global Function to load video library
@@ -61,7 +88,7 @@ function initMobileNav(){
 // ===================================================================
 function isPage(a){
 
-	if($('body#'+a).length){return true;}
+	if($('main#'+a).length){return true;}
 	else if ($('body').hasClass(a)){return true;}
 	else if ($('body').hasClass('page-'+a)){return true;}
 	else{return false;}

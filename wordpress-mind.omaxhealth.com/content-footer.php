@@ -10,7 +10,7 @@
 			<a href="<?php bloginfo('url'); ?>/terms-and-conditions/">Terms & Conditions</a>
 			<a href="<?php bloginfo('url'); ?>/privacy-policy/">Privacy Policy</a>
 			<a href="<?php bloginfo('url'); ?>/faq/">FAQ</a>
-			<a href="mailto:contact@omaxhealth.com?subject=Cognitive%20Boost%20Question">Contact Us</a>
+			<a href="<?php bloginfo('url'); ?>/contact-us/">Contact Us</a>
 		</nav>
 	</div>
 </footer>
