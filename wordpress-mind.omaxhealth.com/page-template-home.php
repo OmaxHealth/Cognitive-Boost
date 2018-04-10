@@ -3,15 +3,22 @@
 
 <main id="home">
 	
-	<section id="hero" class="version1">
+	<section id="hero" class="version2">
 		<div class="container">
 			<div class="text">
 				<h3>Scientifically Advanced</h3>
 				<h1><strong>Cognitive</strong> Boost</h1>
-				<h2>Better Brain For Life<sup>&trade;</sup></h2>
-				<p>Instantly boost memory, focus & natural energy levels while supporting lifelong cognitive health.</p>
+				<h2>First Box $19.95</h2>
 			</div>
-			<div class="product"><img src="<?php bloginfo('template_directory'); ?>/images/hero-home-mobile-bg.jpg"/></div>
+			<div class="book">
+				<h3><strong>Plus</strong>, Free EBook <small>($19.99 value)</small></h3>
+				<ul>
+					<li>Get sharper and more focused</li>
+					<li>Naturally boost your memory</li>
+					<li>Learn tips for lifelong brain health</li>
+				</ul>
+			</div>
+			<div class="product"><img src="<?php bloginfo('template_directory'); ?>/images/hero-home-v2-mobile-bg.jpg"/></div>
 			<div class="order">
 				<div class="price">
 					<div class="ln1">Save 70%</div>

@@ -31,10 +31,6 @@ function force_page_template($template){
 		$new_template = locate_template(array('page-template-home.php'));
 		if ('' != $new_template) {return $new_template;}
 	}
-	if (is_page('home-v2')){
-		$new_template = locate_template(array('page-template-home-v2.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
 	if (is_page('how-it-works')){
 		$new_template = locate_template(array('page-template-how-it-works.php'));
 		if ('' != $new_template) {return $new_template;}

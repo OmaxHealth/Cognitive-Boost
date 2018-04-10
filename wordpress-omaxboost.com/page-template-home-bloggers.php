@@ -1,8 +1,8 @@
+<?php /* Template Name: Podcast Redirect */ ?>
 <?php get_template_part('content','header'); ?>
 <?php the_post(); ?>
 
 <main id="home">
-	
 	<section id="hero" class="version2">
 		<div class="container">
 			<div class="text">
@@ -18,13 +18,13 @@
 					<li>Learn tips for lifelong brain health</li>
 				</ul>
 			</div>
-			<div class="product"><img src="<?php bloginfo('template_directory'); ?>/images/hero-home-v2-mobile-bg.jpg"/></div>
+			<div class="product"><img src="<?php bloginfo('template_directory'); ?>/images/hero-home-mobile-bg.jpg"/></div>
 			<div class="order">
 				<div class="price">
 					<div class="ln1">Save 70%</div>
 					<div class="ln2">+ FREE SHIPPING</div>
 				</div>
-				<a class="button red" href="https://mind.omaxhealth.com/cart/buybutton.php?id=Zc4EJX_Iy0SAAg4PPoyAYw"><span>Order Now</span></a>
+				<a class="button red" href="https://myomaxboost.com/cart/buybutton.php?id=oqZ-PqIm7U6xqB3VBAYiTQ"><span>Order Now</span></a>
 			</div>
 		</div>
 	</section>
@@ -109,7 +109,7 @@
 			</div>
 			<div class="button_wrapper">
 				<img class="badge" src="<?php bloginfo('template_directory'); ?>/images/icon-60day-badge.png" alt ="60 Day Money-Back Guarentee" />
-				<a class="button red" href="https://mind.omaxhealth.com/cart/buybutton.php?id=Zc4EJX_Iy0SAAg4PPoyAYw"><span>Order Now</span></a>
+				<a class="button red" href="https://myomaxboost.com/cart/buybutton.php?id=oqZ-PqIm7U6xqB3VBAYiTQ"><span>Order Now</span></a>
 			</div>
 		</div>
 	</section>

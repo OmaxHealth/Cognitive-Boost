@@ -29,7 +29,7 @@
 				<img class="badge" src="<?php bloginfo('template_directory'); ?>/images/icon-60day-badge.png" alt ="60 Day Money-Back Guarentee" />
 			</div>
 			<div class="column right">
-				<a class="button red" href="https://omaxhealth.com/products/omax-cognitive-boost"><span>Order Now</span></a>
+				<a class="button red" href="https://myomaxboost.com/cart/buybutton.php?id=oqZ-PqIm7U6xqB3VBAYiTQ"><span>Order Now</span></a>
 			</div>		
 		</div>		
 	</section>

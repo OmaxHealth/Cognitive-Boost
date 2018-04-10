@@ -1,12 +1,12 @@
-<section id="lowerCTA" class="version1">
+<section id="lowerCTA" class="version2">
 	<div class="container">
 		<div class="text">
 			<div class="price">
-				<h2>$49.95</h2>
-				<div class="value">FREE SHIPPING</div>
+				<h2>First Box $19.95</h2>
+				<div class="value">Free Shipping</div>
 			</div>
 			<div class="book">
-				<h3><strong>Plus</strong>, Free EBook</h3>
+				<h3><strong>Plus</strong>, Free EBook <small>($19.99 value)</small></h3>
 				<ul>
 					<li>Get sharper and more focused</li>
 					<li>Naturally boost your memory</li>
@@ -14,7 +14,11 @@
 				</ul>
 			</div>
 			<div class="purchase">
-				<a class="button red" href="https://omaxhealth.com/products/omax-cognitive-boost"><span>Order Now</span></a>
+				<div class="discount">
+					<div class="ln1">70%</div>
+					<div class="ln2">Off</div>
+				</div>
+				<a class="button red" href="https://myomaxboost.com/cart/buybutton.php?id=oqZ-PqIm7U6xqB3VBAYiTQ"><span>Order Now</span></a>
 			</div>				
 		</div>
 	</div>
