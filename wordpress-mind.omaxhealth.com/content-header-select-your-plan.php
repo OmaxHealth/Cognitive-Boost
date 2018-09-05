@@ -14,12 +14,8 @@
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" />
 
-	<?php wp_enqueue_style('styles',get_bloginfo('template_directory').'/style.css?ver=020918fjv1',array(),time()); ?>
+	<?php wp_enqueue_style('styles',get_bloginfo('template_directory').'/style.css',array(),'1.0'); ?>
 	<?php wp_head(); ?>
-	
-	<!-- TrustBox script -->
-	<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-	<!-- End Trustbox script -->
 </head>
 <body <?php body_class(); ?>>
 <!-- Google Tag Manager (noscript) -->
@@ -39,15 +35,9 @@
 			</div>
 		</nav>
 		<nav class="global">
-			<a href="tel:800-791-4202">Click to Call</a>
-			<a href="/select-your-plan"><span>Order Now</span></a>
+			<a href="tel:1-855-291-6741">Click to Call</a>
 		</nav>
 		<div class="offer">
-			<!-- TrustBox widget - Micro TrustScore -->
-			<div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b637fa0340045cd0c936" data-businessunit-id="58f6c7470000ff0005a0c05a" data-style-height="20px" data-style-width="100%" data-theme="dark">
-			<a href="https://www.trustpilot.com/review/omaxhealth.com" target="_blank">Trustpilot</a>
-			</div>
-			<!-- End TrustBox widget -->
 			<p>First Box $19.95 + FREE SHIPPING*</p>
 		</div>
 	</div>

@@ -62,7 +62,7 @@
 			
 			<h3>Contact Us</h3>
 			<p>If you would like to access, correct, amend or delete any personal information we have about you, please contact us at:</p>
-			<p>Omax Health, Inc.<br>50 Bridge Street<br>New Hope, PA 18938</p>
+			<p>Omax Health, Inc.<br>2601 Ocean Park Blvd<br>Ste 214<br>Santa Monica, CA 90405<br>USA</p>
 			
 			<h2>QUESTIONS AND CONTACT INFORMATION</h2>
 			<p><a href="mailto:care@omaxhealth.com">care@omaxhealth.com</a><br><a href="tel:1-800-765-6691">1-800-765-6691</a><span> (M-F, 8am to 7pm EST)</span></p>

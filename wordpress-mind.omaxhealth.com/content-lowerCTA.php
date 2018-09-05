@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="text">
 			<div class="price">
-				<h2>First Box $19.95</h2>
+				<h2>First Box $19.95<span class="asterisk">*</span></h2>
 				<div class="value">Free Shipping</div>
 			</div>
 			<div class="book">
@@ -15,10 +15,10 @@
 			</div>
 			<div class="purchase">
 				<div class="discount">
-					<div class="ln1">70%</div>
+					<div class="ln1">60%</div>
 					<div class="ln2">Off</div>
 				</div>
-				<a class="button red" href="https://mind.omaxhealth.com/cart/buybutton.php?id=Zc4EJX_Iy0SAAg4PPoyAYw"><span>Order Now</span></a>
+				<a class="button red" href="/select-your-plan"><span>Order Now</span></a>
 			</div>				
 		</div>
 	</div>

@@ -45,7 +45,7 @@ function initVideo(){
 	$("section .video").each(function(){
 		if ($(this).data('id')){
 			var outerBlock = $(this);
-			var placeholder = $("img.overlay",this);
+			var placeholder = $(".overlay",this);
 			var videoID = $(this).data('id');
 			var player = $(" .player",this);
 			player.tubeplayer({

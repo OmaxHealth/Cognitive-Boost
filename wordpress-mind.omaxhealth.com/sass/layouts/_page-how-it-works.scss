@@ -3,28 +3,35 @@ main#how-it-works {
 	
 	// Section: Hero (Video)
 	#hero {
-		& {background-color:#000;}	
+		& {background-color:#000; background-position:center top; background-repeat:no-repeat;}
 		@include desktop {
+			& {background-size:auto 675px;}
 			.video {
 				&, 
-				& > img.overlay, 
+				& > .overlay, 
 				& > .player,
 				& > iframe {width:1200px; height:675px;}
 			}
 		}
 		@include tablet {
+			& {background-size:auto 422px;}
 			.video {
 				&, 
-				& > img.overlay, 
+				& > .overlay, 
 				& > iframe {width:750px; height:422px;}
 			}
 		}
+		@include tablet_up {
+			& {background-image:url('images/hero-howitworks-desktop-bg.jpg');}
+			.video .overlay img {display:none;}
+		}
 		@include mobile {
+			& {background:none;}
 			.video {
 				&, 
-				& > img, 
+				& > .overlay, 
 				& > .player,
-				& iframe {left:0px; right:0px; top:0px; width:100%; height:calc(100vw * 0.5625);}
+				& iframe {left:0px; right:0px; top:0px; width:100%; height:calc(100vw * 0.5495);}
 			}
 		}
 	}
