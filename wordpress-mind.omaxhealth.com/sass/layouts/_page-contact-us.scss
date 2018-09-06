@@ -11,29 +11,29 @@ main#contact-us {
 		}
 	}
 	
-	@include tablet_up {
-		.flexcolumn {width:750px; margin-bottom:40px;
-			.column {width:50%;
-				&:first-of-type {margin-right:40px;}
-				&:last-of-type {margin-left:40px;}
-			}
-		}
-	}	
-	@include desktop {
+	@include breakpoint('>=bp_1024'){
 		h1 {@include font-size(42px); margin:40px 0;}
 		h2 {@include font-size(22px); margin-bottom:16px;}
 		.links {padding-left:10px;
 			a {@include font-size(16px); margin-bottom:16px;}
 		}
 	}
-	@include tablet {
+	@include breakpoint('>=bp_768'){
+		.flexcolumn {width:720px; margin-bottom:40px; flex-direction:row; justify-content:space-between; align-items:stretch;
+			.column {width:50%;
+				&:first-of-type {margin-right:40px;}
+				&:last-of-type {margin-left:40px;}
+			}
+		}
+	}	
+	@include breakpoint('bp_768'){
 		h1 {@include font-size(36px); margin:30px 0;}
 		h2 {@include font-size(22px); margin-bottom:16px;}
 		.links {padding-left:10px;
 			a {@include font-size(16px); margin-bottom:16px;}
 		}
 	}	
-	@include mobile {
+	@include breakpoint('<=bp_540'){
 		h1 {@include font-size(26px); margin:20px 0;}
 		h2 {@include font-size(22px); margin-bottom:16px;}
 		.flexcolumn {margin-bottom:20px;
@@ -43,15 +43,13 @@ main#contact-us {
 			a {@include font-size(16px); margin-bottom:16px;}
 		}
 	}
-	@include mobile_510 {
+	@include breakpoint('bp_540'){
 		.flexcolumn {width:480px;}
 	}
-	@include mobile_360 {
+	@include breakpoint('bp_360'){
 		.flexcolumn {width:330px;}
 	}
 	
-		
-
 	// Contact Form 7 Overrides
 	input::placeholder {
 		color: rgb(88,88,88);
@@ -111,6 +109,5 @@ main#contact-us {
 	.wpcf7-form-control:focus {
 		border-color: #ddd;
 	}
-
 
 }

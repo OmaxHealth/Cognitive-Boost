@@ -19,7 +19,7 @@ main#faq {
 		}
 	}
 
-	@include desktop {
+	@include breakpoint('>=bp_1024'){
 		.container {padding:40px 20px;}
 		h1 {@include font-size(42px); margin-bottom:40px;}
 		article {margin-bottom:20px;
@@ -33,7 +33,7 @@ main#faq {
 		}
 
 	}
-	@include tablet {
+	@include breakpoint('bp_768'){
 		.container {padding:30px 20px;}
 		h1 {@include font-size(32px); margin-bottom:30px;}
 		article {margin-bottom:20px;
@@ -46,7 +46,7 @@ main#faq {
 			}
 		}	
 	}	
-	@include mobile {
+	@include breakpoint('<=bp_540'){
 		.container {padding:20px;}
 		h1 {@include font-size(26px); margin-bottom:20px;}
 		article {margin-bottom:20px;

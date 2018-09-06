@@ -31,14 +31,14 @@ function force_page_template($template){
 		$new_template = locate_template(array('page-template-home.php'));
 		if ('' != $new_template) {return $new_template;}
 	}
-	if (is_page('how-it-works')){
-		$new_template = locate_template(array('page-template-how-it-works.php'));
+	if (is_page('select-your-plan')){
+		$new_template = locate_template(array('page-template-select-your-plan.php'));
 		if ('' != $new_template) {return $new_template;}
 	}
-	if (is_page('real-user-stories')){
-		$new_template = locate_template(array('page-template-real-user-stories.php'));
+	if (is_page('faq')){
+		$new_template = locate_template(array('page-template-faq.php'));
 		if ('' != $new_template) {return $new_template;}
-	}
+	}	
 	if (is_page('terms-and-conditions')){
 		$new_template = locate_template(array('page-template-terms-and-conditions.php'));
 		if ('' != $new_template) {return $new_template;}
@@ -51,14 +51,7 @@ function force_page_template($template){
 		$new_template = locate_template(array('page-template-contact-us.php'));
 		if ('' != $new_template) {return $new_template;}
 	}
-	if (is_page('faq')){
-		$new_template = locate_template(array('page-template-faq.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
-	if (is_page('select-your-plan')){
-		$new_template = locate_template(array('page-template-select-your-plan.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
+	
 	return $template;
 }
 
@@ -73,13 +66,12 @@ function hide_editor(){
 		
 		// Comment out pages that should show the editor
 		if ($slug == 'home'){$show_editor = false;}
-		if ($slug == 'how-it-works'){$show_editor = false;}
-		if ($slug == 'real-user-stories'){$show_editor = false;}
+		if ($slug == 'select-your-plan'){$show_editor = false;}
+		if ($slug == 'faq'){$show_editor = false;}
 		if ($slug == 'terms-and-conditions'){$show_editor = false;}
 		if ($slug == 'privacy-policy'){$show_editor = false;}
 		if ($slug == 'contact-us'){$show_editor = false;}
-		if ($slug == 'faq'){$show_editor = false;}	
-		
+			
 		if (!$show_editor){
 			remove_post_type_support('page','editor');
 		}	
