@@ -1,0 +1,56 @@
+// SASS: Breakpoint Sizes
+@include breakpoints((
+	bp_1280:(1280px,null),
+	bp_1024:(1024px,1279px),
+	bp_768:(768px,1023px),
+	bp_540:(540px,767px),
+	bp_360:(null,539px)
+));
+
+// Container Widths
+@include breakpoint('bp_1280') {
+	.container {width:1200px!important;}
+}
+@include breakpoint('bp_1024') {
+	.container {width:1000px!important;}
+}
+@include breakpoint('bp_768') {
+	.container {width:768px!important; padding-left:20px; padding-right:20px;}
+}
+@include breakpoint('<=bp_540') {
+	.container {width:100%!important; min-width:360px; overflow-x:hidden; padding-left:15px; padding-right:15px;}
+}
+
+// SASS: Colors
+$color-blue: #055E82;
+$color-red: #FF5349;;
+$color-gray1: #F6F9FC;
+$color-gray2: #78787B;
+$color-teal: #09C9C0;
+
+// SASS: Image Foler Location
+$image-folder: 'images/';
+
+// SASS: Global Images
+$image-logo-header: (width:380px,height:50px,file:'logo-header.svg');
+$image-icon-asotv: (width:125px,height:110px,file:'icon-asotv.svg');
+
+$image-icon-caffeine: (width:190px,height:220px,file:'icon-caffeine.svg');
+$image-icon-shield: (width:190px,height:220px,file:'icon-shield.svg');
+$image-icon-pills: (width:190px,height:220px,file:'icon-pills.svg');
+
+$image-users-amy: (width:640px,height:420px,file:'users-amy.jpg');
+$image-users-anders: (width:640px,height:420px,file:'users-anders.jpg');
+$image-users-chady: (width:640px,height:420px,file:'users-chady.jpg');
+
+$image-featured-first: (width:440px,height:140px,file:'featured-first.png');
+$image-featured-ok: (width:290px,height:140px,file:'featured-ok.png');
+$image-featured-touch: (width:540px,height:140px,file:'featured-touch.png');
+$image-featured-womans_world: (width:300px,height:140px,file:'featured-womans_world.png');
+
+$image-advanced-product: (width:400px,height:270px,file:'advanced-product.png');
+$image-howitworks-lightbulb: (width:340px,height:440px,file:'howitworks-lightbulb.png');
+$image-howitworks-brain: (width:700px,height:700px,file:'howitworks-brain.png');
+
+$image-purity-seal: (width:200px,height:200px,file:'purity-seal.svg');
+$image-lowerCTA-products: (width:640px,height:420px,file:'lowerCTA-products.png');

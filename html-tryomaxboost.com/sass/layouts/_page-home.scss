@@ -1,0 +1,570 @@
+// Page: Home
+main#home {
+	
+	// Section: Main Hero
+	#hero {
+		.container > div {position:absolute;}
+		.image img,
+		.badge img {width:100%; height:auto;}
+		.text {text-align:center;
+			* {text-transform:uppercase;}
+			&.gifts {
+				.badge {@include center-horizontal();}
+				.ln1 {@include font('MontserratSemiBold'); color:$color-orange;}
+				.ln2 {@include font('MontserratRegular'); color:#050505;}
+			}
+			&.offer {
+				.ln1 {@include font('MontserratSemiBold'); color:$color-blue;}
+				.ln2 {position:relative;
+					span.title {position:relative; @include font('MontserratRegularItalic'); color:$color-blue;}
+					span.price {position:relative;
+						&,* {@include font('MontserratMedium'); color:$color-blue;}
+						.sign,
+						small {position:relative;}
+					}
+				}
+				.ln3 {position:relative; @include font('MontserratSemiBold'); color:#050505;}
+			}
+		}
+		.order {
+			.badge {position:absolute; left:0px; bottom:0px;}
+			a.button {position:absolute; right:0px;}
+		}
+		@include tablet_up {
+			& {background-color:#ecf1f4;}
+		}
+		@include desktop {
+			.container {height:740px;}
+			.image {
+				&.product {width:500px; top:50px; left:0px;}
+				&.free {width:380px; top:50px; right:50px;}
+			}
+			.text {
+				&.gifts {top:40px; left:450px; right:430px;
+					.badge {width:115px; height:115px; margin-bottom:30px;}
+					.ln1 {@include font-size(36px); margin-bottom:5px;}
+					.ln2 {@include font-size(22px); margin-bottom:50px;}	
+				}
+				&.offer {top:300px; width:100%;
+					.ln1 {@include font-size(40px);}
+					.ln2 {top:80px;
+						.title {@include font-size(44px); bottom:14px;}
+						.price {@include font-size(98px); padding-left:20px;
+							.sign {@include font-size(66px); bottom:10px;}
+							small {@include font-size(58px); bottom:28px;}
+						}
+					}
+					.ln3 {top:80px; @include font-size(34px);}
+				}
+			}
+			.order {width:440px; height:120px; top:590px; left:400px;
+				.badge {width:120px;}
+				a.button {width:280px; bottom:20px;}
+			}
+		}
+		@include tablet {
+			.container {height:470px;}
+			.image {
+				&.product {width:320px; top:30px; left:0px;}
+				&.free {width:240px; top:30px; right:0px;}
+			}
+			.text {
+				&.gifts {top:30px; left:300px; right:240px;
+					.badge {width:75px; height:75px; margin-bottom:20px;}
+					.ln1 {@include font-size(24px); margin-bottom:5px;}
+					.ln2 {@include font-size(14px); margin-bottom:50px;}	
+				}
+				&.offer {top:200px; width:100%;
+					.ln1 {@include font-size(26px); padding-left:50px;}
+					.ln2 {top:50px;
+						.title {@include font-size(28px); bottom:10px;}
+						.price {@include font-size(62px); padding-left:10px;
+							.sign {@include font-size(42px); bottom:6px;}
+							small {@include font-size(36px); bottom:18px;}
+						}
+					}
+					.ln3 {top:50px; @include font-size(22px);}
+				}
+			}
+			.order {width:270px; height:80px; top:370px; left:240px;
+				.badge {width:80px;}
+				a.button {width:170px; bottom:20px;}
+			}
+		}
+		@include mobile {
+			& {background-color:#fff;}
+			.text {
+				&.gifts {
+					.badge {position:absolute; left:0px; top:0px;}
+				}
+				&.offer {
+					.ln1 {@include font('MontserratMedium');}
+				}
+			}
+		}
+		@include mobile_510 {
+			.container {width:510px!important; height:680px;}
+			.image {
+				&.product {width:280px; top:75px; left:20px;}
+				&.free {width:170px; top:100px; right:30px;}
+			}
+			.text {
+				&.gifts {top:30px; left:230px; width:260px; padding-left:80px;
+					.badge {width:70px; height:70px;}
+					.ln1 {@include font-size(24px); margin-top:20px;}
+					.ln2 {@include font-size(14px);}	
+				}
+				&.offer {top:320px; width:100%;
+					.ln1 {@include font-size(26px); margin-bottom:10px;}
+					.ln2 {
+						.title {@include font-size(28px); bottom:10px;}
+						.price {@include font-size(62px); padding-left:10px;
+							.sign {@include font-size(42px); bottom:6px;}
+							small {@include font-size(36px); bottom:18px;}
+						}
+					}
+					.ln3 {@include font-size(22px);}
+				}
+			}
+			.order {width:300px; height:100px; top:460px; left:105px;
+				.badge {width:100px; height:100px; top:0px; left:100px;}
+				a.button {width:300px; top:110px; left:0px;}
+			}
+		}
+		@include mobile_360 {
+			.container {width:360px!important; height:480px;}
+			.image {
+				&.product {width:200px; top:60px; left:10px;}
+				&.free {width:130px; top:70px; right:10px;}
+			}
+			.text {
+				&.gifts {top:20px; left:160px; width:180px; padding-left:55px;
+					.badge {width:50px; height:50px;}
+					.ln1 {@include font-size(18px); margin-top:12px;}
+					.ln2 {@include font-size(12px);}	
+				}
+				&.offer {top:230px; width:100%;
+					.ln1 {@include font-size(20px); margin-bottom:5px;}
+					.ln2 {
+						.title {@include font-size(20px); bottom:10px;}
+						.price {@include font-size(46px); padding-left:10px;
+							.sign {@include font-size(30px); bottom:6px;}
+							small {@include font-size(28px); bottom:12px;}
+						}
+					}
+					.ln3 {@include font-size(16px);}
+				}
+			}
+			.order {width:210px; height:80px; top:326px; left:75px;
+				.badge {width:75px; height:80px; top:0px; left:65px;}
+				a.button {width:210px; top:85px; left:0px;}
+			}
+		}
+	}
+	
+	// Section: As Seen In (Logos)
+	#logos {
+		& {background-color:#e8e8e8;}
+		.flexbox {position:relative; margin-left:auto; margin-right:auto;
+			span.title {position:relative; @include font('MontserratSemiBold'); color:#191a1b; text-transform:uppercase;}
+		}
+		@include desktop {
+			.container {height:120px;}
+			.flexbox {margin-top:25px; width:890px;
+				.box img {height:70px;}
+				span.title {@include font-size(34px); top:20px; margin-right:10px;}
+			}	
+		}
+		@include tablet {
+			.container {height:80px;}
+			.flexbox {margin-top:25px; width:560px;
+				.box img {height:40px;}
+				span.title {@include font-size(20px); top:12px; margin-right:10px;}
+			}	
+		}
+		@include mobile {
+			.flexbox {flex-direction:row; justify-content:space-evenly; align-items:stretch;
+				.box {
+					&:first-of-type {width:100%; display:block; text-align:center;
+						span.title {display:block;}
+					}
+					&:not(:first-of-type){width:auto;}
+				}
+			}
+		}
+		@include mobile_510 {
+			.flexbox {width:480px; padding-bottom:30px;
+				.box {
+					&:first-of-type {
+						span.title {@include font-size(22px); margin:30px 0;}
+					}
+					&:not(:first-of-type) {margin:0 5px;
+						img {height:46px;}
+					}
+				}
+			}
+		}
+		@include mobile_360 {
+			.flexbox {width:330px; padding-bottom:20px;
+				.box {
+					&:first-of-type {
+						span.title {@include font-size(16px); margin:20px 0;}
+					}
+					&:not(:first-of-type) {margin:0 5px;
+						img {height:30px;}
+					}
+				}
+			}
+		}
+	}
+
+	// Section: Intro
+	#intro {
+		.headline h1 {@include font('MontserratRegular'); text-transform:none;}
+		.text {display:block; position:relative;
+			p {@include font('MontserratRegular'); margin-bottom:0px; text-align:center;}
+			p strong {@include font('MontserratMedium');}
+		}
+		@include desktop {
+			.headline h1 {@include font-size(42px,48px); max-width:1100px;}
+			.text {margin-top:60px; margin-bottom:60px;
+				p {@include font-size(20px,32px);}
+			}
+		}
+		@include tablet {
+			.headline h1 {@include font-size(26px,30px); max-width:680px;}
+			.text {margin-top:30px; margin-bottom:30px;
+				p {@include font-size(18px,26px);}
+			}				
+		}			
+		@include mobile {
+			.text {display:none;}
+		}
+		@include mobile_510 {
+			.headline h1 {@include font-size(24px,30px); max-width:480px;}
+		}
+		@include mobile_360 {
+			.headline h1 {@include font-size(16px,18px); max-width:360px;}
+		}			
+	}
+
+	// Section: Real Stories
+	#stories {
+		@include desktop {
+			.flexcolumn.r1 {margin-bottom:60px;
+				.text {padding:100px 0 0 50px;
+					p.person {max-width:315px;}
+					p.quote {margin-bottom:60px;}
+				}	
+			}	
+		}
+		@include tablet {
+			.flexcolumn.r1 {margin-bottom:40px;
+				.text {padding-left:20px;
+					p.person {margin-bottom:20px;}
+					p.quote {margin-bottom:20px;}
+				}	
+			}		
+		}			
+		@include mobile_510 {
+			.flexcolumn.r1 {
+				.text {padding-bottom:30px;
+					p.quote {@include font-size(18px,26px); margin-top:20px; margin-bottom:20px; max-width:490px;}
+				}	
+			}
+		}
+		@include mobile_360 {
+			.flexcolumn.r1 {
+				.text {padding-bottom:20px;
+					h3 {@include font-size(16px);}
+					.person {@include font-size(14px);}
+				}	
+			}
+		}
+	}
+
+	// Section: Icon Bar
+	#icons {
+		& {background-color:#e8e8e8;}
+		.container {display:flex; flex-wrap:nowrap; justify-content:center;}
+		.block {position:relative; max-height:72px; background-position:top left; background-repeat:no-repeat; background-size:auto 100%;
+			&.caffeine {background-image:url('images/icon-caffeine.png');}
+			&.safe {background-image:url('images/icon-safe.png');}
+			&.drugs {background-image:url('images/icon-drugs.png');}
+			span {@include font('MontserratMedium'); color:#000; text-transform:uppercase; text-align:left; position:relative; display:block;}
+		}
+		@include tablet_up {
+			.container {flex-direction:row; flex-wrap:nowrap; justify-content:center;}
+		}
+		@include desktop {
+			.container {height:125px; padding-top:25px; padding-left:40px;}
+			.block {height:76px; padding-left:62px;
+				span {@include font-size(20px); top:26px; padding-left:10px;}
+				&.caffeine {width:330px;}
+				&.safe {width:260px;}
+				&.drugs {width:350px;}
+			}
+		}
+		@include tablet {
+			.container {height:100px; padding-top:20px; padding-left:40px;}
+			.block {height:60px; padding-left:50px;
+				span {@include font-size(18px); top:26px; padding-left:10px;}
+				&.caffeine {width:240px;}
+				&.safe {width:180px;}
+				&.drugs {width:220px;
+					span {top:10px;}
+				}
+			}
+		}			
+		@include mobile {
+			& {background-color:#f6f9fc;}
+			.container {flex-direction:column; padding-top:20px; padding-bottom:20px;}
+			.block {width:100%; margin-bottom:10px; @include center-horizontal();
+				&:last-of-type {margin-bottom:0px;}
+			}
+		}
+		@include mobile_510 {
+			.block {height:50px; padding-left:40px; max-width:340px;
+				span {@include font-size(20px); top:14px; padding-left:10px;}
+			}				
+		}			
+		@include mobile_360 {
+			.block {height:40px; padding-left:34px; max-width:290px;
+				span {@include font-size(16px); top:14px; padding-left:10px;}
+			}				
+		}				
+	}
+		
+	// Section: How it Works
+	#howitworks {
+		& {background-color:$color-gray1;}
+		h2 {@include font('MontserratRegular'); color:#000; text-align:center; @include center-horizontal();}
+		h3 {@include font('MontserratBold'); color:$color-blue; text-align:center; text-transform:uppercase; background-position:center top; background-repeat:no-repeat;}
+		p {@include font('MontserratRegular'); color:#000; text-align:center; @include center-horizontal();}
+		a.button {@include center-horizontal();}
+		.flexcolumn {
+			.column {
+				&:nth-of-type(1) h3 {background-image:url('images/icon-structure-alpha.png');}
+				&:nth-of-type(2) img {@include center-horizontal();}
+				&:nth-of-type(3) h3 {background-image:url('images/icon-structure-omega.png');}
+			}
+		}
+		@include desktop {
+			.container {padding-top:80px; padding-bottom:80px;}
+			h2 {@include font-size(42px,48px); max-width:750px; margin-bottom:60px;}
+			p {@include font-size(20px,32px); max-width:1000px; margin-bottom:60px;}
+			.flexcolumn {margin-bottom:60px;
+				.column {
+					&:nth-of-type(1),
+					&:nth-of-type(3){width:30%;}
+					&:nth-of-type(2){width:40%;}
+						
+					h3 {@include font-size(34px); padding-top:85px; margin-bottom:60px;}
+					p {@include font-size(18px,26px); max-width:320px; margin-bottom:0px;}
+					img.icon {width:430px;}
+				}
+			}
+			a.button {width:200px;
+				span {@include font-size(18px); top:20px;}
+			}
+		}
+		@include tablet {
+			.container {padding-top:40px; padding-bottom:40px;}
+			h2 {@include font-size(32px,36px); max-width:700px; margin-bottom:40px;}
+			p {@include font-size(18px,26px); max-width:1000px; margin-bottom:40px;}
+			.flexcolumn {
+				.column {
+					&:nth-of-type(1),
+					&:nth-of-type(3){width:32%;}
+					&:nth-of-type(2){width:36%;}
+					
+					h3 {@include font-size(28px); padding-top:85px; margin-bottom:20px;}
+					p {@include font-size(16px,22px); margin-bottom:0px;}
+					img.icon {width:250px;}
+				}
+			}
+			a.button {width:200px;}
+		}			
+		@include mobile {
+			& {background-color:#fff;}
+			.container {padding-top:30px; padding-bottom:10px;}
+			h2 {@include font-size(26px,28px); max-width:500px; margin-bottom:20px;}
+			p {@include font-size(16px,22px); max-width:1000px; margin-bottom:20px;}
+			.flexcolumn {margin-bottom:20px;
+				.column {
+					h3 {@include font-size(26px); padding-top:65px; margin-bottom:15px; background-size:auto 60px;}
+					p {margin-bottom:0px;}
+					img.icon {width:100%; max-width:260px;}
+				}
+			}
+			a.button {margin-bottom:20px;}
+		}			
+	}
+
+	// Section: Better Brain
+	#better {
+		h2 {@include font('MontserratRegular'); color:#000; text-align:center; @include center-horizontal();}
+		p {@include font('MontserratRegular'); color:#000; text-align:center; @include center-horizontal();}
+		h3 {@include font('MontserratRegular'); color:#fff; text-align:center; @include center-horizontal();}
+		.button_wrapper {position:relative; display:block; @include center-horizontal();}
+		.flexcolumn {
+			.column {position:relative; background-position:center top; background-repeat:no-repeat; background-size:auto 100%;
+				&:nth-of-type(1){background-image:url('images/better-box1-bg.jpg');
+					.icon {background-color:$color-blue; background-image:url('images/icon-head.svg');}
+				}
+				&:nth-of-type(2){background-image:url('images/better-box2-bg.jpg');
+					.icon {background-color:$color-gray2; background-image:url('images/icon-spokes.svg');}
+				}
+				&:nth-of-type(3){background-image:url('images/better-box3-bg.jpg');
+					.icon {background-color:$color-blue; background-image:url('images/icon-blocks.svg');}
+				}
+				&:nth-of-type(4){background-image:url('images/better-box4-bg.jpg');
+					.icon {background-color:$color-gray2; background-image:url('images/icon-brain.svg');}
+				}
+				.icon {position:absolute; background-position:center top; background-repeat:no-repeat;}
+			}
+		}
+		@include tablet_up {
+			a.button {@include center-horizontal();}
+			img.badge {display:none;}
+		}
+		@include desktop {
+			& > .container {padding-top:100px; padding-bottom:80px;}
+			h2 {@include font-size(42px); margin-bottom:40px;}
+			p {@include font-size(20px,32px); max-width:850px;}
+			a {width:250px;}
+			.flexcolumn {margin-top:50px; margin-bottom:100px;
+				.column {width:275px; height:420px; margin-bottom:145px;
+					&:nth-of-type(3){background-position:left -260px top;}
+					&:nth-of-type(4){background-position:left -320px top;}
+					.icon {bottom:-145px; left:25px; right:25px; height:225px; background-size:90px; background-position:center top 40px;
+						h3 {@include font-size(24px,28px); margin-top:140px; max-width:200px;}
+					}
+				}
+			}
+		}
+		@include tablet {
+			& > .container {padding-top:40px; padding-bottom:20px;}
+			h2 {@include font-size(32px); margin-bottom:40px;}
+			p {@include font-size(18px,26px); max-width:650px;}
+			a {width:200px;}
+			.flexcolumn {margin-top:40px; margin-bottom:40px;
+				.column {width:175px; height:220px; margin-bottom:100px;
+					&:nth-of-type(2){background-position:left -100px top;}
+					&:nth-of-type(3){background-position:left -120px top;}
+					&:nth-of-type(4){background-position:left -140px top;}
+					.icon {bottom:-100px; left:10px; right:10px; height:155px; background-size:60px; background-position:center top 20px;
+						h3 {@include font-size(18px,22px); letter-spacing:-0.02em; margin-top:90px; max-width:140px;}
+					}
+				}
+			}
+		}
+		@include mobile {
+			& > .container {padding-top:30px; padding-bottom:20px;}
+			h2 {@include font-size(26px,28px); margin-bottom:20px;}
+			p {@include font-size(16px,22px); max-width:650px;}
+			.flexcolumn {width:100vw; margin-left:-15px; margin-right:-15px; margin-top:30px;
+				.column {width:100%; height:calc(100vw * 0.55); background-size:cover;
+					.icon {left:0px; right:0px;}
+				}
+			}
+			.button_wrapper {display:none;}
+		}
+		@include mobile_510 {
+			h1 {max-width:550px;}
+			.flexcolumn .column {margin-bottom:120px;
+				.icon {bottom:-120px; height:120px; background-size:50px; background-position:center top 10px!important;
+					h3 {@include font-size(20px,24px); margin-top:65px; max-width:200px;}
+				}
+			}	
+		}			
+		@include mobile_360 {
+			h1 {@include font-size(23px,26px);}
+			.flexcolumn .column {margin-bottom:100px;
+				.icon {bottom:-100px; height:100px; background-size:40px; background-position:center top 10px!important;
+					h3 {@include font-size(16px,20px); margin-top:50px; max-width:140px;}
+				}
+			}			
+		}			
+	}
+
+	// Section: Science & Medial Expertise
+	#science {
+		h2 {@include font('MontserratRegular');}
+		p {@include font('MontserratRegular');}
+		p.ln1 {@include font('MontserratMedium');}
+		@include tablet_up {
+			.column {width:50%;
+				&.image {
+					img {@include center-horizontal();}
+					.title {@include center-horizontal(); text-align:center;}
+				}
+			}
+		}
+		@include desktop {
+			.container {padding-bottom:60px;}
+			.column {
+				&.image {padding-left:40px;
+					.title {padding-top:15px;
+						p.ln1 {@include font-size(20px); margin-bottom:5px;}
+						p.ln2 {@include font-size(18px,26px);}
+					}
+				}
+				&.text {padding-top:20px; padding-left:40px; padding-right:60px;
+					h2 {@include font-size(42px,48px); margin-bottom:40px;}
+					p {@include font-size(20px,32px);}
+				}
+			}
+		}
+		@include tablet {
+			.container {padding-top:20px; padding-bottom:30px;}
+			.column {
+				&.image {width:40%;
+					.title {padding-top:20px;
+						p.ln1 {@include font-size(18px); margin-bottom:5px;}
+						p.ln2 {@include font-size(16px,20px);}
+					}
+				}
+				&.text {width:60%; padding-top:15px; padding-left:40px; padding-right:20px;
+					h2 {@include font-size(32px,36px); margin-bottom:20px;}
+					p {@include font-size(18px,26px);}
+				}
+			}
+		}
+		@include mobile {
+			.column {
+				&.image {display:flex; flex-direction:column; justify-content:flex-start; align-items:flex-start; order:2; margin-left:auto; margin-right:auto;
+					img {order:1; width:240px; @include center-horizontal(); position:relative;}
+					.title {order:2; width:100%; text-align:center;
+						p.ln1 {@include font-size(16px); margin-bottom:5px;}
+						p.ln2 {@include font-size(16px,20px);}
+					}
+				}
+				&.text {order:1;
+					& > * {text-align:center;}
+					h2 {@include font-size(26px,28px); margin-bottom:20px;}
+					p {@include font-size(16px,22px);}
+				}
+			}
+		}
+		@include mobile_510 {
+			.container {padding-top:20px;}
+			.column.image {margin-top:40px;
+				.title {margin-top:20px; margin-bottom:30px;}
+			}
+			.column.text {
+				h2 {@include font-size(34px,38px);}
+			}			
+		}
+		@include mobile_360 {
+			.container {padding-top:10px;}
+			.column.image {margin-top:30px;
+				.title {margin-top:15px; margin-bottom:20px;}
+			}
+			.column.text {
+				h2 {@include font-size(24px,28px);}
+			}		
+		}
+	}
+		
+}	
