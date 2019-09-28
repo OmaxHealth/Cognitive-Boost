@@ -24,7 +24,7 @@
 					<div class="ln1">Save 70%</div>
 					<div class="ln2">+ FREE SHIPPING</div>
 				</div>
-				<a class="button red" href="https://myomaxboost.com/cart/buybutton.php?id=oqZ-PqIm7U6xqB3VBAYiTQ"><span>Order Now</span></a>
+				<a class="button red" href="https://omaxboost.com/cart/buybutton.php?id=NV748LxlhEORyq5HkCO9xg"><span>Order Now</span></a>
 			</div>
 		</div>
 	</section>
@@ -109,7 +109,7 @@
 			</div>
 			<div class="button_wrapper">
 				<img class="badge" src="<?php bloginfo('template_directory'); ?>/images/icon-60day-badge.png" alt ="60 Day Money-Back Guarentee" />
-				<a class="button red" href="https://myomaxboost.com/cart/buybutton.php?id=oqZ-PqIm7U6xqB3VBAYiTQ"><span>Order Now</span></a>
+				<a class="button red" href="https://omaxboost.com/cart/buybutton.php?id=NV748LxlhEORyq5HkCO9xg"><span>Order Now</span></a>
 			</div>
 		</div>
 	</section>

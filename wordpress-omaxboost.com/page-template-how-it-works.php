@@ -5,7 +5,7 @@
 	
 	<section id="hero">
 		<div class="container video" data-id="fQNe_TcoCsc">
-			<img class="overlay" src="<?php bloginfo('template_directory'); ?>/images/hero-howitworks-bg.jpg" alt="watch video"/>
+			<div class="overlay"><img src="<?php bloginfo('template_directory'); ?>/images/hero-howitworks-mobile-bg.jpg"/></div>
 			<div class="player"></div>
 		</div>
 	</section>
@@ -29,7 +29,7 @@
 				<img class="badge" src="<?php bloginfo('template_directory'); ?>/images/icon-60day-badge.png" alt ="60 Day Money-Back Guarentee" />
 			</div>
 			<div class="column right">
-				<a class="button red" href="https://myomaxboost.com/cart/buybutton.php?id=oqZ-PqIm7U6xqB3VBAYiTQ"><span>Order Now</span></a>
+				<a class="button red" href="https://omaxboost.com/cart/buybutton.php?id=NV748LxlhEORyq5HkCO9xg"><span>Order Now</span></a>
 			</div>		
 		</div>		
 	</section>
@@ -173,11 +173,11 @@
 					</div>
 				</div>
 				<div class="column">
-					<img src="<?php bloginfo('template_directory'); ?>/images/team-ann.jpg" alt="Dr. Ann Shippy"/>
+					<img src="<?php bloginfo('template_directory'); ?>/images/team-amy.jpg" alt="Dr. Amy Killen"/>
 					<div class="box">
-						<h3>Dr. Ann Shippy</h3>
-						<p class="title">Functional Medicine Physician, Scientist & Mom</p>
-						<p class="bio">Dr. Shippy is an expert in environmental toxicity who believes making gradual diet and lifestyle changes can make a big difference in your brain and body health. She is an advocate of Alpha & Omega&trade;, due to it's natural ability to reduce inflammation and support a better brain.</p>
+						<h3>Dr. Amy Killen</h3>
+						<p class="title">Board Certified Physician, Anti-Aging Expert & Humanist</p>
+						<p class="bio">Dr. Killen is a board-certified physician who focuses on anti-aging medicine, nutrition, sexual health and wellness. Her interest in brain health emerged through her studies in optimizing the mind-body connection. Dr. Killen's passion for innovation led her to discover the power of Alpha & Omega, which she believes can lead to a better brain for life.</p>
 					</div>
 				</div>
 			</div>

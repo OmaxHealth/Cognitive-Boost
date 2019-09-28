@@ -62,6 +62,31 @@ function force_page_template($template){
 	return $template;
 }
 
+// WordPress: Hides editor on template pages
+add_action('admin_init','hide_editor');
+function hide_editor(){
+	$postID = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'];
+	if(isset($postID)){
+		$post = get_post($postID); 
+		$slug = $post->post_name;
+		$show_editor = true;
+		
+		// Comment out pages that should show the editor
+		if ($slug == 'home'){$show_editor = false;}
+		if ($slug == 'home-v2'){$show_editor = false;}
+		if ($slug == 'how-it-works'){$show_editor = false;}
+		if ($slug == 'real-user-stories'){$show_editor = false;}
+		if ($slug == 'terms-and-conditions'){$show_editor = false;}
+		if ($slug == 'privacy-policy'){$show_editor = false;}
+		if ($slug == 'contact-us'){$show_editor = false;}
+		if ($slug == 'faq'){$show_editor = false;}	
+		
+		if (!$show_editor){
+			remove_post_type_support('page','editor');
+		}	
+	}
+}
+
 // WordPress: Changes the outgoing Email Name
 add_filter('wp_mail_from_name','wpb_sender_name');
 function wpb_sender_name($original_email_from){

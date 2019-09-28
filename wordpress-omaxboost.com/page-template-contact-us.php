@@ -6,12 +6,12 @@
 		<div class="container">
 			<h1>Contact Us</h1>
 			<div class="flexcolumn">
-				<div class="column"><?php echo do_shortcode('[contact-form-7 id="33" title="Contact Us"]'); ?></div>
+				<div class="column"><?php echo do_shortcode('[contact-form-7 id="43" title="Contact Us"]'); ?></div>
 				<div class="column">
 					<h2>We're here to help</h2>
 					<div class="links">
 						<a class="email" href="mailto:care@omaxhealth.com">care@omaxhealth.com</a>
-						<a class="phone" href="tel:1-800-881-6084">1-800-881-6084</a>
+						<a class="phone" href="tel:1-800-765-6691">800-765-6691</a>
 						<a class="faq" href="<?php bloginfo('url'); ?>/faq/">Frequently Asked Questions</a>						
 					</div>
 				</div>

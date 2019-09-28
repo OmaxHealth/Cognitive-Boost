@@ -123,7 +123,7 @@
 			
 			<h3 style="text-decoration: underline;">Arbitration procedures.</h3>
 			<ol>
-			<li>Before commencing any arbitration proceedings under this Agreement, you must first present the claim or dispute to the Company by sending a written complaint to Company, Attn: Legal Department, 50 West Bridget Street, New Hope, PA 18938, and allowing the Company the opportunity to resolve the claim or dispute. If your claim or dispute is not resolved within sixty (60) days, you may commence arbitration proceedings in accordance with the terms of this Agreement.</li>
+			<li>Before commencing any arbitration proceedings under this Agreement, you must first present the claim or dispute to the Company by sending a written complaint to Company, Attn: Legal Department, 2601 Ocean Park Blvd., Santa Monica, CA, 90405, and allowing the Company the opportunity to resolve the claim or dispute. If your claim or dispute is not resolved within sixty (60) days, you may commence arbitration proceedings in accordance with the terms of this Agreement.</li>
 			<li>The arbitration of any claim or dispute under this Agreement shall be conducted pursuant to the American Arbitration Association's ("AAA") United States Commercial Dispute Resolution Procedures and Supplementary Procedures for Consumer-Related Disputes. These rules and procedures are available at <a href="https://www.adr.org/Rules" target="_blank" title="www.adr.org/Rules" rel="noopener noreferrer">https://www.adr.org/Rules</a>.</li>
 			<li>The arbitration of any claim or dispute under this Agreement shall be conducted in the State of New Jersey, in the city of Princeton.</li>
 			<li>The arbitration of any claim or dispute under this Agreement shall be conducted by an arbitrator who is independent and impartial. The exchange of information and timing of the arbitration shall be supervised by the arbitrator and shall be in accordance with procedures provided by the arbitrator.</li>
@@ -139,7 +139,7 @@
 			
 			<h3 style="text-decoration: underline;">Waiver of damages.</h3>
 			<p>Each of the parties hereby (a) irrevocably waives, to the maximum extent not prohibited by law, any right it may have to a trial by jury in respect of any proceeding directly or indirectly at any time arising out of, under or in connection with the purchase of the Product from Company or any transaction contemplated hereby or associated herewith; (b) irrevocably waives, to the maximum extent not prohibited by law, any right it may have to claim or recover in any such proceeding any special, exemplary, punitive or consequential damages, or any damages other than, or in addition to, actual damages.</p>
-			<p>Omax Health, Inc.<br>50 West Bridge Street<br>New Hope, PA 18938<br>USA</p>
+			<p>Omax Health, Inc.<br>2601 Ocean Park Blvd<br>Ste 214<br>Santa Monica, CA 90405<br>USA</p>
 			
 			<h2>QUESTIONS AND CONTACT INFORMATION</h2>
 			<p><a href="mailto:care@omaxhealth.com">care@omaxhealth.com</a><br><a href="phone:1-800-765-6691">1-800-765-6691</a><span> (M-F, 8am to 7pm EST)</span></p>

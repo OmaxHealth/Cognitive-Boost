@@ -1,0 +1,181 @@
+// Global: Button
+a.button {
+	& {display:block; position:relative; background-color:$color-red;
+		span {display:block; position:relative; width:100%; @include font('Montserrat','SemiBold'); color:#fff; text-transform:uppercase; text-align:center; letter-spacing:0.1em;}
+	}
+	&:hover {text-decoration:none; background-color:$color-teal;}
+}
+	
+// Global: Top Header
+header {
+	& {background-color:#fff; position:fixed; top:0px; left:0px; right:0px; z-index:100;}
+	.upper {
+		a.logo {position:absolute; top:50%; transform: translateY(-50%); display:block; @include image-background($image-logo-header,'center center','100% 100%'); overflow:hidden; text-indent:-1000px;}
+		nav.global {position:absolute; right:0px;
+			& > * {position:absolute; display:block;}
+			a.phone {left:0px; top:50%; transform: translateY(-50%); @include image-background($image-icon-phone-old,'center center','100% 100%'); text-indent:-1000px; cursor:pointer;}
+			a.button {background-color:#ff5349; top:0px; bottom:0px; right:0px;
+				&:hover {background-color:$color-teal;}
+				span {@include font('Montserrat','Regular'); color:#fff; text-transform:uppercase; text-align:center; @include center-horizontal(); @include center-vertical();}
+			}
+		}
+	}
+	.lower {background-color:#064c6b;
+		.offer {position:absolute; @include font('Montserrat','Medium'); color:#fff; text-transform:uppercase;
+			span {font-family:inherit; font-weight:inherit; font-size:inherit; line-height:inherit; color:inherit;}
+		}
+		.trustpilot {position:absolute; display:none;}
+	}
+	
+	@include breakpoint('>=bp_1024'){
+		a.logo {left:0px;}
+		nav.global a.phone {display:none;}
+		.lower .offer {left:0px; right:0px; text-align:center;}
+	}
+	@include breakpoint('<=bp_768'){
+		.container {width:100%!important; padding:0px!important;}
+		.lower .offer {left:0px; right:0px; text-align:center;}
+	}
+	@include breakpoint('bp_1280'){
+		.upper {
+			&, .container {height:75px;}
+			a.logo {@include image-size($image-logo-header,null,30px);}
+			nav.global {width:140px; height:75px;
+				a.button {width:140px;
+					span {@include font-size(18px,20px);}
+				}
+			}		
+		}
+		.lower {
+			&, .container {height:35px;}
+			.offer {@include font-size(21px,35px);}
+			.trustpilot {top:7px; right:-45px;}
+		}		
+	}
+	@include breakpoint('bp_1024'){
+		.upper {
+			&, .container {height:60px;}
+			a.logo {@include image-size($image-logo-header,null,30px);}
+			nav.global {width:120px; height:60px;
+				a.button{width:120px;
+					span {@include font-size(16px,20px);}
+				}
+			}		
+		}
+		.lower {
+			&, .container {height:30px;}
+			.offer {@include font-size(18px,30px);}
+			.trustpilot {top:7px; right:-45px;}
+		}		
+	}
+	@include breakpoint('bp_768'){
+		.upper {
+			&, .container {height:95px;}
+			a.logo {left:20px; @include image-size($image-logo-header,null,40px);}
+			nav.global {width:270px; height:95px;
+				a.button{width:190px;
+					span {@include font-size(22px,24px);}
+				}
+				a.phone {@include image-size($image-icon-phone-old,null,65px);}
+			}		
+		}
+		.lower {
+			&, .container {height:45px;}
+			.offer {@include font-size(22px,45px);}
+			.trustpilot {top:7px; right:-45px;}
+		}		
+	}
+	@include breakpoint('bp_540'){
+		.upper {
+			&, .container {height:70px;}
+			a.logo {left:15px; @include image-size($image-logo-header,null,30px);}
+			nav.global {width:195px; height:70px;
+				a.button{width:130px;
+					span {@include font-size(16px,20px);}
+				}
+				a.phone {@include image-size($image-icon-phone-old,null,50px);}
+			}		
+		}
+		.lower {
+			&, .container {height:30px;}
+			.offer {@include font-size(16px,30px);}
+			.trustpilot {top:7px; right:-45px;}
+		}		
+	}
+	@include breakpoint('bp_360'){
+		.upper {
+			&, .container {height:45px;}
+			a.logo {left:15px; @include image-size($image-logo-header,null,20px);}
+			nav.global {width:135px; height:45px;
+				a.button{width:90px;
+					span {@include font-size(12px,14px);}
+				}
+				a.phone {@include image-size($image-icon-phone-old,null,35px);}
+			}		
+		}
+		.lower {
+			&, .container {height:25px;}
+			.offer {@include font-size(12px,25px);}
+			.trustpilot {top:7px; right:-45px;}
+		}		
+	}
+}
+
+// Global: Main Spacing for Fixed Header
+main {
+	@include breakpoint('bp_1280'){
+		margin-top:110px;
+	}
+	@include breakpoint('bp_1024'){
+		margin-top:90px;
+	}
+	@include breakpoint('bp_768'){
+		margin-top:140px;
+	}
+	@include breakpoint('bp_540'){
+		margin-top:100px;
+	}
+	@include breakpoint('bp_360'){
+		margin-top:70px;
+	}
+}
+
+// Global: Footer
+footer {
+	& {background-color:$color-gray1; text-align:center;}
+	p {@include font('Montserrat','Regular',12px,16px); color:#454545; margin-bottom:10px;
+		&.disclaimer {display:block; border:1px solid #454545; padding:10px; @include center-horizontal();}
+		&.copyright {@include font('Montserrat','Medium');}
+		&:last-of-type {margin-bottom:0px;}
+	}
+	nav {
+		a {@include font('Montserrat','SemiBold',14px); color:#454545;
+			&:not(:last-of-type):after {content:"|"; padding:0 5px 0 10px; opacity:0.5;}
+			&:hover {color:$color-blue;
+				&:after {color:#454545;}
+			}		
+		}
+	}
+	
+	@include breakpoint('>=bp_768'){
+		.container {padding:40px 0;}
+		p.disclaimer {max-width:630px;}
+		nav {margin-top:20px;}
+	}
+	@include breakpoint('<=bp_540'){
+		.container {padding:20px 15px;}
+		nav {margin-top:20px;}
+	}
+	@include breakpoint('bp_540'){
+		p.disclaimer {max-width:500px;}
+	}
+	@include breakpoint('bp_360'){
+		nav {max-width:290px; @include center-horizontal();
+			a {display:inline-block;
+				&:nth-of-type(2):after {display:none;}
+				&:nth-of-type(3),
+				&:nth-of-type(4){margin-top:5px;}
+			}
+		}
+	}
+}

@@ -18,159 +18,139 @@ main#home {
 	
 	// Section: Main Hero
 	#hero {
-		& {position:relative; z-index:auto!important; background-position:top center; background-repeat:no-repeat; background-size:auto 100%;}
-		.container > * {position:absolute;}
-		h1 {@include font('MontserratRegular'); color:#2f3132; text-transform:uppercase; display:inline-block;
-			span {@include font('MontserratSemiBold'); color:inherit;}
-			&:after {content:''; position:absolute; left:0px; right:0px; height:2px; background-color:$color-blue;}
-		}
-		ul.checkmarks.blue {
-			li {@include font('MontserratSemiBold');}
-		}
-		.cta {
-			* {position:absolute;}
-			& > * {left:0px; right:0px; text-align:center;}
-			.ln1 {@include font('MontserratBold'); color:$color-red; text-transform:uppercase; top:0px;}
-			.price {@include font('MontserratBold'); color:$color-blue;
-				span {position:relative; font-family:inherit; font-weight:inherit; color:inherit;}
-				small {position:relative; @include font('MontserratRegular'); color:inherit;}
+		.text {text-align:center;
+			& > * {@include center-horizontal(); text-align:center;}
+			h1 {@include font('MontserratLight'); color:$color-blue; text-transform:uppercase;
+				strong {@include font('MontserratSemiBold');}
 			}
-			.ln2 {@include font('MontserratSemiBold'); color:$color-blue; text-transform:uppercase;}
-			.ln3 {@include font('MontserratSemiBold'); color:$color-blue;}
-			a.button {bottom:0px;}
+			h2 {@include font('MontserratMedium'); color:#000;
+					sup {@include font('MontserratLight'); font-size:50%;}
+				}
+			p {@include font('MontserratMedium'); color:#000;}
+			h3 {@include font('MontserratRegular'); color:#000; text-transform:uppercase; display:inline-block; position:relative;
+				&:after {content:""; position:absolute; bottom:0px; left:0px; right:0px; display:block; height:2px; background-color:$color-blue;}
+			}
 		}
-		.name {@include font('MontserratSemiBold'); color:#fff;}
-
-		@include breakpoint('>=bp_1024'){
-			& {@include splitBG(#bfbcbb,#e9e9e9); background-image:url($image-folder+'hero-bg-desktop.jpg');}
-			.name br {display:none;}
+		.order {position:relative; display:block;
+			.price {text-align:center;
+				.ln1 {@include font('MontserratSemiBold'); color:$color-blue;}
+				.ln2 {@include font('MontserratMedium'); color:#282528; text-transform:uppercase;}
+			}
+		}
+		
+		@include breakpoint('>=bp_768'){
+			& {background:#8496a4 url('images/hero-home-desktop-bg.jpg') top center no-repeat; background-size:auto 100%;}
+			.text,
+			.order {position:absolute;
+				.price {position:absolute; left:0px;}
+				a.button {position:absolute; top:0px; right:0px;}
+			}
+			.product {display:none;}
 		}
 		@include breakpoint('bp_1280'){
-			.container {height:670px;}
-			h1 {right:120px; top:50px; @include font-size(44px);
-				&:after {bottom:-15px;}
-			}
-			ul.checkmarks.blue {right:120px; top:130px; width:415px;
-				li {@include font-size(26px,36px); padding-left:50px; min-height:30px; margin-bottom:20px;
-					&:before {top:4px; width:30px; height:30px;}
+			.container {height:700px;}
+			.text {width:480px; top:150px; right:50px;
+				h3 {@include font-size(24px); width:350px; margin-bottom:20px;
+					&:after {bottom:-10px;}
 				}
-			}
-			img.asotv {right:120px; top:350px; @include image-size($image-icon-asotv,60px);}
-			.cta {right:200px; bottom:30px; width:230px; height:205px;
-				.ln1 {@include font-size(22px); letter-spacing:0.08em;}
-				.price {top:24px; @include font-size(60px);
-					span:nth-of-type(1){bottom:5px; @include font-size(42px);}
-					span:nth-of-type(2){bottom:16px; @include font-size(36px);}
-					small {bottom:28px; @include font-size(20px);}
+				h1 {margin-bottom:20px; @include font-size(54px); letter-spacing:-0.06em;}	
+				h2 {@include font-size(42px); margin-bottom:30px;
+					sup {position:relative; font-size:50%; line-height:30px; top:10px;}
 				}
-				.ln2 {top:84px; @include font-size(28px);}
-				.ln3 {top:116px; @include font-size(16px);}
-				a.button {@include button(230px,64px,20px);}
+				p {@include font-size(22px,32px); width:400px; letter-spacing:-0.02em;}			
 			}
-			.name {bottom:30px; left:100px; @include font-size(18px);}
+			.order {top:500px; right:60px; width:430px; height:60px;
+				.price {top:6px;
+					.ln1 {@include font-size(30px);}
+					.ln2 {@include font-size(20px);}
+				}
+				a.button {@include button(240px,60px,22px);}
+			}
 		}
 		@include breakpoint('bp_1024'){
-			.container {height:560px;}
-			h1 {right:100px; top:40px; @include font-size(36px);
-				&:after {bottom:-10px;}
-			}
-			ul.checkmarks.blue {right:100px; top:100px; width:340px;
-				li {@include font-size(22px,30px); padding-left:45px; min-height:26px; margin-bottom:15px;
-					&:before {top:2px; width:26px; height:26px;}
+			.container {height:550px;}
+			.text {width:400px; top:120px; right:10px;
+				h3 {@include font-size(22px); width:320px; margin-bottom:20px;
+					&:after {bottom:-10px;}
 				}
-			}
-			img.asotv {right:100px; top:280px; @include image-size($image-icon-asotv,50px);}
-			.cta {right:170px; bottom:30px; width:200px; height:180px;
-				.ln1 {@include font-size(18px); letter-spacing:0.1em;}
-				.price {top:22px; @include font-size(50px);
-					span:nth-of-type(1){bottom:5px; @include font-size(34px);}
-					span:nth-of-type(2){bottom:14px; @include font-size(30px);}
-					small {bottom:23px; @include font-size(18px);}
+				h1 {margin-bottom:15px; @include font-size(40px); letter-spacing:-0.06em;}	
+				h2 {@include font-size(34px); margin-bottom:15px;
+					sup {position:relative; font-size:50%; line-height:30px; top:-2px;}
 				}
-				.ln2 {top:76px; @include font-size(24px);}
-				.ln3 {top:102px; @include font-size(14px);}
-				a.button {@include button(200px,54px,18px);}
+				p {@include font-size(18px,28px); width:400px; letter-spacing:-0.02em;}			
 			}
-			.name {bottom:30px; left:90px; @include font-size(16px);}
-		}
-		@include breakpoint('<=bp_768'){
-			& {@include splitBG(#fefefe,#e9e9e9); background-image:url($image-folder+'hero-bg-tablet.jpg');
-				&:before, &:after {display:block!important;}
-			}			
+			.order {top:390px; right:10px; width:380px; height:60px;
+				.price {top:0px;
+					.ln1 {@include font-size(28px);}
+					.ln2 {@include font-size(18px);}
+				}
+				a.button {@include button(200px,50px,18px);}
+			}
 		}
 		@include breakpoint('bp_768'){
-			.container {height:830px; width:768px!important;}
-			h1 {top:50px; right:30px; @include font-size(42px);
-				&:after {bottom:-15px;}
-			}
-			ul.checkmarks.blue {top:125px; right:30px; width:395px;
-				li {@include font-size(26px,36px); padding-left:50px; min-height:32px; margin-bottom:18px; letter-spacing:-0.04em;
-					&:before {top:4px; width:32px; height:32px;}
+			.container {height:430px;}
+			.text {width:370px; top:100px; right:0px;
+				h3 {@include font-size(16px); width:240px; margin-bottom:20px; width:240px;
+					&:after {bottom:-10px;}
 				}
+				h1 {@include font-size(34px); margin-bottom:5px;}
+				h2 {@include font-size(26px); margin-bottom:10px;
+						sup {position:relative; top:6px;}
+					}
+				p {@include font-size(16px,22px); width:300px;}
 			}
-			img.asotv {top:370px; right:60px; @include image-size($image-icon-asotv,70px);}
-			.cta {bottom:40px; right:30px; width:300px; height:290px;
-				.ln1 {@include font-size(26px); letter-spacing:0.15em;}
-				.price {top:28px; @include font-size(80px);
-					span:nth-of-type(1){bottom:8px; @include font-size(54px);}
-					span:nth-of-type(2){bottom:22px; @include font-size(48px);}
-					small {bottom:36px; @include font-size(28px);}
+			.order {top:305px; right:20px;width:300px; height:50px;
+				.price {top:4px;
+					.ln1 {@include font-size(24px);}
+					.ln2 {@include font-size(16px);}
 				}
-				.ln2 {top:106px; @include font-size(36px);}
-				.ln3 {top:144px; @include font-size(22px);}
-				a.button {@include button(300px,74px,24px);}
+				a.button {@include button(150px,40px,14px); top:4px;}
 			}
-			.name {bottom:40px; left:40px; @include font-size(24px,34px);}
+		}
+		@include breakpoint('<=bp_540'){
+			& {background-color:#f1f3f4;}
+			.container {width:100vw; padding:20px 0 30px;}
+			.text,
+			.order,
+			.book,
+			.product {position:relative!important; width:100%; @include center-horizontal();}
+			.text h2 {display:none;}
+			a.button {@include center-horizontal();}
 		}
 		@include breakpoint('bp_540'){
-			.container {height:580px; width:540px!important;}
-			h1 {top:40px; right:20px; @include font-size(30px);
-				&:after {bottom:-10px;}
-			}
-			ul.checkmarks.blue {top:90px; right:20px; width:285px;
-				li {@include font-size(18px,24px); padding-left:35px; min-height:24px; margin-bottom:15px;
-					&:before {top:2px; width:24px; height:24px;}
+			.text {max-width:450px; margin-bottom:10px;
+				h3 {@include font-size(27px); margin-bottom:20px;
+					&:after {height:2px; bottom:-10px;}
 				}
+				h1 {@include font-size(46px); letter-spacing:-0.01em; margin-bottom:5px;}
+				p {@include font-size(18px,28px); max-width:340px;}
 			}
-			img.asotv {top:260px; right:40px; @include image-size($image-icon-asotv,50px);}
-			.cta {bottom:30px; right:40px; width:190px; height:180px;
-				.ln1 {@include font-size(20px); letter-spacing:0.05em;}
-				.price {top:20px; @include font-size(52px);
-					span:nth-of-type(1){bottom:5px; @include font-size(36px);}
-					span:nth-of-type(2){bottom:14px; @include font-size(32px);}
-					small {bottom:24px; @include font-size(18px);}
+			.product {width:100%;}
+			.order {margin-top:-50px;
+				.price {margin-bottom:20px;
+					.ln1 {@include font-size(32px);}
+					.ln2 {@include font-size(21px);}
 				}
-				.ln2 {top:74px; @include font-size(26px);}
-				.ln3 {top:100px; @include font-size(14px);}
-				a.button {@include button(190px,48px,16px);}
+				a.button {@include button(300px,80px,26px);}
 			}
-			.name {bottom:30px; left:20px; @include font-size(16px,22px);}
 		}
 		@include breakpoint('bp_360'){
-			& {background-image:url($image-folder+'hero-bg-mobile.jpg');}
-			.container {height:390px; width:360px!important;}
-			h1 {top:15px; right:15px; @include font-size(22px); letter-spacing:-0.02em;
-				&:after {bottom:-10px;}
-			}
-			ul.checkmarks.blue {top:60px; right:15px; width:185px;
-				li {@include font-size(16px,20px); padding-left:30px; min-height:22px; margin-bottom:6px; text-shadow: 0px 0px 10px rgba(255,255,255,0.8);
-					&:before {top:2px; width:22px; height:22px;}
+			.product {width:100vw;}
+			.text {margin-bottom:10px;
+				h3 {@include font-size(16px); display:inline-block; margin-bottom:15px;
+					&:after {height:1px; bottom:-6px;}
 				}
+				h1 {@include font-size(33px); margin-bottom:8px;}
+				p {@include font-size(14px,20px); max-width:260px;}
 			}
-			img.asotv {top:200px; right:30px; @include image-size($image-icon-asotv,32px);}
-			.cta {bottom:15px; right:15px; width:180px; height:140px;
-				.ln1 {@include font-size(14px); letter-spacing:0.1em;}
-				.price {top:15px; @include font-size(38px);
-					span:nth-of-type(1){bottom:4px; @include font-size(26px);}
-					span:nth-of-type(2){bottom:10px; @include font-size(22px);}
-					small {bottom:14px; @include font-size(16px);}
+			.order {margin-top:-30px;
+				.price {margin-bottom:10px;
+					.ln1 {@include font-size(23px);}
+					.ln2 {@include font-size(15px);}
 				}
-				.ln2 {top:50px; @include font-size(18px);}
-				.ln3 {top:70px; @include font-size(12px);}
-				.price, .ln2, .ln3 {color:#fff; text-shadow: 0px 0px 16px rgba(0,0,0,0.9);}
-				a.button {@include button(180px,44px,14px);}
+				a.button {@include button(210px,50px,16px);}
 			}
-			.name {bottom:15px; left:15px; width:140px; @include font-size(12px,14px); text-shadow: 0px 0px 8px rgba(0,0,0,0.8);}
+			
 		}
 	}
 	

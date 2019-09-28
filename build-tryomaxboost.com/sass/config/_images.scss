@@ -1,0 +1,58 @@
+// SASS: Image Foler Location
+$image-folder: 'images/';
+
+// Layout: Global Images
+$image-logo-header: (width:380px,height:50px,file:'logo-header.svg');
+$image-icon-phone-cell: (width:56px,height:100px,file:'icon-phone-cell.svg');
+$image-icon-phone-old: (width:1000px,height:1000px,file:'icon-phone-old.svg');
+
+// Layout: Home
+$image-icon-asotv: (width:125px,height:110px,file:'home/icon-asotv.svg');
+$image-hero-bg-desktop: (width:2000px,height:170px,file:'home/hero-bg-desktop.jpg');
+$image-hero-bg-mobile: (width:1024px,height:750px,file:'home/hero-bg-mobile.jpg');
+$image-hero-price: (width:310px,height:130px,file:'home/hero-price.svg');
+$image-hero-seal: (width:400px,height:400px,file:'home/hero-seal.png');
+$image-hero-product-desktop: (width:940px,height:540px,file:'home/hero-product-desktop.png');
+$image-hero-product-mobile: (width:480px,height:300px,file:'home/hero-product-mobile.png');
+$image-icon-checkmark-blue: (width:100px,height:100px,file:'home/icon-checkmark-blue.svg');
+
+$image-icon-caffeine: (width:190px,height:220px,file:'home/icon-caffeine.svg');
+$image-icon-60-day: (width:290px,height:220px,file:'home/icon-60-day.svg');
+$image-icon-pills: (width:190px,height:220px,file:'home/icon-pills.svg');
+
+$image-reviews-stars: (width:430px,height:70px,file:'home/reviews-stars-yellow.svg');
+$image-icon-play: (width:512px,height:512px,file:'home/icon-play.svg');
+$image-reviews-photo: (width:600px,height:360px,file:'home/review-gretchen.jpg');
+
+$image-powerhouse-bg: (width:2000px,height:620px,file:'home/powerhouse-bg.jpg');
+$image-powerhouse-product: (width:500px,height:330px,file:'home/powerhouse-product.jpg');
+$image-icon-arrow-right: (width:100px,height:100px,file:'home/icon-arrow-right.svg');
+
+$image-science-dr-killen-desktop: (width:480px,height:450px,file:'home/howitworks-dr-killen-desktop.jpg');
+$image-science-dr-killen-mobile: (width:220px,height:400px,file:'home/howitworks-dr-killen-mobile.jpg');
+$image-icon-quote-left: (width:10px,height:10px,file:'home/icon-quote-left.svg');
+
+$image-howitworks-brain: (width:400px,height:350px,file:'home/howitworks-brain.png');
+
+$image-better-bg: (width:350px,height:350px,file:'home/better-bg1.jpg'); 
+$image-icon-head: (width:200px,height:200px,file:'home/icon-head.svg'); 
+$image-icon-spokes: (width:200px,height:200px,file:'home/icon-spokes.svg'); 
+$image-icon-blocks: (width:200px,height:200px,file:'home/icon-blocks.svg'); 
+$image-icon-brain: (width:200px,height:200px,file:'home/icon-brain.svg'); 
+
+$image-featured-first: (width:440px,height:140px,file:'home/featured-first.png');
+$image-featured-ok: (width:290px,height:140px,file:'home/featured-ok.png');
+$image-featured-touch: (width:540px,height:140px,file:'home/featured-touch.png');
+$image-featured-womans_world: (width:300px,height:140px,file:'home/featured-womans_world.png');
+
+$image-purity-seal: (width:200px,height:200px,file:'purity-seal.svg');
+
+$image-icon-plus: (width:140px,height:140px,file:'home/icon-plus.svg');
+$image-lowerCTA-products-desktop: (width:1800px,height:640px,file:'lowerCTA-products-desktop.jpg');
+$image-lowerCTA-products-mobile: (width:640px,height:320px,file:'lowerCTA-products-mobile.jpg');
+
+// Layout: Select Your Plan
+$image-product-one-time: (width:411px,height:292px,file:'select-your-plan/product-one-time.png');
+$image-product-set: (width:429px,height:274px,file:'select-your-plan/product-set.png');
+$image-icon-ribbon: (width:153px,height:99px,file:'select-your-plan/icon-ribbon.png');
+$image-icon-seal: (width:93px,height:90px,file:'select-your-plan/icon-seal.png');

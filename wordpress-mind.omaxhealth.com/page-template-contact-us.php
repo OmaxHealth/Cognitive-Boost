@@ -11,7 +11,7 @@
 					<h2>We're here to help</h2>
 					<div class="links">
 						<a class="email" href="mailto:care@omaxhealth.com">care@omaxhealth.com</a>
-						<a class="phone" href="tel:800-791-4202">800-791-4202</a>
+						<a class="phone" href="tel:1-800-765-6691">800-765-6691</a>
 						<a class="faq" href="<?php bloginfo('url'); ?>/faq/">Frequently Asked Questions</a>						
 					</div>
 				</div>

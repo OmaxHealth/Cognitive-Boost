@@ -30,7 +30,7 @@
 		<div class="container">
 			<a class="logo" href="<?php bloginfo('url'); ?>">Omax Cognitive Boost</a>
 			<nav class="global">
-				<a class="phone" href="tel:1-800-791-4202">Click to Call</a>
+				<a class="phone" href="tel:1-800-765-6691">Click to Call</a>
 				<a class="button" href="<?php bloginfo('url'); ?>/select-your-plan/"><span>Order Now</span></a>
 			</nav>			
 		</div>

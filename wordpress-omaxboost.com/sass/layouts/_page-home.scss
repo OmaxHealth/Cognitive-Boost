@@ -614,6 +614,34 @@ main#home {
 			}				
 		}
 	}
+
+	// Section: Trustpilot
+	#trustpilot {
+		@include tablet_up {
+			padding: 60px 0;
+		}
+		@include mobile {
+			padding: 30px 0;
+		}
+		background: #F6F9FC;
+		h3 {
+			display: none;
+			@media (min-width: 520px) {
+				@include font('Montserrat');
+				display: block;
+			    font-size: 1.75em;
+			    color: black;
+			    text-transform: none;
+			    text-align: center;
+			    letter-spacing: 0;
+			    letter-spacing: -1px;
+			    margin-bottom: 40px;
+			}
+			@media (min-width: 768px) {
+				font-size: 2.25em;
+			}
+		}
+	}
 	
 	// Section: Purity
 	#purity {
@@ -722,5 +750,6 @@ main#home {
 			}		
 		}
 	}
-		
+	// Disclaimer
+	.asterisk{font-size:25px;position:relative;top:-25px}	
 }	

@@ -7,7 +7,7 @@
 			<div class="text">
 				<h3>Scientifically Advanced</h3>
 				<h1><strong>Cognitive</strong> Boost</h1>
-				<h2>First Box $19.95</h2>
+				<h2>First Box $19.95<span class="asterisk">*</span></h2>
 			</div>
 			<div class="book">
 				<h3><strong>Plus</strong>, Free EBook <small>($19.99 value)</small></h3>
@@ -20,10 +20,10 @@
 			<div class="product"><img src="<?php bloginfo('template_directory'); ?>/images/hero-home-v2-mobile-bg.jpg"/></div>
 			<div class="order">
 				<div class="price">
-					<div class="ln1">Save 70%</div>
+					<div class="ln1">Save 60%</div>
 					<div class="ln2">+ FREE SHIPPING</div>
 				</div>
-				<a class="button red" href="https://myomaxboost.com/cart/buybutton.php?id=oqZ-PqIm7U6xqB3VBAYiTQ"><span>Order Now</span></a>
+				<a class="button red" href="https://omaxboost.com/cart/buybutton.php?id=NV748LxlhEORyq5HkCO9xg"><span>Order Now</span></a>
 			</div>
 		</div>
 	</section>
@@ -108,7 +108,7 @@
 			</div>
 			<div class="button_wrapper">
 				<img class="badge" src="<?php bloginfo('template_directory'); ?>/images/icon-60day-badge.png" alt ="60 Day Money-Back Guarentee" />
-				<a class="button red" href="https://myomaxboost.com/cart/buybutton.php?id=oqZ-PqIm7U6xqB3VBAYiTQ"><span>Order Now</span></a>
+				<a class="button red" href="https://omaxboost.com/cart/buybutton.php?id=NV748LxlhEORyq5HkCO9xg"><span>Order Now</span></a>
 			</div>
 		</div>
 	</section>
@@ -142,6 +142,15 @@
 			</div>
 		</div>
 			
+	</section>
+
+	<section id="trustpilot">
+		<h3>What Our Customers Are Saying</h3>
+	<!-- TrustBox widget - Carousel -->
+	<div class="trustpilot-widget" data-locale="en-US" data-template-id="53aa8912dec7e10d38f59f36" data-businessunit-id="58f6c7470000ff0005a0c05a" data-style-height="130px" data-style-width="100%" data-theme="light" data-tags="SelectedReview" data-schema-type="Organization">
+	<a href="https://www.trustpilot.com/review/omaxhealth.com" target="_blank">Trustpilot</a>
+	</div>
+	<!-- End TrustBox widget -->
 	</section>
 
 	<section id="purity">
